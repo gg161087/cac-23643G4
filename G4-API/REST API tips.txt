@@ -18,10 +18,10 @@ crear estructura base del proyecto:
 edit ./proyecto-rest_api/.env:
 	PORT=3000
 	HOST=localhost
-	DB_HOST=bllxj36u2qg6powvyu2e-mysql.services.clever-cloud.com
-	DB_NAME=bllxj36u2qg6powvyu2e
-	DB_USER=ufp9jstylnskeaum
-	DB_PASSWORD=v7zwBjWwSopK8FC2OM0E
+	DB_HOST=localhost
+	DB_NAME=cac-23643g4
+	DB_USER=root
+	DB_PASSWORD=''
 	
 edit ./proyecto-rest_api/.babelrc:
 	{
@@ -43,7 +43,7 @@ edit ./proyecto-rest_api/src/config.js:
 	const PORT = process.env.PORT || 4000;
 	const HOST = process.env.HOST || 'localhost';
 	const DB_HOST = process.env.DB_HOST || 'localhost';
-	const DB_NAME = process.env.DB_NAME || 'funkoshop';
+	const DB_NAME = process.env.DB_NAME || 'cac-23643g4';
 	const DB_USER = process.env.DB_USER || 'root';
 	const DB_PASSWORD = process.env.DB_PASSWORD || '';
 	const JWT_SECRET = process.env.JWT_SECRET || 'secret';
