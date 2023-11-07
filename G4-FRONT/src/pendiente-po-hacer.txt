@@ -1,4 +1,6 @@
+* Nombre de la tienda.
 * Definir tipo y tamaño de la fuente.
 * Definir colores.
 * Hacer menu hamburguesa.
 * Hacer hover a los links.
+* Hacer Responsive.

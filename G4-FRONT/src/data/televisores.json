@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "Marca": "Philips",
+    "Tamaño de Pantalla": 70,
+    "Tipo de Resolución": "Full HD",
+    "Sistema Operativo": "Android TV",
+    "Tecnología": "OLED",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["3 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["30% OFF"],
+    "Precio": ["800.000"],
+    "Tiempo de Entrega": ["Retiralo YA"],
+    "Imagen": {
+      "Resolución": "1366 x 768 p",
+      "Formato de pantalla": "Plano",
+      "3D": "No"
+    },
+    "Caracteristicas Generales": {
+      "Eficiencia energética": "A+",
+      "Smart TV": "Sí",
+      "Color": "Bisel negro mate"
+    },
+    "Caracteristicas Smart": {
+      "Youtube": "Sí",
+      "Netflix": "Sí",
+      "Control por Voz": "Sí"
+    },
+    "Conectividad": {
+      "Entradas HDMI": "3",
+      "Entradas USB": "2",
+      "Conexión a internet": "Sí",
+      "NFC": "Sí",
+      "Salidas audio óptico digital": "Sí",
+      "Conector para auriculares": "Sí",
+      "HDMI ARC": "Sí"
+    },
+    "Sonido": {
+      "Cantidad de parlates": "2",
+      "Potencia": "10W RMS"
+    },
+    "Dimensiones": {
+      "Alto": "433 mm",
+      "Ancho": "433 mm",
+      "Profundidad": "76 mm",
+      "Alto (con base)": "453 mm",
+      "Ancho (con base)": "716 mm",
+      "Profundidad (con base)": "166 mm",
+      "Medida VESA": "100 X 100 mm",
+      "Peso": "15 kg"
+    },
+    "Modelo y Origen": {
+      "Modelo": "32PHD6917/77",
+      "Origen": "Argentina"
+    },
+    "Que Incluye": {
+      "Control Remoto": "Sí",
+      "Otros Accesorios Incluidos": [
+        "2 pilas AAA",
+        "Cable de alimentacion",
+        "Guia de inicio rápida",
+        "Folleto legal y de seguridad",
+        "Soporte para la mesa"
+      ]
+    },
+    "Descripcion": {
+      "Conectividad": "Gracias a su conexión Wi-Fi y Bluetooth, podrás conectarte de forma inalámbrica a cualquier dispositivo. También cuenta con puertos HDMI y USB para que puedas vincular y reproducir contenido multimedia de consolas, notebooks, tablets, smartphone y pendrives.",
+      "Imagen": "El Philips 32PHD6917/77 es un smart TV compacto y elegante con una pantalla LED de 32 pulgadas y resolución HD (1366 x 768 p). Su motor de procesamiento optimiza la calidad de imagen para ofrecer nitidez, colores ricos y movimientos suaves. Desde videos de YouTube hasta series imperdibles de Netflix, siempre disfrutarás de la mejor experiencia visual posible.",
+      "Sonido": "Aumenta el dramatismo independientemente de lo que veas. Este smart TV admite barras de sonido compatibles con Dolby Atmos, que reproducen tanto la profundidad como la altura, para crear un sonido Surround tridimensional virtual que fluye por encima tuyo y a tu alrededor.",
+      "Entretenimiento sin límites": "Tendrás a tu alcance las plataformas y servicios de streaming más populares, como Netflix, YouTube, Disney+, Amazon Prime Video y más, para que disfrutes de la resolución HD al máximo.",
+      "Asistente de voz": "Presioná un botón del control remoto para hablar con el Asistente de Google y controlar el televisor o los dispositivos inteligentes de tu hogar usando solo tu voz.",
+      "Android TV": "Esta Android Smart TV de Philips te ofrece el contenido que querés cuando lo querés. Podrás personalizar la pantalla de inicio para mostrar tus aplicaciones favoritas, lo que te facilitará la reproducción de las películas y los programas que te encantan."
+    }
+  },
+  {
+    "id": 2,
+    "Marca": "Samsung",
+    "Tamaño de Pantalla": 75,
+    "Tipo de Resolución": "4K UHD",
+    "Sistema Operativo": "Samsung Tizen",
+    "Tecnología": "LED",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["6 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["20% OFF"],
+    "Precio": ["900.000"],
+    "Tiempo de Entrega": ["Disponible en 48 hrs"],
+    "Imagen": {
+      "Resolución": "3,840 x 2,160",
+      "Formato de pantalla": "Plano",
+      "3D": "Sí"
+    },
+    "Caracteristicas Generales": {
+      "Eficiencia energética": "A+",
+      "Smart TV": "Sí",
+      "Color": "Negro"
+    },
+    "Caracteristicas Smart": {
+      "Youtube": "Sí",
+      "Netflix": "Sí",
+      "Control por Voz": "Sí"
+    },
+    "Conectividad": {
+      "Entradas HDMI": "3",
+      "Entradas USB": "2",
+      "Conexión a internet": "Sí",
+      "NFC": "No",
+      "Salidas audio óptico digital": "Sí",
+      "Conector para auriculares": "No",
+      "HDMI ARC": "No"
+    },
+    "Sonido": {
+      "Cantidad de parlates": "4",
+      "Potencia": "10W RMS"
+    },
+    "Dimensiones": {
+      "Alto": "960.3 mm",
+      "Ancho": "1676.7 mm",
+      "Profundidad": "26.6 mm",
+      "Alto (con base)": "1005.5 mm",
+      "Ancho (con base)": "1676.7 mm",
+      "Profundidad (con base)": "340.4 mm",
+      "Medida VESA": "400 x 400 mm",
+      "Peso": "32 kg"
+    },
+    "Modelo y Origen": {
+      "Modelo": "UN75BU8000GCFV",
+      "Origen": "Argentina"
+    },
+    "Que Incluye": {
+      "Control Remoto": "Sí",
+      "Otros Accesorios Incluidos": [
+        "2 pilas AAA",
+        "Cable de alimentacion",
+        "Guia de inicio rápida",
+        "Folleto legal y de seguridad",
+        "Soporte para la mesa"
+      ]
+    },
+    "Descripcion": {
+      "Smart Hub": "El nuevo Smart Hub de Samsung pone la selección de contenido en primer plano a fin de que pases menos tiempo buscando y más tiempo transmitiendo películas, series y todo el contenido que tanto te gusta.",
+      "Diseño": "El smart TV Samsung Crystal UN75BU8000GCFV ofrece un estilo elegante y más delgado que nunca. Su diseño AirSlim le permitirá integrarse perfectamente en la pared, dándole al espacio una gran apariencia. Además, su soporte ajustable te permitirá modificar la altura y el espacio del soporte como quieras, incluso se adapta perfectamente a una barra de sonido.",
+      "Sonido": "Para completar tu experiencia multimedia, Samsung te ofrece un smart TV con sonido envolvente y gran tecnología para que te sientas en el medio de la acción.",
+      "Object Tracking Sound Lite (OTS Lite)": "El sonido envolvente 3D del audio de canal superior virtual te absorberá a la mejor experiencia de audio.",
+      "Q-Symphony": "Q-Symphony permite que el televisor y la barra de sonido funcionen simultáneamente para obtener un mejor efecto envolvente, sin silenciar los altavoces del televisor.",
+      "Sonido adaptativo": "El sonido adaptativo tiene inteligencia por escena, que le permite optimizar el sonido por tipo de contenido, en función del análisis de escena que hace en tiempo real.",
+      "Asistente de voz": "Podrás elegir tu asistente favorito: Bixby o Amazon Alexa, y tener una experiencia de entretenimiento óptima con un control más que avanzado para tu hogar.",
+      "Control remoto ecológico": "El control remoto ecológico SollarCell está equipado con un panel solar en la parte posterior, por lo que podrás olvidarte de las pilas desechables. Además, cuenta con un micrófono incorporado que te facilitará la función de asistente de voz.",
+      "Pantalla": "Con la pantalla de 75” pulgadas del Samsung Crystal disfrutarás de todas tus series, películas y videos favoritos en calidad 4K, con imágenes, colores y detalles espectaculares.",
+      "Potenciador de contraste": "Esta innovadora tecnología de imagen analiza regiones de cada imagen y ajusta dinámicamente el contraste, lo que da como resultado una mayor sensación de profundidad y naturalidad.",
+      "Dynamic Crystal Color": "Dynamic Crystal Color ofrece variaciones realistas para que puedas ver todos los detalles de cada imágen, con mil millones de tonos de color. ",
+      "HDR": "High Dynamic Range aumenta el rango de niveles de luz en tu televisor para que puedas disfrutar de un amplio espectro de colores y mayores detalles, incluso en las escenas más oscuras.",
+      "Motion Xceleration": "Experimentá una imagen y un rendimiento sin cortes; su tecnología estima y compensa automáticamente los fotogramas en la fuente de contenido.",
+      "Procesador Crystal 4K": "La potente mejora de 4K garantiza que obtengas una resolución de hasta 4K para tu contenido favorito."
+    }
+  }
+]

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-export const CentroAyuda = () => {
+export const Consolas = () => {
   return (
     <>
-      <h1>CENTRO DE AYUDA</h1>
+      <h1>CONSOLAS Y VIDEOJUEGOS</h1>
       <Link to="/">VOLVER AL INICIO</Link>
     </>
   );

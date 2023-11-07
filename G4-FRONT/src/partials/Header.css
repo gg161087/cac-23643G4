@@ -1,89 +1,43 @@
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: gray;
-}
-
-/* Estilos de la primera barra de navegacion */
 .container__nav1 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   background-color: rgb(59, 59, 59);
 }
 
 .nav1__link {
-  margin: 0 10px 0 10px;
-  padding: 5px;
-  text-decoration: none;
   color: antiquewhite;
 }
 
-.icon {
-  margin-right: 10px;
-}
-
-/* Estilos de la segunda barra de navegacion */
 .container__nav2 {
-  width: 100%;
   background-color: rgb(116, 116, 116);
 }
 
-.nav2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .nav2__logo {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  text-decoration: none;
   color: antiquewhite;
-}
-
-.logo__img {
-  margin-right: 10px;
-}
-
-.nav2__inputSearch {
-  display: flex;
-  align-items: center;
-}
-
-.nav2__miCuenta {
-  display: flex;
-  align-items: center;
 }
 
 .miCuenta__link {
-  margin: 0 10px 0 10px;
-  text-decoration: none;
   color: antiquewhite;
 }
 
-/* Estilos de la tercera barra de navegacion */
 .container__nav3 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   background-color: rgb(100, 100, 100);
 }
 
 .nav3__link {
-  margin: 0 10px 0 10px;
-  padding: 5px;
-  text-decoration: none;
   color: antiquewhite;
 }
 
-.icon {
-  margin-right: 10px;
+a.dropdown-toggle:link {
+  margin: 0 10px 0 10px;
+  padding: 0;
+  color: antiquewhite;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 870px) {
   .header {
     display: none;
+    background-color: red;
+  }
+  .container__nav1 {
+    background-color: green;
   }
 }

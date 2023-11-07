@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NotFound } from "./pages/NotFound.jsx";
 import { CentroAyuda } from "./pages/CentroAyuda.jsx";
 import { VentaTelefonica } from "./pages/VentaTelefonica.jsx";
 import { Sucursales } from "./pages/Sucursales.jsx";
@@ -16,6 +17,8 @@ import { Celulares } from "./pages/Celulares.jsx";
 import { Computadoras } from "./pages/Computadoras.jsx";
 import { ExclusivoOnline } from "./pages/ExclusivoOnline.jsx";
 import { Ofertas } from "./pages/Ofertas.jsx";
+import { Consolas } from "./pages/Consolas.jsx";
+import { Tablets } from "./pages/Tablets.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -32,8 +35,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="televisores" element={<Televisores />}></Route>
         <Route path="celulares" element={<Celulares />}></Route>
         <Route path="computadoras" element={<Computadoras />}></Route>
+        <Route path="videojuegos" element={<Consolas />}></Route>
+        <Route path="tablets" element={<Tablets />}></Route>
         <Route path="exclusivo-online" element={<ExclusivoOnline />}></Route>
         <Route path="ofertas" element={<Ofertas />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
