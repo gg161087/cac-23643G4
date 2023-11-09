@@ -10,7 +10,7 @@
     "Formas de Pago": ["3 cuotas sin interes"],
     "Tipo de Entrega": ["Retiro en sucursal"],
     "Descuento": ["30% OFF"],
-    "Precio": ["800.000"],
+    "Precio": ["200.000"],
     "Tiempo de Entrega": ["Retiralo YA"],
     "Imagen": {
       "Resolución": "1366 x 768 p",
@@ -153,6 +153,148 @@
       "HDR": "High Dynamic Range aumenta el rango de niveles de luz en tu televisor para que puedas disfrutar de un amplio espectro de colores y mayores detalles, incluso en las escenas más oscuras.",
       "Motion Xceleration": "Experimentá una imagen y un rendimiento sin cortes; su tecnología estima y compensa automáticamente los fotogramas en la fuente de contenido.",
       "Procesador Crystal 4K": "La potente mejora de 4K garantiza que obtengas una resolución de hasta 4K para tu contenido favorito."
+    }
+  },
+  {
+    "id": 3,
+    "Marca": "LG",
+    "Tamaño de Pantalla": 55,
+    "Tipo de Resolución": "4K UHD",
+    "Sistema Operativo": "WebOS",
+    "Tecnología": "NanoCell",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["12 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["30% OFF"],
+    "Precio": ["1.000.000"],
+    "Tiempo de Entrega": ["Disponible en 24 hrs"],
+    "Imagen": {
+      "Resolución": "4K (3840 x 2160)",
+      "Formato de pantalla": "Plano",
+      "3D": "No"
+    },
+    "Caracteristicas Generales": {
+      "Eficiencia energética": "A+",
+      "Smart TV": "Sí",
+      "Color": "Gris",
+      "Procesador": "α9 Gen5 AI Processor 4K"
+    },
+    "Caracteristicas Smart": {
+      "Youtube": "Sí",
+      "Netflix": "Sí",
+      "Control por Voz": "Sí"
+    },
+    "Conectividad": {
+      "Entradas HDMI": "4",
+      "Entradas USB": "3",
+      "Conexión a internet": "Sí",
+      "NFC": "Si",
+      "Salidas audio óptico digital": "Sí",
+      "Conector para auriculares": "Si",
+      "HDMI ARC": "Si"
+    },
+    "Sonido": {
+      "Cantidad de parlates": "4",
+      "Potencia": "40W "
+    },
+    "Dimensiones": {
+      "Alto": "757 mm",
+      "Ancho": "1222 mm",
+      "Profundidad": "230 mm",
+      "Medida VESA": "300 x 200 mm",
+      "Peso": "20 kg"
+    },
+    "Modelo y Origen": {
+      "Modelo": "OLED55C2",
+      "Origen": "Argentina"
+    },
+    "Que Incluye": {
+      "Control Remoto": "Sí",
+      "Otros Accesorios Incluidos": [
+        "2 pilas AAA",
+        "Cable de alimentacion",
+        "Guia de inicio rápida",
+        "Folleto legal y de seguridad",
+        "Soporte para la mesa"
+      ]
+    },
+    "Descripcion": {
+      "Conectividad": "Mediante sus entradas HDMI podrás conectar reproductores de video, consolas de juegos y notebooks. También, a través de sus puertos USB, lograrás reproducir contenido multimedia (música, fotos, videos) almacenados en dispositivos externos como tablets, smartphones y pendrives. Incluso, cuenta con conexión Bluetooth 5.0.",
+      "Entretenimiento sin límites": "Con el sistema operativo webOS podrás acceder a tu contenido preferido de una forma fácil e intuitiva. Disfrutá de las mejores apps de streaming como Netflix, Disney y Prime Video, entre otras.",
+      "Pantalla": "El smart TV LG OLED55C2 posee pantalla OLED, una tecnología de pantalla auto-luminosa que marca la diferencia en la experiencia visual, ofreciendo un realismo extremo y diseños únicos. Sus 55 pulgadas y la resolución 4K te permitirán disfrutar de todas tus series, películas, partidos o videos como nunca antes. Además, debido a su taza de refresco de 120Hz, tendrás una experiencia de uso súper fluida. "
+    }
+  },
+  {
+    "id": 4,
+    "Marca": "TCL",
+    "Tamaño de Pantalla": 75,
+    "Tipo de Resolución": "4K ",
+    "Sistema Operativo": "Google TV",
+    "Tecnología": "QLED",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["9 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["50% OFF"],
+    "Precio": ["8.000.000"],
+    "Tiempo de Entrega": ["Disponible en 12 hrs"],
+    "Imagen": {
+      "Resolución": "3840 x 2160",
+      "Formato de pantalla": "Plano",
+      "3D": "Sí"
+    },
+    "Caracteristicas Generales": {
+      "Eficiencia energética": "A+",
+      "Smart TV": "Sí",
+      "Color": "Negro",
+      "Procesador": "64-bit A55×4 1.3GHz"
+    },
+    "Caracteristicas Smart": {
+      "Youtube": "Sí",
+      "Netflix": "Sí",
+      "Control por Voz": "No"
+    },
+    "Conectividad": {
+      "Entradas HDMI": "3",
+      "Entradas USB": "1",
+      "Conexión a internet": "Sí",
+      "NFC": "No",
+      "Salidas audio óptico digital": "No",
+      "Conector para auriculares": "No",
+      "HDMI ARC": "No"
+    },
+    "Sonido": {
+      "Cantidad de parlates": "2",
+      "Potencia": "2x10W "
+    },
+    "Dimensiones": {
+      "Alto": "95,9 cm",
+      "Ancho": "166,8 cm",
+      "Profundidad": "9 cm",
+      "Alto (con base)": "100 cm",
+      "Ancho (con base)": "166,8 cm",
+      "Profundidad (con base)": "32,9 cm",
+      "Medida VESA": "300 x 300",
+      "Peso": "24 kg"
+    },
+    "Modelo y Origen": {
+      "Modelo": "L75C645-F",
+      "Origen": "Argentina"
+    },
+    "Que Incluye": {
+      "Control Remoto": "Sí",
+      "Otros Accesorios Incluidos": [
+        "2 pilas AAA",
+        "Cable de alimentacion",
+        "Guia de inicio rápida",
+        "Folleto legal y de seguridad",
+        "Soporte para la mesa"
+      ]
+    },
+    "Descripcion": {
+      "Conectá tu dispositivos": "Posee tres puertos HDMI, lo que te permite conectar fácilmente tus dispositivos favoritos, como consolas de juegos y sistemas de sonido. Además, cuenta con puerto USB 3.0 para reproducir contenido desde unidades de almacenamiento externas.",
+      "Conectividad": "Ofrece conectividad Wi-Fi a 2.4GHz, lo que te permite acceder a una amplia variedad de aplicaciones y servicios de transmisión en línea directamente desde el televisor. Además, cuenta con Bluetooth 5.0, que facilita la conexión de dispositivos compatibles, como auriculares inalámbricos o altavoces.",
+      "Sonido": "Gracias a su compatibilidad con Dolby Atmos, crea una experiencia de sonido tridimensional inmersiva. Con Dolby Atmos, sentirás que el audio se mueve a tu alrededor, brindándote una experiencia auditiva excepcional. ",
+      "Pantalla": "La pantalla del smart TV TCL L75C645-F posee 75 pulgadas y resolución 4K, lo que garantiza imágenes nítidas y vibrantes que harán que cada detalle cobre vida. Además, su tasa de refresco de 60Hz asegura una experiencia de visualización suave y fluida, ideal para películas, deportes y juegos."
     }
   }
 ]
