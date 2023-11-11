@@ -1,11 +1,14 @@
 import "./App.css";
 import { Header } from "./partials/Header";
 import { Footer } from "./partials/Footer";
+import { Slider } from "./partials/Slider";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
+      <Slider />
       <br />
       <br />
       <br />
@@ -27,7 +30,7 @@ function App() {
       <br />
       <br />
       <br />
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
