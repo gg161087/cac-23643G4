@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./Footer.css";
 import { Container, Row, Col, FormControl, Button } from "react-bootstrap";
 import {
   AiFillFacebook,
