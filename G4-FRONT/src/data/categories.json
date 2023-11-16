@@ -1,14 +1,22 @@
 [
     {
-        "category_id": 1,
+        "id": 1,
         "name": "celulares"
     },
     {
-        "category_id": 2,
+        "id": 2,
         "name": "computadoras"
     },
     {
-        "category_id": 3,
+        "id": 3,
         "name": "televisores"
+    },
+    {
+        "id": 4,
+        "name" : "consolas"
+    },
+    {
+        "id": 5,
+        "name" : "tablets"
     }
 ]

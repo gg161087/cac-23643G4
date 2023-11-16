@@ -1,20 +1,24 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import { ProductoCard } from './ProductoCard.jsx';
+import { ProductoCard } from './ProductoCard.jsx'
+
+import categories from './../data/categories.json'
+import { getNameById } from './../utils/getById.js';
 
 import './ProductosGrid.css'
 
-export const ProductosGrid = ({productos, category}) => {    
-    if(!productos){
+export const ProductosGrid = ({products}) => { 
+
+    if(!products){
         return null
     }
 
     return (
         <div className="container">
             <div className="grid_container">
-                {productos.map((producto) =>(
-                    <Link key={producto.product_id} to={`/${category}/${producto.product_id}`}>
-                        <ProductoCard producto={producto}></ProductoCard>   
+                {products.map((product) =>(
+                    <Link key={product.id} to={`/${getNameById(categories, product.category_id)}/${product.id}`}>
+                        <ProductoCard product={product}></ProductoCard>   
                     </Link>
                 ))}
             </div>

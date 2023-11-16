@@ -58,44 +58,29 @@ export const Footer = () => {
                             <div className="col-6">
                                 <h4 className=" mb-4">Información Legal</h4>
                                 <p>Términos y Condiciones </p>
-                                <p>
-                                    Contratos de Adhesión-Ley N° 24.240 de Defensa del Consumidor
-                                </p>
+                                <p>Contratos de Adhesión-Ley N° 24.240 de Defensa del Consumidor</p>
                                 <p>Información al Usuario Financiero</p>
-                                <Button className=" btn-sm" variant="outline-warning">
-                                    Solicitud de Baja
-                                </Button>
-                                <Button className=" btn-sm mt-2" variant="outline-danger">
-                                    Botón de Arrepentimiento
-                                </Button>
+                                <Button className=" btn-sm" variant="outline-warning">Solicitud de Baja</Button>
+                                <Button className=" btn-sm" variant="outline-danger">Botón de Arrepentimiento</Button>
                             </div>
                         </div>
                     </Col>                    
                     <Col className="lh-sm mt-4" xl={3}>
                         <h4 className=" mb-4">Contactános</h4>
-                        <p>
-                            <AiOutlineWhatsApp className="me-2" />
-                            5491187654321
-                        </p>
-                        <p>
-                            <AiFillPhone className="me-2" />
-                            0800-123-45678
-                        </p>
-                        <p>
-                            <AiFillMail className="me-2" />
-                            atencionarg@correo.com
-                        </p>
-                        <p>
-                            <AiOutlineOrderedList className="me-2" />
-                            Contacto
-                        </p>
+                        <p><AiOutlineWhatsApp className="me-2"/>5491187654321</p>
+                        <p><AiFillPhone className="me-2"/>0800-123-45678</p>
+                        <p><AiFillMail className="me-2"/>atencionarg@correo.com</p>
+                        <p><AiOutlineOrderedList className="me-2"/>Contacto</p>
                     </Col>                    
                 </Row>                
             </Container>
-            <Container fluid className="row3 p-3">                    
-                <Container xl={12}>
-                    Copyright © 2023 | Todos los derechos reservados Nombre de la tienda
-                    S.A | Capital Federal | Argentina
+            <Container fluid className="row3">                    
+                <Container>
+                    <Row className="justify-content-md-center">
+                        <Col md="auto">                            
+                            <small>Copyright © 2023 | Todos los derechos reservados Nombre de la tienda S.A | Capital Federal | Argentina</small>
+                        </Col>
+                    </Row>
                 </Container>                    
             </Container>
         </footer>

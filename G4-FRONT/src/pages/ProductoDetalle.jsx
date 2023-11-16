@@ -4,37 +4,16 @@ import { useParams } from 'react-router-dom'
 import { Header } from './../partials/Header.jsx'
 import { Footer } from './../partials/Footer.jsx'
 
-import celulares from './../data/celulares.json';
-import computadoras from './../data/computadoras.json';
-import televisores from './../data/televisores.json';
+import products from './../data/products.json';
+import { getById } from './../utils/getById.js';
 
-export const ProductoDetalle = ({category}) => {
+export const ProductoDetalle = () => {
 
     const { id } = useParams();
 
     const [product, setProduct] = useState(null)
 
-    let findProduct = ''
-
-    const getProductById = (productos, productoId) => {        
-        return productos.find(producto => producto.product_id == productoId);
-    };
-
-    console.log(category);
-    switch (category) {
-        case 'celulares':            
-            findProduct = getProductById(celulares, id);             
-            break;
-        case 'computadoras':
-            findProduct = getProductById(computadoras, id);            
-            break;
-        case 'televisores':
-            findProduct = getProductById(televisores, id);            
-            break;
-    
-        default:
-            break;
-    }
+    const findProduct = getById(products, id)
 
     useEffect(() => {           
         setProduct(findProduct)                
@@ -46,7 +25,20 @@ export const ProductoDetalle = ({category}) => {
         <>
             <Header></Header>
             <div className="container">
-                <h1>{product.product_name}</h1>
+                <h1>{product.brand}</h1>
+                <img src={product.imgUrl} alt=""/>
+                <p>${product.price}</p>
+                <p>{product.dues} sin interes</p>
+                <p>Pagando en efecto un {product.discount}% off</p>
+                <p>{product.description}</p>
+                <p>Codigo: {product.sku}</p>
+                <h2>Caracteristicas:</h2>
+                {product.specifications.map((specification)=>(
+                    <div>
+                        <h3>{specification.name}</h3>
+                        <p>{specification.value}</p>
+                    </div>
+                ))}
             </div>
             <Footer></Footer>
         </>

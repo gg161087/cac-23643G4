@@ -31,11 +31,13 @@ export const App = () => {
                 <Route path="/favoritos" element={<Favoritos/>}></Route>
                 <Route path="/miCarrito" element={<MiCarrito/>}></Route>
                 <Route path="/televisores" element={<Televisores/>}></Route>
-                <Route path="/televisores/:id" element={<ProductoDetalle category='televisores'/>}></Route>
+                <Route path="/televisores/:id" element={<ProductoDetalle/>}></Route>
                 <Route path="/celulares" element={<Celulares/>}></Route>
-                <Route path="/celulares/:id" element={<ProductoDetalle category='celulares'/>}></Route>
+                <Route path="/celulares/:id" element={<ProductoDetalle/>}></Route>
                 <Route path="/computadoras" element={<Computadoras/>}></Route>
-                <Route path="/computadoras/:id" element={<ProductoDetalle category='computadoras'/>}></Route>
+                <Route path="/computadoras/:id" element={<ProductoDetalle/>}></Route>
+                <Route path="/consolas/:id" element={<ProductoDetalle/>}></Route>
+                <Route path="/tablets/:id" element={<ProductoDetalle/>}></Route>
                 <Route path="/videojuegos" element={<Consolas />}></Route>
                 <Route path="/videojuegos/:id" element={<ProductoDetalle/>}></Route>
                 <Route path="/tablets" element={<Tablets/>}></Route>      
