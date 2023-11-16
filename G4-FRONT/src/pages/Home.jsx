@@ -1,5 +1,5 @@
 import { Header } from './../partials/Header.jsx'
-import { Slider } from './../partials/Slider.jsx'
+import { Slider } from './../components/Slider.jsx'
 import { ProductosGrid } from './../components/ProductosGrid.jsx';
 import { Footer } from './../partials/Footer.jsx'
 

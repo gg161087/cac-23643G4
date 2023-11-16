@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Slider = () => {
   return (
+    <div className="container mt-4">
     <Carousel>
       <Carousel.Item className="carousel">
         <Link to="/celulares">
@@ -24,5 +25,6 @@ export const Slider = () => {
         </Link>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 };

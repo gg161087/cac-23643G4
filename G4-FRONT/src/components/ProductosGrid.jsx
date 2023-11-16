@@ -13,7 +13,7 @@ export const ProductosGrid = ({productos, category}) => {
         <div className="container">
             <div className="grid_container">
                 {productos.map((producto) =>(
-                    <Link key={producto.id} to={`/${category}/${producto.id}`}>
+                    <Link key={producto.product_id} to={`/${category}/${producto.product_id}`}>
                         <ProductoCard producto={producto}></ProductoCard>   
                     </Link>
                 ))}

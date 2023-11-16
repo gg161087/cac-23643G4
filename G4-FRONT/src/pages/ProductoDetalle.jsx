@@ -17,7 +17,7 @@ export const ProductoDetalle = ({category}) => {
     let findProduct = ''
 
     const getProductById = (productos, productoId) => {        
-        return productos.find(producto => producto.id == productoId);
+        return productos.find(producto => producto.product_id == productoId);
     };
 
     console.log(category);
@@ -46,7 +46,7 @@ export const ProductoDetalle = ({category}) => {
         <>
             <Header></Header>
             <div className="container">
-                <h1>{product.Marca}</h1>
+                <h1>{product.product_name}</h1>
             </div>
             <Footer></Footer>
         </>
