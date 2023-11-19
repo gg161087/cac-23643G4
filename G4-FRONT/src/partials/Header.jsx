@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "/logo.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { Container, Nav, Form, NavDropdown } from "react-bootstrap";
@@ -61,10 +61,11 @@ export const Header = () => {
                                     alt="Logo"
                                     style={{ width: "70px" }}
                                 />
-                                <h1>Nombre de la Tienda</h1>
+                                <h1>Argonauta</h1>
                             </Link>
                         </Nav>
-                        <Nav className="">
+                        
+                        <Nav className=" d-flex align-items-center">
                             <Form className="">
                                 <Form.Control
                                     type="search"
@@ -72,8 +73,6 @@ export const Header = () => {
                                     className=""
                                 />
                             </Form>
-                        </Nav>
-                        <Nav className=" d-flex align-items-center">
                             <Link
                                 className="miCuenta__link text-decoration-none ms-2 me-2"
                                 to="/miCuenta"

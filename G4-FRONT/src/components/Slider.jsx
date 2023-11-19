@@ -9,7 +9,7 @@ import "./Slider.css";
 
 export const Slider = () => {
     return (
-        <div className="container mt-4">
+        <div className=" mt-4">
             <Carousel>
                 <Carousel.Item className="carousel">
                     <Link to="/celulares">

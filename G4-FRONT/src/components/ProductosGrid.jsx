@@ -13,7 +13,7 @@ export const ProductosGrid = ({products}) => {
         return null
     }
 
-    return (
+    return ( 
         <div className="container">
             <div className="grid_container">
                 {products.map((product) =>(

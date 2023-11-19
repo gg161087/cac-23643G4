@@ -6,6 +6,7 @@ import { Footer } from './../partials/Footer.jsx'
 
 import products from './../data/products.json';
 import { getById } from './../utils/getById.js';
+import { ProductosGrid } from './../components/ProductosGrid.jsx';
 
 export const ProductoDetalle = () => {
 
@@ -34,11 +35,15 @@ export const ProductoDetalle = () => {
                 <p>Codigo: {product.sku}</p>
                 <h2>Caracteristicas:</h2>
                 {product.specifications.map((specification)=>(
+                    // eslint-disable-next-line react/jsx-key
                     <div>
                         <h3>{specification.name}</h3>
                         <p>{specification.value}</p>
                     </div>
                 ))}
+            <br></br>
+            <h1>Productos que te puede interesar:</h1>
+            <ProductosGrid products={products}/> 
             </div>
             <Footer></Footer>
         </>

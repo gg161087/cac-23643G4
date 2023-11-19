@@ -1,8 +1,12 @@
+import { BsDisplay } from "react-icons/bs"
+
 export const ProductoCard = ({product}) => {
 
     return (
-        <div className="card" style={{width: '18rem'}}>
-            <img src={product.imgUrl} className="card-img-top" alt={`Image de ${product.name}`}/>
+        <div className="card border-light" style={{width:'18rem'}}  >
+                <center>
+                <img src={product.imgUrl}  className="card-img-top "  style={{ width: 'auto', height: 200 }}   alt={`Image de ${product.name}`}/>
+                </center>
             <div className="card-body">
                 <h5 className="card-title">{product.brand}</h5>
                 <p className="card-text">{product.model}</p>
