@@ -8,7 +8,7 @@ export const ProductoCard = ({ product }) => {
         <img
           src={product.imgUrl}
           className="card-img-top "
-          style={{ width: "auto", height: 200 }}
+          style={{height: 200 }}
           alt={`Image de ${product.name}`}
         />
       </center>
