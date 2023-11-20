@@ -1,0 +1,269 @@
+[
+  {
+    "id": 1,
+    "Marca": "Samsung",
+    "Línea": "Galaxy Tab A",
+    "Modelo": "A8",
+    "Modelo alfanumérico": "SM-X200",
+    "Color": "Dark gray",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["9 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["20% OFF"],
+    "Precio": ["300.000"],
+    "Tiempo de Entrega": ["Disponible en 24 hrs"],
+    "Memoria": {
+      "Memoria RAM": "4 GB",
+      "Capacidad": "64 GB",
+      "Tipos de lectores de tarjetas de memoria": "Micro-SD",
+      "Máxima capacidad de memoria soportada": "1 TB"
+    },
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión del sistema operativo": 11,
+      "Capa original de personalización del sistema operativo": "One UI 3.1"
+    },
+    "Cámara": {
+      "Cantidad de cámaras traseras": 1,
+      "Tipo de resolución del video": "Full HD",
+      "Con flash": "No",
+      "Resoluciones de las cámaras traseras": "8 Mpx"
+    },
+    "Sensores": {
+      "Sensores": "Acelerómetro, Giroscopio, Sensor geomagnético, Sensor hall, Sensor de luz ambiente"
+    },
+    "Batería": {
+      "Capacidad de la batería ": "7040 mAh"
+    },
+    "Peso y dimensiones": {
+      "Peso": "508 g",
+      "Largo de la tablet": "246.8 mm",
+      "Ancho de la tablet": "161.9 mm",
+      "Espesor de la tablet": "6.9 mm"
+    },
+    "Conectividad": {
+      "Con red móvil": "No",
+      "Conectividad": "Wi-Fi Direct, USB 2.0, Wi-Fi, Bluetooth, Smart Switch",
+      "Con control parental": "Sí",
+      "Versión de Bluetooth": 5,
+      "Lectores de tarjetas SIM": "No",
+      "Con micrófono": "Sí",
+      "Con salida para auriculares": "Sí",
+      "Con GPS": "Sí"
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "10.5",
+      "Altura de la pantalla": "10.5",
+      "Ancho de la pantalla": "10.5",
+      "Con desbloqueo facial": "Sí",
+      "Es multi-touch": "Sí",
+      "Píxeles por pulgada": "216 ppi",
+      "Máxima resolución de pantalla": "1920 px x 1200 px"
+    },
+    "Accesorios": {
+      "Accesorios incluidos": "Cable USB-C, Cargador"
+    },
+    "Procesador": {
+      "Procesador gráfico": "Mali-G52 MP2",
+      "Procesadores": "Octa-Core",
+      "Chipset": "Unisoc Tiger T618 (12 nm)",
+      "Velocidad del procesador": "2 GHz",
+      "Cantidad de núcleos": 8
+    },
+
+    "Otros": {
+      "Resolución de las cámaras frontales": "5 Mpx"
+    }
+  },
+  {
+    "id": 2,
+    "Marca": "Apple",
+    "Línea": "iPad",
+    "Modelo": "9th generation",
+    "Version": "2021",
+    "Modelo alfanumérico": "A2602",
+    "Color": "Gris espacial",
+    "Modelo detallado": "A2602",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["3 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["30% OFF"],
+    "Precio": ["400.000"],
+    "Tiempo de Entrega": ["Disponible en 12 hrs"],
+    "Memoria": {
+      "Memoria RAM": "3 GB",
+      "Capacidad": "64 GB"
+    },
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "iPadOS",
+      "Versión del sistema operativo": 15.0
+    },
+    "Cámara": {
+      "Cantidad de cámaras traseras": 1,
+      "Con flash": "No",
+      "Resoluciones de las cámaras traseras": "8 Mpx"
+    },
+    "Sensores": {
+      "Sensores": "Touch ID, Giroscopio, Acelerómetro, Barómetro, Sensor de luz ambiente"
+    },
+    "Batería": {
+      "Duración de la batería de la tablet": "10 h"
+    },
+    "Peso y dimensiones": {
+      "Peso": "487 g"
+    },
+    "Conectividad": {
+      "Con red móvil": "No",
+      "Conectividad": "USB, Wi-Fi, Bluetooth, Smart connector, Conector lightning, MIMO",
+      "Versión de Bluetooth": 4.2,
+      "Con micrófono": "Sí",
+      "Con salida para auriculares": "Sí",
+      "Con GPS": "No"
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "10.2",
+      "Es multi-touch": "Sí",
+      "Píxeles por pulgada": "264 ppi",
+      "Máxima resolución de pantalla": "2160 px x 1620 px"
+    },
+    "Accesorios": {
+      "Accesorios incluidos": "Adaptador USB-C, Cable lightning a USB-C"
+    },
+    "Procesador": {
+      "Chipset": "Apple A13 Bionic"
+    },
+
+    "Otros": {
+      "Resolución de las cámaras frontales": "12 Mpx"
+    }
+  },
+  {
+    "id": 3,
+    "Marca": "Lenovo",
+    "Línea": "Tab",
+    "Modelo": "M10 HD 2nd Gen with Folio Case and Film",
+    "Modelo alfanumérico": "TB-X306X",
+    "Color": "Iron gray",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["6 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["40% OFF"],
+    "Precio": ["300.000"],
+    "Tiempo de Entrega": ["Disponible en 48 hrs"],
+    "Memoria": {
+      "Memoria RAM": "4 GB",
+      "Capacidad": "64 GB",
+      "Tipos de lectores de tarjetas de memoria": "Micro-SD",
+      "Máxima capacidad de memoria soportada": "1 TB"
+    },
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión del sistema operativo": 10.0,
+      "Capa original de personalización del sistema operativo": "Android 10"
+    },
+    "Cámara": {
+      "Cantidad de cámaras traseras": 1,
+      "Tipo de resolución del video": "1280x800",
+      "Con flash": "No",
+      "Resoluciones de las cámaras traseras": "8 Mpx"
+    },
+    "Sensores": {
+      "Sensores": "Sensor de luz ambiente, Sensor de proximidad, Acelerómetro, Sensor hall, Giroscopio, Sensor de vibración"
+    },
+    "Batería": {
+      "Duración de la batería de la tablet": "700 h",
+      "Capacidad de la batería": "5000 mAh"
+    },
+    "Peso y dimensiones": {
+      "Peso": "420 g",
+      "Largo de la tablet": "241.54 mm",
+      "Ancho de la tablet": "149.38 mm",
+      "Espesor de la tablet": "8.25 mm"
+    },
+    "Conectividad": {
+      "Con red móvil": "Sí",
+      "Conectividad": "Wi-Fi, Wi-Fi Direct, Bluetooth, USB micro-C, 4G LTE, Wi-Fi Display, Pogo pin, OTG",
+      "Con control parental": "Sí",
+      "Versión de Bluetooth": 5,
+      "Lectores de tarjetas SIM": "Nano-SIM",
+      "Con micrófono": "Sí",
+      "Con salida para auriculares": "Sí",
+      "Con GPS": "Sí"
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "10.1",
+      "Con desbloqueo facial": "Sí",
+      "Es multi-touch": "Sí",
+      "Máxima resolución de pantalla": "1280 px x 800 px"
+    },
+    "Accesorios": {
+      "Accesorios incluidos": "Adaptador de CA, Cable USB-C, Guía de inicio rápido, Folio case, Film"
+    },
+    "Procesador": {
+      "Procesador gráfico": "IMG PowerVR GE8320",
+      "Procesadores": "Octa-Core Cortex-A53",
+      "Chipset": "MediaTek Helio P22T",
+      "Velocidad del procesador": "2.3 GHz",
+      "Cantidad de núcleos": 8
+    },
+
+    "Otros": {
+      "Resolución de las cámaras frontales": "5 Mpx"
+    }
+  },
+  {
+    "id": 4,
+    "Marca": "Enova",
+    "Modelo": "TAE08N10-NN",
+    "Color": "Negro",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["12 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["20% OFF"],
+    "Precio": ["200.000"],
+    "Tiempo de Entrega": ["Disponible en 24 hrs"],
+    "Memoria": {
+      "Memoria RAM": "2 GB",
+      "Capacidad": "32 GB",
+      "Máxima capacidad de memoria soportada": "128 GB"
+    },
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión del sistema operativo": 12.0
+    },
+    "Cámara": {
+      "Cantidad de cámaras traseras": 1,
+      "Resoluciones de las cámaras traseras": "5 Mpx"
+    },
+    "Batería": {
+      "Duración de la batería de la tablet": "3 h",
+      "Capacidad de la batería": "3500 mAh"
+    },
+    "Peso y dimensiones": {
+      "Peso": "0.65 kg"
+    },
+    "Conectividad": {
+      "Con red móvil": "No",
+      "Conectividad": "Wi-Fi, Bluetooth, USB",
+      "Con salida para auriculares": "Sí",
+      "Con GPS": "No"
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "8",
+      "Máxima resolución de pantalla": "1280 px x 800 px"
+    },
+    "Accesorios": {
+      "Accesorios incluidos": "Cargador USB, Cable USB, Funda de silicona, Film"
+    },
+    "Procesador": {
+      "Procesadores": "Quad-Core",
+      "Velocidad del procesador": "1.5 GHz",
+      "Cantidad de núcleos": 4
+    },
+
+    "Otros": {
+      "Cantidad de cámaras frontales": 1,
+      "Resolución de las cámaras frontales": "2 Mpx"
+    }
+  }
+]
