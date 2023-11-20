@@ -7,8 +7,7 @@ export const ProductoCard = ({ product }) => {
       <center>
         <img
           src={product.imgUrl}
-          className="card-img-top "
-          style={{ width: "auto", height: 200 }}
+          style={{ maxHeight:150}}
           alt={`Image de ${product.name}`}
         />
       </center>
@@ -17,7 +16,7 @@ export const ProductoCard = ({ product }) => {
         <p className="card-text">{product.model}</p>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">{product.description}</li>
+        <li className="list-group-item" style={{minHeight:80}}>{product.description}</li>
         <li className="list-group-item price">${product.price}</li>
         <li className="list-group-item">{product.dues} cuotas sin interes</li>
         <li className="list-group-item">{product.discount}% off</li>
