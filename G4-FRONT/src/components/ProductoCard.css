@@ -10,7 +10,8 @@
 }
 
 .card-img-top {
-  object-fit: cover;
+  object-fit: contain;
+  width: 100%;
 }
 
 .list-group-item {
