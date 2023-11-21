@@ -1,15 +1,32 @@
-export const getCategories = (req, res) => {
-    res.send('Proximamente logica de obtener la lista de categorias de la BD');
+import { getCategories, getCategory, createCategory, updateCategory, deleteCategory } from './../models/categoryModel.js';
+
+export const getAllCategories = async (req, res, next) => {
+    const dbResponse = await getCategories();
+    dbResponse instanceof Error
+        ? next(dbResponse)
+        : res.status(200).json(dbResponse);
 }
-export const getCategory = (req, res) => {
-    res.send('Proximamente logica de obtener el categoria de la BD');
+export const getCategoryById = async (req, res, next) => {
+    if (notNumber(req.params.id, res)) return;
+    const dbResponse = await getCategory(Number(req.params.id));
+    if (dbResponse instanceof Error) return next(dbResponse);
+    dbResponse.length ? res.status(200).json(dbResponse) : next();
 }
-export const createCategory = (req, res) => {
-    res.send('Proximamente logica de crear categoria en la BD');
+export const createNewCategory = async (req, res, next) => {    
+    const dbResponse = await createCategory({ ...req.body});
+    dbResponse instanceof Error
+        ? next(dbResponse)
+        : res.status(201).json(`Category ${req.body.name} created!`);
 }
-export const updateCategory = (req, res) => {
-    res.send('Proximamente logica de actualizar categoria en la BD');
+export const updateCategoryById = async (req, res, next) => {
+    if (notNumber(req.params.id, res)) return;
+    const dbResponse = await updateCategory(req.params.id, req.body);
+    if (dbResponse instanceof Error) return next(dbResponse);
+    dbResponse.affectedRows ? res.status(200).json(req.body) : next();
 }
-export const deleteCategory = (req, res) => {
-    res.send('Proximamente logica borrar pcategoria en la BD');
+export const deleteCategoryById = async (req, res, next) => {
+    if (notNumber(req.params.id, res)) return;
+    const dbResponse = await deleteCategory(req.params.id);
+    if (dbResponse instanceof Error) return next(dbResponse);
+    dbResponse.affectedRows ? res.status(204).end() : next();
 }
