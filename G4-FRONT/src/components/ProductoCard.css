@@ -1,7 +1,9 @@
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
   border: 1px solid #ddd;
-  height: 400px;
+  
+  width: 24rem;
+  min-height: 50rem;
 }
 
 .card:hover {
@@ -9,8 +11,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.card-img-top {
-
+.card-img-top{
+  width: 5rem;  
+  height: auto;
+  max-height: 20rem;  
 }
 
 .list-group-item {
