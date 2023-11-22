@@ -13,6 +13,14 @@
 .nav2__logo {
   color: antiquewhite;
 }
+.header__search{
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+.header__search .search-bar-container{
+  width: 30rem;
+}
 
 .miCuenta__link {
   color: antiquewhite;

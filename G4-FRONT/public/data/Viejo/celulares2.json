@@ -1,0 +1,457 @@
+[
+  {
+    "id": 1,
+    "Marca": "Motorola",
+    "Linea": "Moto G",
+    "Modelo": "G32",
+    "Color": "Gris mineral",
+    "Modelo detallado": "G32",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["3 cuotas sin interes"],
+    "Tipo de Entrega": ["Retiro en sucursal"],
+    "Descuento": ["30% OFF"],
+    "Precio": ["200.000"],
+    "Tiempo de Entrega": ["Retiralo YA"],
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión original del sistema operativo": 12,
+      "Última versión compatible del sistema operativo": 12
+    },
+    "Conectividad": {
+      "Red móvil": "4G/LTE",
+      "Tipo de conector de carga": "USB-C",
+      "Con conector USB": "Sí",
+      "Con conector jack 3.5 mm": "Sí",
+      "Con Wi-Fi": "Sí",
+      "Con GPS": "Sí",
+      "Con Bluetooth": "Sí",
+      "Con NFC": "No",
+      "Con mini HDMI": "No",
+      "Con radio": "Sí",
+      "Con sintonizador de TV": "No"
+    },
+    "Cámara": {
+      "Resolución de la cámara trasera principal": "50 Mpx",
+      "Resolución de video de la cámara trasera": "1920 px x 1080 px",
+      "Resolución de la cámara frontal principal": "16 Mpx",
+      "Características principales de las cámaras": "Flash LED, Panorámica, Modo retrato, Modo belleza, Modo noche",
+      "Resolución de las cámaras traseras": "50 Mpx/8 Mpx/2 Mpx",
+      "Apertura del diafragma de la cámara trasera": "f 1.8/f 2.2/f 2.4",
+      "Resolución de las cámaras frontales": "16 Mpx",
+      "Apertura del diafragma de la cámara frontal": "f 2.4",
+      "Cantidad de cámaras traseras": 3,
+      "Cantidad de cámaras frontales": 1,
+      "Zoom digital": "8x",
+      "Resolución de video de la cámara frontal": "1920 px x 1080 px",
+      "Con cámara": "Sí",
+      "Con flash en la cámara frontal": "No"
+    },
+    "Diseño y resistencia": {
+      "Con teclado QWERTY físico": "No",
+      "Es resistente a salpicaduras": "Sí",
+      "Es a prueba de agua": "Sí"
+    },
+    "Sensores": {
+      "Con acelerómetro": "Sí",
+      "Con sensor de proximidad": "Sí",
+      "Con giroscopio": "Sí",
+      "Con brújula": "Sí",
+      "Con barómetro": "No"
+    },
+    "Tarjeta SIM": {
+      "Es Dual SIM": "No",
+      "Cantidad de ranuras para tarjeta SIM": 1,
+      "Tamaños de tarjeta SIM compatibles": "Nano-SIM",
+      "Con eSIM": "No"
+    },
+    "Memoria": {
+      "Memoria interna": "128 GB",
+      "Memoria RAM": "4 GB",
+      "Tipos de tarjeta de memoria": "Micro-SD",
+      "Capacidad máxima de la tarjeta de memoria": "1 TB",
+      "Con ranura para tarjeta de memoria": "Sí"
+    },
+    "Procesador": {
+      "Modelo del procesador": "Snapdragon 680 4G",
+      "Velocidad del procesador": "2.4 GHz",
+      "Modelos de CPU": "4x2.4 GHz Kryo 265 Gold, 4x1.9 GHz Kryo 265 Silver",
+      "Modelo de GPU": "Adreno 610",
+      "Cantidad de núcleos del procesador": 8,
+      "Velocidad del GPU": "1.1 GHz"
+    },
+    "Especificaciones": {
+      "Mes de lanzamiento": "Julio",
+      "Año de lanzamientor": 2022
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "6.49 ",
+      "Tipo de resolución de la pantalla ": "Full HD+í",
+      "Resolución de la pantalla": "1080 px x 2400 px",
+      "Tecnología de la pantalla": "IPS",
+      "Píxeles por pulgada de la pantalla": "405 ppi",
+      "Frecuencia de actualización de la pantalla": "90 Hz",
+      "Relación de aspecto de la pantalla": "20:9",
+      "Con pantalla táctil": "Sí"
+    },
+    "Batería": {
+      "Capacidad de la batería": "5000 mAh ",
+      "Tipo de batería ": "Polímero de litio",
+      "Tiempo de conversación": "23 h",
+      "Con carga rápida": "Sí",
+      "Con carga inalámbrica": "No",
+      "Con batería removible": "No"
+    },
+    "Seguridad": {
+      "Con lector de huella digital": "Sí",
+      "Con reconocimiento facial": "Sí",
+      "Con reconocimiento de iris": "No"
+    },
+    "Peso y dimensiones": {
+      "Peso": "180 g",
+      "Altura x Ancho x Profundidadl": "16.1 cm x 7.3 cm x 0.8 cm"
+    },
+    "Otros": {
+      "Resolución de la cámara gran angular": "8 Mpx"
+    }
+  },
+  {
+    "id": 2,
+    "Marca": "Samsung",
+    "Linea": "Galaxy S",
+    "Modelo": "S20 FE",
+    "Color": "Azul",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["6 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["10% OFF"],
+    "Precio": ["300.000"],
+    "Tiempo de Entrega": ["Disponible en 48 hrs"],
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión original del sistema operativo": 10,
+      "Última versión compatible del sistema operativo": 11,
+      "Capa original de personalización del sistema operativo": "One UI 2",
+      "Última capa compatible de personalización del sistema operativo": "One UI 3"
+    },
+
+    "Conectividad": {
+      "Red móvil": "4G/LTE",
+      "Tipo de conector de carga": "USB-C",
+      "Con conector USB": "Sí",
+      "Con conector jack 3.5 mm": "No",
+      "Con Wi-Fi": "Sí",
+      "Con GPS": "Sí",
+      "Con Bluetooth": "Sí",
+      "Con NFC": "Sí",
+      "Con radio": "No",
+      "Con sintonizador de TV": "No"
+    },
+
+    "Cámara": {
+      "Resolución de la cámara trasera principal": "12 Mpx",
+      "Resolución de video de la cámara trasera": "3840 px x 2160 px",
+      "Resolución de la cámara frontal principal": "32 Mpx",
+      "Características principales de las cámaras": "Autoenfoque,Cámara lenta,Flash LED,Foto HDR,OIS",
+      "Resolución de las cámaras traseras": "12 Mpx/12 Mpx/8 Mpx",
+      "Apertura del diafragma de la cámara trasera": "f 1.8/f 2.2/f 2.4",
+      "Apertura del diafragma de la cámara frontal": "f 2.2",
+      "Cantidad de cámaras traseras": 3,
+      "Cantidad de cámaras frontales": 1,
+      "Zoom óptico": "3x",
+      "Zoom digital": "30x",
+      "Resolución de video de la cámara frontal": "3840 px x 2160 px",
+      "Con cámara": "Sí",
+      "Con flash en la cámara frontal": "No"
+    },
+    "Diseño y resistencia": {
+      "Clasificación IP": "IP68",
+      "Con teclado QWERTY físico": "No",
+      "Es a prueba de agua": "Sí",
+      "Es resistente al polvo": "Sí"
+    },
+    "Sensores": {
+      "Con acelerómetro": "Sí",
+      "Con sensor de proximidad": "Sí",
+      "Con giroscopio": "Sí",
+      "Con brújula": "Sí",
+      "Con barómetro": "Sí"
+    },
+    "Tarjeta SIM": {
+      "Es Dual SIM": "No",
+      "Cantidad de ranuras para tarjeta SIM": 1,
+      "Tamaños de tarjeta SIM compatibles": "Nano-SIM"
+    },
+    "Memoria": {
+      "Memoria interna": "128 GB",
+      "Memoria RAM": "6 GB",
+      "Tipos de tarjeta de memoria": "Micro-SD",
+      "Capacidad máxima de la tarjeta de memoria": "1 TB",
+      "Con ranura para tarjeta de memoria": "Sí"
+    },
+    "Procesador": {
+      "Velocidad del procesador": "2700 MHz",
+      "Cantidad de núcleos del procesador": 8
+    },
+    "Especificaciones": {
+      "Mes de lanzamiento": "Octubre",
+      "Año de lanzamientor": 2020
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "6.5 ",
+      "Tipo de resolución de la pantalla ": "Full HD+",
+      "Resolución de la pantalla": "1080 px x 2400 px",
+      "Tecnología de la pantalla": "Super AMOLED",
+      "Tipo de pantalla": "Infinity-O Display",
+      "Píxeles por pulgada de la pantalla": "405 ppi",
+      "Frecuencia de actualización de la pantalla": "120 Hz",
+      "Relación de aspecto de la pantalla": "20:9",
+      "Con pantalla táctil": "Sí"
+    },
+    "Batería": {
+      "Capacidad de la batería": "4500 mAh ",
+      "Tipo de batería ": "Polímero de litio",
+      "Tiempo de conversación": "23 h",
+      "Con carga rápida": "Sí",
+      "Con carga inalámbrica": "Sí",
+      "Con batería removible": "No"
+    },
+    "Seguridad": {
+      "Con lector de huella digital": "Sí",
+      "Con reconocimiento de iris": "No"
+    },
+    "Peso y dimensiones": {
+      "Peso": "190 g",
+      "Altura x Ancho x Profundidadl": "159.8 mm x 74.5 mm x 8.4 mm"
+    },
+    "Otros": {
+      "Con IMEI": "Sí",
+      "Compañía telefónica": "Liberado",
+      "Con impacto positivo": "Sí"
+    }
+  },
+  {
+    "id": 3,
+    "Marca": "Xiomi",
+    "Modelo": "12 Pro 5G",
+    "Color": "Gris",
+    "Modelo detallado": "12 GB",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["9 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["20% OFF"],
+    "Precio": ["1.000.000"],
+    "Tiempo de Entrega": ["Disponible en 24 hrs"],
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "Android",
+      "Versión original del sistema operativo": 12,
+      "Capa original de personalización del sistema operativo": "MIUI 13"
+    },
+
+    "Conectividad": {
+      "Red móvil": "5G",
+      "Tipo de conector de carga": "USB-C",
+      "Con conector USB": "Sí",
+      "Con conector jack 3.5 mm": "No",
+      "Con Wi-Fi": "Sí",
+      "Con GPS": "Sí",
+      "Con Bluetooth": "Sí",
+      "Con NFC": "Sí",
+      "Con radio": "No",
+      "Con sintonizador de TV": "No"
+    },
+
+    "Cámara": {
+      "Resolución de la cámara trasera principal": "50 Mpx",
+      "Resolución de video de la cámara trasera": "7680 px x 4320 px",
+      "Resolución de la cámara frontal principal": "32 Mpx",
+      "Características principales de las cámaras": "Modo noche, Modo retrato, Modo profesional, Foto HDR, Filtros",
+      "Tipos de cámaras traseras": "Gran angular",
+      "Resolución de las cámaras traseras": "50 Mpx/50 Mpx/50 Mpx",
+      "Apertura del diafragma de la cámara trasera": "f 1.9/f 1.9/f 2.2",
+      "Tipos de cámaras frontales": "Regular",
+      "Resolución de las cámaras frontales": "32 Mpx",
+      "Apertura del diafragma de la cámara frontal": "f 2.45",
+      "Cantidad de cámaras traseras": 3,
+      "Cantidad de cámaras frontales": 1,
+      "Resolución de video de la cámara frontal": "1920 px x 1080 px",
+      "Con cámara": "Sí",
+      "Con flash en la cámara frontal": "No",
+      "Con reconocimiento de mano": "No"
+    },
+    "Diseño y resistencia": {
+      "Con teclado QWERTY físico": "No",
+      "Es resistente a salpicaduras": "No",
+      "Es resistente al agua": "No",
+      "Es a prueba de agua": "No",
+      "Es resistente al polvo": "Sí",
+      "Es resistente a caídas": "No"
+    },
+    "Sensores": {
+      "Con acelerómetro": "Sí",
+      "Con sensor de proximidad": "Sí",
+      "Con giroscopio": "Sí",
+      "Con brújula": "Sí",
+      "Con barómetro": "Sí"
+    },
+    "Tarjeta SIM": {
+      "Es Dual SIM": "Sí",
+      "Cantidad de ranuras para tarjeta SIM": 2,
+      "Tamaños de tarjeta SIM compatibles": "Nano-SIM"
+    },
+    "Memoria": {
+      "Memoria interna": "256 GB",
+      "Memoria RAM": "12 GB",
+      "Con ranura para tarjeta de memoria": "No"
+    },
+    "Procesador": {
+      "Modelo del procesador": "Snapdragon 8 Gen 1",
+      "Velocidad del procesador": "3 GHz",
+      "Modelos de CPU": "1x3 GHz Cortex-X2, 3x2.5 ghz cortex-a710, 4x1.8 GHz Cortex-A510",
+      "Modelo de GPU": "Adreno 730",
+      "Cantidad de núcleos del procesador": 8
+    },
+    "Especificaciones": {
+      "Mes de lanzamiento": "Diciembre",
+      "Año de lanzamientor": 2021
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "6.73 ",
+      "Tipo de resolución de la pantalla ": "WQHD+",
+      "Resolución de la pantalla": "1440 px x 3200 px",
+      "Tecnología de la pantalla": "AMOLED",
+      "Tipo de pantalla": "DotDisplay",
+      "Píxeles por pulgada de la pantalla": "522 ppi",
+      "Frecuencia de actualización de la pantalla": "120 Hz",
+      "Brillo máximo de la pantalla": "1500 cd/m²",
+      "Relación de aspecto de la pantalla": "20:9",
+      "Con pantalla táctil": "Sí",
+      "Con pantalla plegable": "No"
+    },
+    "Batería": {
+      "Capacidad de la batería": "4600 mAh ",
+      "Tipo de batería ": "Polímero de litio",
+      "Tiempo de conversación": "19 h",
+      "Con carga rápida": "Sí",
+      "Con carga inalámbrica": "Sí",
+      "Con batería removible": "No"
+    },
+    "Seguridad": {
+      "Con lector de huella digital": "Sí",
+      "Con reconocimiento facial": "Sí",
+      "Con reconocimiento de iris": "No"
+    },
+    "Peso y dimensiones": {
+      "Peso": "205 g",
+      "Altura x Ancho x Profundidadl": "163.6 mm x 74.6 mm x 8.16 mm"
+    },
+    "Otros": {
+      "Incluye lápiz": "No"
+    }
+  },
+  {
+    "id": 4,
+    "Marca": "Apple",
+    "Línea": "iPhone",
+    "Modelo": "iPhone 13 Pro Max",
+    "Color": "Plata",
+    "Promociones": "Envío gratis Capital y GBA",
+    "Formas de Pago": ["3 cuotas sin interes"],
+    "Tipo de Entrega": ["Envío a domicilio"],
+    "Descuento": ["20% OFF"],
+    "Precio": ["3.000.000"],
+    "Tiempo de Entrega": ["Disponible en 12 hrs"],
+    "Sistema operativo": {
+      "Nombre del sistema operativo": "iOS",
+      "Versión original del sistema operativo": 15,
+      "Última versión compatible del sistema operativo": "16"
+    },
+
+    "Conectividad": {
+      "Red móvil": "5G",
+      "Tipo de conector de carga": "Lightning",
+      "Con conector USB": "No",
+      "Con conector jack 3.5 mm": "No",
+      "Con Wi-Fi": "Sí",
+      "Con GPS": "Sí",
+      "Con Bluetooth": "Sí",
+      "Con NFC": "Sí",
+      "Con radio": "No"
+    },
+
+    "Cámara": {
+      "Resolución de la cámara trasera principal": "12 Mpx",
+      "Resolución de video de la cámara trasera": "3840 px x 2160 px",
+      "Resolución de la cámara frontal principal": "12 Mpx",
+      "Características principales de las cámaras": "Modo retrato, Modo noche, Panorama, Modo ráfaga, Geoetiquetado",
+      "Resolución de las cámaras traseras": "12 Mpx/12 Mpx/12 Mpx",
+      "Apertura del diafragma de la cámara trasera": "f 2.8/f 1.8/f 1.5",
+      "Apertura del diafragma de la cámara frontal": "f 2.2",
+      "Cantidad de cámaras traseras": 3,
+      "Cantidad de cámaras frontales": 1,
+      "Zoom óptico": "6x",
+      "Zoom digital": "15x",
+      "Resolución de video de la cámara frontal": "3840 px x 2160 px",
+      "Con cámara": "Sí"
+    },
+    "Diseño y resistencia": {
+      "Clasificación IP": "IP68",
+      "Con teclado QWERTY físico": "No",
+      "Es resistente a salpicaduras": "Sí",
+      "Es resistente al agua": "Sí",
+      "Es resistente al polvo": "Sí"
+    },
+    "Sensores": {
+      "Con acelerómetro": "Sí",
+      "Con sensor de proximidad": "Sí",
+      "Con giroscopio": "Sí",
+      "Con brújula": "Sí",
+      "Con barómetro": "Sí"
+    },
+    "Tarjeta SIM": {
+      "Es Dual SIM": "No",
+      "Cantidad de ranuras para tarjeta SIM": 1,
+      "Cantidad de eSIMs": "2",
+      "Tamaños de tarjeta SIM compatibles": "Nano-SIM",
+      "Con eSIM": "Sí"
+    },
+    "Memoria": {
+      "Memoria interna": "512 GB",
+      "Memoria RAM": "6 GB",
+      "Con ranura para tarjeta de memoria": "No"
+    },
+    "Procesador": {
+      "Modelo del procesador": "Apple A15 Bionic",
+      "Modelo de GPU": "Apple GPU",
+      "Cantidad de núcleos del procesador": 6
+    },
+    "Especificaciones": {
+      "Mes de lanzamiento": "Septiembre",
+      "Año de lanzamientor": 2021
+    },
+    "Pantalla": {
+      "Tamaño de la pantalla": "6.7 ",
+      "Resolución de la pantalla": "1284 px x 2778 px",
+      "Tecnología de la pantalla": "OLED",
+      "Tipo de pantalla": "Super Retina XDR",
+      "Píxeles por pulgada de la pantalla": "458 ppi",
+      "Frecuencia de actualización de la pantalla": "120 Hz",
+      "Brillo máximo de la pantalla": "1200 cd/m²",
+      "Frecuencia de actualización de la pantalla secundaria": "120 Hz",
+      "Relación de aspecto de la pantalla": "19.5:9",
+      "Con pantalla táctil": "Sí"
+    },
+    "Batería": {
+      "Tipo de batería ": "Ion de litio",
+      "Con carga rápida": "Sí",
+      "Con carga inalámbrica": "Sí",
+      "Con batería removible": "No"
+    },
+    "Seguridad": {
+      "Con lector de huella digital": "Sí"
+    },
+    "Peso y dimensiones": {
+      "Peso": "238 g",
+      "Altura x Ancho x Profundidadl": "160.8 mm x 78.1 mm x 7.65 mm"
+    }
+  }
+]

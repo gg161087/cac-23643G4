@@ -41,10 +41,9 @@ export const App = () => {
                     <Route path="/celulares/:id" element={<ProductoDetalle/>}></Route>
                     <Route path="/computadoras" element={<Computadoras/>}></Route>
                     <Route path="/computadoras/:id" element={<ProductoDetalle/>}></Route>
+                    <Route path="/consolas" element={<Consolas />}></Route>                    
                     <Route path="/consolas/:id" element={<ProductoDetalle/>}></Route>
                     <Route path="/tablets/:id" element={<ProductoDetalle/>}></Route>
-                    <Route path="/videojuegos" element={<Consolas />}></Route>
-                    <Route path="/videojuegos/:id" element={<ProductoDetalle/>}></Route>
                     <Route path="/tablets" element={<Tablets/>}></Route>      
                     <Route path="/exclusivo-online" element={<ExclusivoOnline/>}></Route>
                     <Route path="/ofertas" element={<Ofertas/>}></Route>

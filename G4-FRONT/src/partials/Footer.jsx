@@ -34,12 +34,12 @@ export const Footer = () => {
                 </Row>                
                 <Row className="row2 ">                   
                     <Col className="lh-sm mt-4" xl={4}>
-                        <h4 className="mb-4">Nombre de la tienda</h4>
+                        <h4 className="mb-4">Argonauta</h4>
                         <p>Acerca de Nosotros </p>
-                        <p>Responsabilidad Social Nombre de la tienda</p>
+                        <p>Responsabilidad Social</p>
                         <p>Trabaja con Nosotros</p>
-                        <p>Beneficios Nombre de la tienda</p>
-                        <p> Mega Puntos Nombre de la tienda</p>
+                        <p>Beneficios</p>
+                        <p>Mega Puntos</p>
                         <p>Revistas</p>
                         <p>Servicios</p>
                         <p>Proveedores</p>
@@ -78,7 +78,7 @@ export const Footer = () => {
                 <Container>
                     <Row className="justify-content-md-center">
                         <Col md="auto">                            
-                            <small>Copyright © 2023 | Todos los derechos reservados Nombre de la tienda S.A | Capital Federal | Argentina</small>
+                            <small>Copyright © 2023 | Todos los derechos reservados Argonauta S.A | Capital Federal | Argentina</small>
                         </Col>
                     </Row>
                 </Container>                    
