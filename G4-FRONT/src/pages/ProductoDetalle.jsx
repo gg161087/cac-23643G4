@@ -1,3 +1,4 @@
+import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -20,7 +21,7 @@ export const ProductoDetalle = () => {
         return null
     }
     return (
-        <div className="container">
+        <Container>
             <h1>{product.brand}</h1>
             <img src={product.imgUrl} alt="" />
             <p>${product.price}</p>
@@ -38,6 +39,6 @@ export const ProductoDetalle = () => {
             <br></br>
             <h1>Productos que te puede interesar:</h1>
             <ProductosGrid products={products} />
-        </div>
+        </Container>
     )
 }

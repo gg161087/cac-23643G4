@@ -1,9 +1,4 @@
 import { useEffect, useState } from "react";
-import { SearchBar } from "../components/SearchBar";
-import { SearchResultsList } from "../components/SearchResultsList";
-
-import logo from "/logo.png";
-import "./Header.css";
 import { Link } from "react-router-dom";
 import { Container, Nav, NavDropdown } from "react-bootstrap";
 import { FaPhoneVolume, FaTruckMoving } from "react-icons/fa";
@@ -12,18 +7,24 @@ import { BiSolidMessage, BiSolidUser } from "react-icons/bi";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 
+import { SearchBar } from "../components/SearchBar";
+import { SearchResultsList } from "../components/SearchResultsList";
+import { getDinamic } from './../utils/getDinamic.js';
+
+import logo from "/logo.png";
+import "./Header.css";
+
 export const Header = () => {
 
     const [results, setResults] = useState([]);
     const [categories, setCategories] = useState([])
 
     useEffect(() =>{
-        const loadCategories = async () => {
-            const response = await fetch('data/categories.json')
-            const data = await response.json()
-            setCategories(data)                     
+        const getCategories = async () => {
+            const response = await getDinamic('data/categories.json')            
+            setCategories(response)                     
         }         
-        loadCategories()      
+        getCategories()      
     },[])
 
     return (
@@ -132,8 +133,8 @@ export const Header = () => {
                     <Nav className="">
                         <NavDropdown className="nav3__link m-0 text-decoration-none" title="Categorías">
                             {categories.map((category) =>(
-                                <NavDropdown.Item> 
-                                    <Link key={category.id} className="nav3__link text-decoration-none ms-2 me-2" to={category.name}>{category.name}</Link> 
+                                <NavDropdown.Item key={category.id}> 
+                                    <Link className="nav3__link text-decoration-none ms-2 me-2" to={category.name}>{category.name}</Link> 
                                 </NavDropdown.Item>                                                  
                             ))}      
                         </NavDropdown>                               

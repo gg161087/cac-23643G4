@@ -2,16 +2,17 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import productos from "../data/products.json";
 
+import { getDinamic } from './../utils/getDinamic.js';
 import "./SearchBar.css";
 
 export const SearchBar = ({ setResults }) => {
+
   const [input, setInput] = useState("");
 
-  const fetchData = (value) => {
-    // fetch("http://localhost:3000/products.json")
-    // .then((response) => response.json())
-    // .then((json) => {
-    const results = productos.filter((user) => {
+  const fetchData = async (value) => {
+    const products = await getDinamic('data/products.json')    
+    //se reemplazo productos por products
+    const results = products.filter((user) => {
       return (
         value && user && user.model && user.model.toLowerCase().includes(value)
       );

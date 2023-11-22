@@ -1,3 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 import { ProductoCard } from './ProductoCard.jsx'
@@ -14,14 +16,14 @@ export const ProductosGrid = ({products}) => {
     }
 
     return ( 
-        <div className="container">
-            <div className="grid_container">
+        <Container>
+            <Container className="grid_container">
                 {products.map((product) =>(
                     <Link key={product.id} to={`/${getNameById(categories, product.category_id)}/${product.id}`}>
                         <ProductoCard product={product}></ProductoCard>   
                     </Link>
                 ))}
-            </div>
-        </div>
+            </Container>
+        </Container>
     )
 }

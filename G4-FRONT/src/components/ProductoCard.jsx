@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import "./ProductoCard.css";
 
 export const ProductoCard = ({ product }) => { 
@@ -15,7 +17,7 @@ export const ProductoCard = ({ product }) => {
                 alt={`Image de ${product.name}`}
             />
             <div className="card-body">
-                <h5 className="card-title">{product.brand} {product.model}</h5>
+                <h5 className="card-title">{product.brand} - {product.model}</h5>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item" style={{ minHeight: 80 }}>{product.description}</li>
                     <li className="list-group-item price">${product.price}</li>
@@ -24,9 +26,9 @@ export const ProductoCard = ({ product }) => {
                 </ul>
             </div>
             <div className="card-body">
-                <a href="#" className="card-link">
-                    Card link
-                </a>                
+                <Link to='/' >
+                    <p className="card-link">Card link</p>
+                </Link>                
             </div>
         </div>
     );
