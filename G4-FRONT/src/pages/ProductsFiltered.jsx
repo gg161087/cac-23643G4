@@ -2,34 +2,30 @@ import { useState, useEffect } from 'react';
 import { Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom"
 
-import { ProductosGrid } from '../components/ProductosGrid.jsx';
+import { ProductsGrid } from '../components/ProductsGrid.jsx';
 import { getDinamicByName, getDinamicByCategoryId } from './../utils/getDinamic.js';
 
 export const ProductsFiltered = () => {
     
     const { product } = useParams();
-    const [category, setCategory] = useState('')
+
     const [products, setProducts] = useState([])
 
     useEffect(() =>{
-        const getCategory = async () => {
+        const getProductsByCategoryId = async () => {
             const response = await getDinamicByName('data/categories.json', product)
-            const {id} = response[0]            
-            setCategory(id)
+            const {id} = response[0]
+            const dataFilter = await getDinamicByCategoryId('data/products.json', id)
+            setProducts(dataFilter);                       
         }
-        getCategory()
-        const getProducts = async () => {  
-            const dataFilter = await getDinamicByCategoryId('data/products.json', category)
-            console.log(dataFilter);
-            setProducts(dataFilter)            
-        }
-        getProducts()                        
-    },[])
+        getProductsByCategoryId()
+                                
+    },[product])
 
     return (
         <Container>
-            <h1>CELULARES</h1>
-            <ProductosGrid products={products}></ProductosGrid>            
+            <h1>{product.toLocaleUpperCase()}</h1>
+            <ProductsGrid products={products}></ProductsGrid>            
             <Link to="/">VOLVER AL INICIO</Link>
         </Container>
     );

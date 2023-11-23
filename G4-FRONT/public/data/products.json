@@ -50,7 +50,7 @@
         "sku": "iPhone12-001",
         "dues": 12,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp",
-        "category_id": 2,
+        "category_id": 1,
         "specifications": [
             {
                 "name": "Pantalla",

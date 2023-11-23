@@ -2,10 +2,10 @@ import { Container } from "react-bootstrap";
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { getDinamic, getDinamicById } from './../utils/getDinamic.js';
-import { ProductosGrid } from './../components/ProductosGrid.jsx';
+import { getDinamic, getDinamicById } from '../utils/getDinamic.js';
+import { ProductsGrid } from '../components/ProductsGrid.jsx';
 
-export const ProductoDetalle = () => {
+export const ProductDetail = () => {
 
     const { id } = useParams();
 
@@ -14,8 +14,7 @@ export const ProductoDetalle = () => {
 
     useEffect(() => {        
         const getProduct = async () => {
-            const findProduct = await getDinamicById('data/products.json', id)
-            console.log(findProduct);
+            const findProduct = await getDinamicById('data/products.json', id)            
             setProduct(findProduct)
             console.log(product);
         }
@@ -43,15 +42,15 @@ export const ProductoDetalle = () => {
             <p>{product.description}</p>
             <p>Codigo: {product.sku}</p>
             <h2>Caracteristicas:</h2>
-            {/* {product.specifications.map((specification) => (                
+            {product.specifications.map((specification) => (                
                 <div key={specification.name}>
                     <h3>{specification.name}</h3>
                     <p>{specification.value}</p>
                 </div>
-            ))} */}
+            ))}
             <br></br>
             <h1>Productos que te puede interesar:</h1>
-            <ProductosGrid products={products} />
+            <ProductsGrid products={products} />
         </Container>
     )
 }

@@ -1,7 +1,13 @@
 export const getDinamicByCategoryId = async(path, id) => {
     const response = await fetch(`http://localhost:5173/${path}`)
     const data = await response.json()               
-    const dataFilter = data.find((element => element.category_id == id))    
+    const dataFilter = data.filter((element => element.category_id == id))    
+    return dataFilter 
+}
+export const getCategoryByCategoryId = async(path, id) => {
+    const response = await fetch(`http://localhost:5173/${path}`)
+    const data = await response.json()               
+    const dataFilter = data.find((element => element.id == id))    
     return dataFilter 
 }
 export const getDinamic = async(path) => {

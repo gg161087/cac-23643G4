@@ -14,19 +14,10 @@ import { getDinamic } from './../utils/getDinamic.js';
 import logo from "/logo.png";
 import "./Header.css";
 
-export const Header = () => {
+export const Header = ({categories}) => {
 
     const [results, setResults] = useState([]);
-    const [categories, setCategories] = useState([])
-
-    useEffect(() =>{
-        const getCategories = async () => {
-            const response = await getDinamic('data/categories.json')            
-            setCategories(response)                     
-        }         
-        getCategories()      
-    },[])
-
+    
     return (
         <header className="header d-flex flex-wrap">
             <Container fluid className="container__nav1">
@@ -129,13 +120,16 @@ export const Header = () => {
             {/* ************************************************************************* */}
             <Container fluid className="container__nav3">
                 <Container className="d-flex justify-content-between align-items-center p-2">
+                    {/* Esto estaba dentro del NavDropdown causando errores:  
+                        <NavDropdown.Item key={category.id}> 
+                            <Link className="nav3__link text-decoration-none ms-2 me-2" to={category.name}>{category.name}</Link> 
+                        </NavDropdown.Item>    
+                    */}
 
                     <Nav className="">
                         <NavDropdown className="nav3__link m-0 text-decoration-none" title="Categorías">
                             {categories.map((category) =>(
-                                <NavDropdown.Item key={category.id}> 
-                                    <Link className="nav3__link text-decoration-none ms-2 me-2" to={category.name}>{category.name}</Link> 
-                                </NavDropdown.Item>                                                  
+                                <Link key={category.id} className="nav3__link text-decoration-none ms-2 me-2" to={category.name}>{category.name}</Link>                                                                               
                             ))}      
                         </NavDropdown>                               
                     </Nav>

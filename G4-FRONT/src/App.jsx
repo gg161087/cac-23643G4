@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import { Header } from './partials/Header.jsx';
@@ -5,7 +6,7 @@ import { Footer } from './partials/Footer.jsx';
 
 import { Home } from './pages/Home.jsx'
 import { NotFound } from "./pages/NotFound.jsx"
-import { ProductoDetalle } from './pages/ProductoDetalle.jsx'
+import { ProductDetail } from './pages/ProductDetail.jsx'
 import { CentroAyuda } from "./pages/CentroAyuda.jsx"
 import { VentaTelefonica } from "./pages/VentaTelefonica.jsx"
 import { Sucursales } from "./pages/Sucursales.jsx"
@@ -17,10 +18,23 @@ import { ExclusivoOnline } from "./pages/ExclusivoOnline.jsx"
 import { Ofertas } from "./pages/Ofertas.jsx"
 import { ProductsFiltered } from './pages/ProductsFiltered.jsx';
 
+import { getDinamic } from './utils/getDinamic.js';
+
 export const App = () => {
+
+    const [categories, setCategories] = useState([])
+
+    useEffect(() =>{
+        const getCategories = async () => {
+            const response = await getDinamic('data/categories.json')            
+            setCategories(response)                     
+        }         
+        getCategories()      
+    },[])
+
     return (
         <BrowserRouter>
-            <Header/>
+            <Header categories={categories}/>
             <main>
                 <Routes>
                     <Route index element={<Home/>}></Route>
@@ -31,7 +45,7 @@ export const App = () => {
                     <Route path="miCuenta" element={<MiCuenta/>}></Route>
                     <Route path="favoritos" element={<Favoritos/>}></Route>
                     <Route path="miCarrito" element={<MiCarrito/>}></Route>
-                    <Route path=":product/:id" element={<ProductoDetalle/>}></Route>
+                    <Route path=":product/:id" element={<ProductDetail/>}></Route>
                     <Route path=':product' element={<ProductsFiltered/>}></Route>                       
                     <Route path="exclusivo-online" element={<ExclusivoOnline/>}></Route>
                     <Route path="ofertas" element={<Ofertas/>}></Route>
