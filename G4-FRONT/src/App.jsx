@@ -13,13 +13,8 @@ import { EnviosDomicilio } from "./pages/EnviosDomicilio.jsx"
 import { MiCuenta } from "./pages/MiCuenta.jsx"
 import { Favoritos } from "./pages/Favoritos.jsx"
 import { MiCarrito } from "./pages/MiCarrito.jsx"
-import { Televisores } from "./pages/Televisores.jsx"
-import { Celulares } from "./pages/Celulares.jsx"
-import { Computadoras } from "./pages/Computadoras.jsx"
 import { ExclusivoOnline } from "./pages/ExclusivoOnline.jsx"
 import { Ofertas } from "./pages/Ofertas.jsx"
-import { Consolas } from "./pages/Consolas.jsx"
-import { Tablets } from "./pages/Tablets.jsx"
 import { ProductsFiltered } from './pages/ProductsFiltered.jsx';
 
 export const App = () => {
@@ -28,7 +23,7 @@ export const App = () => {
             <Header/>
             <main>
                 <Routes>
-                    <Route index element={<Home />}></Route>
+                    <Route index element={<Home/>}></Route>
                     <Route path="centro-de-ayuda" element={<CentroAyuda/>}></Route>
                     <Route path="venta-telefonica" element={<VentaTelefonica/>}></Route>
                     <Route path="sucursales" element={<Sucursales/>}></Route>

@@ -1,15 +1,12 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { useState, useEffect } from 'react';
+import { Container } from "react-bootstrap";
 import { Link } from 'react-router-dom'
 
 import { ProductoCard } from './ProductoCard.jsx'
 
-import categories from './../data/categories.json'
 import { getNameById } from './../utils/getById.js';
-
 import './ProductosGrid.css'
 
-export const ProductosGrid = ({products}) => { 
+export const ProductosGrid = ({products, categories}) => { 
 
     if(!products){
         return null

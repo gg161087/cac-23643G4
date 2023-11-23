@@ -3,25 +3,28 @@ import { Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom"
 
 import { ProductosGrid } from '../components/ProductosGrid.jsx';
-import { getDinamic, getDinamicByCategoryId } from './../utils/getDinamic.js';
+import { getDinamicByName, getDinamicByCategoryId } from './../utils/getDinamic.js';
 
 export const ProductsFiltered = () => {
     
     const { product } = useParams();
-
+    const [category, setCategory] = useState('')
     const [products, setProducts] = useState([])
 
     useEffect(() =>{
-        const getProducts = async () => {
-            const categories = await getDinamic('data/categories.json')
-            const findId = categories.find(item => item.name === product);          
-            const dataFilter = await getDinamicByCategoryId('data/products.json', findId.id) 
+        const getCategory = async () => {
+            const response = await getDinamicByName('data/categories.json', product)
+            const {id} = response[0]            
+            setCategory(id)
+        }
+        getCategory()
+        const getProducts = async () => {  
+            const dataFilter = await getDinamicByCategoryId('data/products.json', category)
             console.log(dataFilter);
             setProducts(dataFilter)            
         }
-        getProducts()                
-        console.log(products);      
-    },[product])
+        getProducts()                        
+    },[])
 
     return (
         <Container>

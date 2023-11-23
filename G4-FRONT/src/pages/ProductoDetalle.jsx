@@ -1,25 +1,38 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import products from './../data/products.json';
-import { getById } from './../utils/getById.js';
+import { getDinamic, getDinamicById } from './../utils/getDinamic.js';
 import { ProductosGrid } from './../components/ProductosGrid.jsx';
 
 export const ProductoDetalle = () => {
 
     const { id } = useParams();
 
-    const [product, setProduct] = useState(null)
+    const [products, setProducts] = useState([])
+    const [product, setProduct] = useState('')
 
-    const findProduct = getById(products, id)
-
-    useEffect(() => {
-        setProduct(findProduct)
+    useEffect(() => {        
+        const getProduct = async () => {
+            const findProduct = await getDinamicById('data/products.json', id)
+            console.log(findProduct);
+            setProduct(findProduct)
+            console.log(product);
+        }
+        getProduct()
+        const getProducts = async () => {
+            const response = await getDinamic('data/products.json')
+            setProducts(response)
+        }        
+        getProducts()
     }, [id])
+
     if (!product) {
-        return null
+        return (
+            <p>cargando</p>
+        )
     }
+    
     return (
         <Container>
             <h1>{product.brand}</h1>
@@ -30,12 +43,12 @@ export const ProductoDetalle = () => {
             <p>{product.description}</p>
             <p>Codigo: {product.sku}</p>
             <h2>Caracteristicas:</h2>
-            {product.specifications.map((specification) => (                
+            {/* {product.specifications.map((specification) => (                
                 <div key={specification.name}>
                     <h3>{specification.name}</h3>
                     <p>{specification.value}</p>
                 </div>
-            ))}
+            ))} */}
             <br></br>
             <h1>Productos que te puede interesar:</h1>
             <ProductosGrid products={products} />
