@@ -26,7 +26,12 @@ const FormularioAnulacionPedido = () => {
             <Form.Control
               type="text"
               placeholder="Nombre"
-              className="name-input"
+              style={{
+                width: "90%",
+                height: "5vh",
+                margin: "0 40px 10px 0",
+                paddingRight: "20px",
+              }}
             />
           </Form.Group>
 
@@ -35,7 +40,12 @@ const FormularioAnulacionPedido = () => {
             <Form.Control
               type="text"
               placeholder="Apellidos"
-              className="name-input"
+              style={{
+                width: "90%",
+                height: "5vh",
+                margin: "0 40px 10px 0",
+                paddingRight: "20px",
+              }}
             />
           </Form.Group>
         </div>
