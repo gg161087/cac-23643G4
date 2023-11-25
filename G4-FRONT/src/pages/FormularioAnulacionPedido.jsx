@@ -1,7 +1,15 @@
 import { Form, Button } from "react-bootstrap";
+import { useState } from "react";
 import "./FormularioAnulacionPedido.css";
 
 const FormularioAnulacionPedido = () => {
+  const [dni, setDni] = useState("");
+
+  const handleDniChange = (e) => {
+    const newDni = e.target.value.replace(/\D/g, "").slice(0, 8);
+    setDni(newDni);
+  };
+
   return (
     <>
       <div>
@@ -38,9 +46,11 @@ const FormularioAnulacionPedido = () => {
             type="text"
             placeholder="Número de documento"
             className="dni-input"
+            value={dni}
+            onChange={handleDniChange}
           />
           <small style={{ color: "#ef7f13", fontSize: "1.2rem" }}>
-            Máximo de 8 dígitos. Usado actualmente: 0 dígitos.
+            Máximo de 8 dígitos. Usado actualmente: {dni.length} dígitos.
           </small>
         </Form.Group>
 
