@@ -1,13 +1,131 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Accordion, Col, Container, Row } from "react-bootstrap";
+import FormularioAnulacionPedido from "./FormularioAnulacionPedido";
 
-export const CentroAyuda = () => {
-    return (
+const CentroAyuda = () => {
+  // Estado para gestionar el contenido que se muestra
+  const [contenido, setContenido] = useState("");
+  const [titulo, setTitulo] = useState("Centro de Ayuda");
 
-        <Container>
-            <h1>CENTRO DE AYUDA</h1>
-            <Link to="/">VOLVER AL INICIO</Link>
-        </Container>
+  // Función para manejar el cambio de contenido
+  const handleItemClick = (nuevoContenido, nuevoTitulo) => {
+    setContenido(nuevoContenido);
+    setTitulo(nuevoTitulo);
+  };
 
-    );
+  // Funciones para definir el contenido
+  const contenidoArrepentimiento = () => <FormularioAnulacionPedido />;
+  const contenidoCentroAyuda = () => "Contenido para Centro de Ayuda";
+
+  return (
+    <Container fluid>
+      <Row>
+        {/* Menú a la izquierda */}
+        <Col sm={3}>
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="1">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick(
+                    contenidoArrepentimiento(),
+                    "Arrepentimiento de Compra"
+                  )
+                }
+              >
+                Arrepentimiento de Compra
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick(contenidoCentroAyuda(), "Centro de Ayuda")
+                }
+              >
+                Centro de Ayuda
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="3">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick("Contenido para Ciberdelitos", "Ciberdelitos")
+                }
+              >
+                Ciberdelitos
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="4">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick("Contenido para Contactanos", "Contactanos")
+                }
+              >
+                Contactanos
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="5">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick(
+                    "Contenido para Institucional",
+                    "Institucional"
+                  )
+                }
+              >
+                Institucional
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="6">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick(
+                    "Contenido para Política de Privacidad",
+                    "Política de Privacidad"
+                  )
+                }
+              >
+                Política de Privacidad
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="7">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick("Contenido para Sucursales", "Sucursales")
+                }
+              >
+                Sucursales
+              </Accordion.Header>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="8">
+              <Accordion.Header
+                onClick={() =>
+                  handleItemClick(
+                    "Contenido para Términos y Condiciones",
+                    "Términos y Condiciones"
+                  )
+                }
+              >
+                Términos y Condiciones
+              </Accordion.Header>
+            </Accordion.Item>
+          </Accordion>
+        </Col>
+
+        <Col sm={9}>
+          <div>
+            <h2>{titulo}</h2>
+            <p>{contenido}</p>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
 };
+
+export default CentroAyuda;
