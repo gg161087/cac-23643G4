@@ -5,6 +5,9 @@
 .nav1__link {
   color: antiquewhite;
 }
+.nav1__link:hover {
+  color: rgb(255, 255, 255);
+}
 
 .container__nav2 {
   background-color: rgb(116, 116, 116);
@@ -13,17 +16,27 @@
 .nav2__logo {
   color: antiquewhite;
 }
-.header__search{
-  display: flex;
-  justify-content: center;
-  width: auto;
+.nav2__logo:hover {
+  color: rgb(230, 230, 230);
 }
-.header__search .search-bar-container{
-  width: 30rem;
+
+.header__search {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.header__search .search-bar-container {
+  position: absolute;
+  z-index: 5;
+  width: 25%;
 }
 
 .miCuenta__link {
   color: antiquewhite;
+}
+.miCuenta__link:hover {
+  color: rgb(255, 255, 255);
 }
 
 .container__nav3 {
@@ -33,11 +46,17 @@
 .nav3__link {
   color: antiquewhite;
 }
+.nav3__link:hover {
+  color: rgb(255, 255, 255);
+}
 
 a.dropdown-toggle:link {
   margin: 0 10px 0 10px;
   padding: 0;
   color: antiquewhite;
+}
+a.dropdown-toggle:hover {
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 870px) {

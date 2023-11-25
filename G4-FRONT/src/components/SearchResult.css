@@ -1,7 +1,9 @@
 .search-result {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .search-result:hover {
-  background-color: #efefef;
+  background-color: gray;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
 }
