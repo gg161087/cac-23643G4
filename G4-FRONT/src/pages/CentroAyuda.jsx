@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import FormularioAnulacionPedido from "./FormularioAnulacionPedido";
+import "./CentroAyuda.css";
 
 const CentroAyuda = () => {
   // Estado para gestionar el contenido que se muestra
@@ -119,7 +120,7 @@ const CentroAyuda = () => {
 
         <Col sm={9}>
           <div>
-            <h2>{titulo}</h2>
+            <h2 className="title-arrepentimiento">{titulo}</h2>
             <p>{contenido}</p>
           </div>
         </Col>
