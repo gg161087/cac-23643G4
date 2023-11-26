@@ -7,13 +7,11 @@ const CentroAyuda = () => {
   // Estado para gestionar el contenido que se muestra
   const [contenido, setContenido] = useState("");
   const [titulo, setTitulo] = useState("Centro de Ayuda");
-
   // Función para manejar el cambio de contenido
   const handleItemClick = (nuevoContenido, nuevoTitulo) => {
     setContenido(nuevoContenido);
     setTitulo(nuevoTitulo);
   };
-
   // Funciones para definir el contenido
   const contenidoArrepentimiento = () => <FormularioAnulacionPedido />;
   const contenidoCentroAyuda = () => "Contenido para Centro de Ayuda";
