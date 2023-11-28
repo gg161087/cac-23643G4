@@ -3,7 +3,7 @@
 }
 
 .search-result:hover {
-  background-color: gray;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
+  background-color: #f2f2f2;
+  cursor: pointer; 
+  color: #333;
 }

@@ -1,6 +1,6 @@
 .footer {
-  color: antiquewhite;
-  background-color: rgb(116, 116, 116);
+  color: #fff;
+  background-color: #333;
 }
 
 .row1 {
@@ -12,5 +12,6 @@
 }
 
 .row3 {
-  background-color: rgb(100, 100, 100);
+  background-color: #f2f2f2;
+  color: #333;
 }

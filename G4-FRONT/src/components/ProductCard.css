@@ -13,8 +13,9 @@
 
 .card-img-top{
   width: 5rem;  
-  height: auto;
+  height: 20rem;
   max-height: 20rem;  
+  object-fit: contain;
 }
 
 .list-group-item {
@@ -25,6 +26,6 @@
   font-size: 2.5rem;
 }
 
-.card-link {
+/* .card-link {
   color: #007bff;
-}
+} */

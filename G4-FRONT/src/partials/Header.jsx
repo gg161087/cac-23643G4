@@ -81,12 +81,12 @@ export const Header = ({ categories }) => {
                 )}
               </div>
             </Container>
-            <Nav className="d-flex justify-content-end  w-50">
+            <Nav className="d-flex flex-nowrap justify-content-end  w-50">
               <Link
                 className="miCuenta__link text-decoration-none ms-3 me-3"
                 to="miCuenta "
               >
-                <BiSolidUser /> Mi cuenta
+                <BiSolidUser/> <span className="cuenta">Mi cuenta</span>
               </Link>
               <Link
                 className="miCuenta__link text-decoration-none ms-3 me-3"
@@ -106,7 +106,7 @@ export const Header = ({ categories }) => {
       </Container>
       {/* ************************************************************************* */}
       <Container fluid className="container__nav3">
-        <Container className="d-flex justify-content-between align-items-center p-2">
+        <Container className="d-flex justify-content-between align-items-center p-3">
           <Nav className="">
             <NavDropdown
               className="nav3__link m-0 text-decoration-none"

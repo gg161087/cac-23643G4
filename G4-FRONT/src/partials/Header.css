@@ -1,70 +1,129 @@
-.container__nav1 {
-  background-color: rgb(59, 59, 59);
-}
-
-.nav1__link {
-  color: antiquewhite;
-}
-.nav1__link:hover {
-  color: rgb(255, 255, 255);
-}
-
+.container__nav1,
 .container__nav2 {
-  background-color: rgb(116, 116, 116);
+  background-color: #f2f2f2;
 }
 
-.nav2__logo {
-  color: antiquewhite;
+.nav1__link,
+.nav2__logo,
+.miCuenta__link {
+  color: #333;
 }
-.nav2__logo:hover {
-  color: rgb(230, 230, 230);
+
+/* .nav1__link:hover,
+.nav2__logo:hover,
+.miCuenta__link:hover {
+  color: green;
+} */
+
+
+.input-wrapper>input::placeholder {
+  color: #999;
+  padding-left: 2rem;
 }
 
 .header__search {
   display: flex;
-  /* align-items: center; */
+  /* align-items: center;*/
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .header__search .search-bar-container {
   position: absolute;
   z-index: 5;
   width: 25%;
 }
 
-.miCuenta__link {
-  color: antiquewhite;
-}
-.miCuenta__link:hover {
-  color: rgb(255, 255, 255);
+.container__nav3 {
+  background-color: #333;
+  height: 5.5rem;
 }
 
-.container__nav3 {
-  background-color: rgb(100, 100, 100);
-}
 
 .nav3__link {
-  color: antiquewhite;
-}
-.nav3__link:hover {
-  color: rgb(255, 255, 255);
+  color: #fff;
+  background-color: #51514f;
+  padding: 0.4rem 1rem;
+  letter-spacing: .1rem;
 }
 
-a.dropdown-toggle:link {
+.nav3__link:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+
+a.dropdown-item {
+  font-size: 1.5rem;
+  /* border-bottom: 1px solid black; */
+  display: block;
+
+}
+
+.dropdown-item a {
+  background-color: white;
+  color: #333;
+}
+
+
+.nav-link {
+  color: #fff;
+  width: 13rem;
+}
+
+/* .nav-link:hover {
+  color: #333;
+  transition: none;
+} */
+
+.dropdown-menu {
+  translate: -2.1rem .1rem;
+}
+
+
+/* a.dropdown-toggle:link {
   margin: 0 10px 0 10px;
   padding: 0;
-  color: antiquewhite;
+  color: #fff !important;
+}  */
+
+a.dropdown-toggle {
+  margin: 0 10px 0 10px;
+  padding: 0;
+  color: #fff;
 }
+
 a.dropdown-toggle:hover {
-  color: rgb(255, 255, 255);
+  color: #333;
 }
+
+.nav-link::after {
+  color: #333;
+}
+
 
 @media (max-width: 870px) {
   .header {
     display: none;
     background-color: red;
   }
+
   .container__nav1 {
     background-color: green;
+    display: none;
   }
+
+  .miCuenta__link {
+    font-size: 2.4rem;
+  }
+
+  .cuenta {
+    display: none;
+  }
+
+  .input-wrapper {
+    display: none;
+  }
+
+
 }
