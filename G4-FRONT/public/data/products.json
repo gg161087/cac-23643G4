@@ -13,28 +13,23 @@
         "category_id": 1,
         "specifications": [
             {
-                "name": "Pantalla",
-                "type": "String",
+                "name": "Pantalla",                
                 "value": "Dynamic AMOLED 2X, 6.2 pulgadas"
             },
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Exynos 990"
             },
             {
-                "name": "RAM",
-                "type": "Number",
+                "name": "RAM",                
                 "value": 8
             },
             {
-                "name": "Almacenamiento interno",
-                "type": "String",
+                "name": "Almacenamiento interno",                
                 "value": "128 GB"
             },
             {
-                "name": "Cámara",
-                "type": "String",
+                "name": "Cámara",                
                 "value": "Triple cámara trasera: 12 MP (principal) + 64 MP (telefoto) + 12 MP (ultra gran angular)"
             }
         ]
@@ -53,28 +48,23 @@
         "category_id": 1,
         "specifications": [
             {
-                "name": "Pantalla",
-                "type": "String",
+                "name": "Pantalla",                
                 "value": "Super Retina XDR, 6.1 pulgadas"
             },
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "A14 Bionic"
             },
             {
-                "name": "RAM",
-                "type": "Number",
+                "name": "RAM",                
                 "value": 4
             },
             {
-                "name": "Almacenamiento interno",
-                "type": "String",
+                "name": "Almacenamiento interno",                
                 "value": "256 GB"
             },
             {
-                "name": "Cámara",
-                "type": "String",
+                "name": "Cámara",                
                 "value": "Doble cámara trasera: 12 MP (principal) + 12 MP (ultra gran angular)"
             }
         ]
@@ -93,18 +83,15 @@
         "category_id": 4,
         "specifications": [
             {
-                "name": "Tipo",
-                "type": "String",
+                "name": "Tipo",                
                 "value": "Consola de videojuegos"
             },
             {
-                "name": "Almacenamiento",
-                "type": "String",
+                "name": "Almacenamiento",                
                 "value": "825 GB SSD"
             },
             {
-                "name": "Unidad óptica",
-                "type": "String",
+                "name": "Unidad óptica",                
                 "value": "Unidad de disco Blu-ray Ultra HD"
             }
         ]
@@ -123,18 +110,15 @@
         "category_id": 3,
         "specifications": [
             {
-                "name": "Tipo de pantalla",
-                "type": "String",
+                "name": "Tipo de pantalla",                
                 "value": "OLED"
             },
             {
-                "name": "Tamaño de pantalla",
-                "type": "String",
+                "name": "Tamaño de pantalla",                
                 "value": "55 pulgadas"
             },
             {
-                "name": "Resolución",
-                "type": "String",
+                "name": "Resolución",                
                 "value": "4K UHD"
             }           
         ]
@@ -153,23 +137,19 @@
         "category_id": 2,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Intel Core i7 6-core"
             },
             {
-                "name": "RAM",
-                "type": "Number",
+                "name": "RAM",                
                 "value": 16
             },
             {
-                "name": "Almacenamiento SSD",
-                "type": "String",
+                "name": "Almacenamiento SSD",                
                 "value": "512 GB"
             },
             {
-                "name": "Sistema operativo",
-                "type": "String",
+                "name": "Sistema operativo",                
                 "value": "macOS"
             }
         ]
@@ -188,28 +168,23 @@
         "category_id": 1,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Snapdragon 680 4G 2.4 GHz"
             },
             {
-                "name": "GPU",
-                "type": "String",
+                "name": "GPU",                
                 "value": "Adreno 610 1.1 GHz"
             },
             {
-                "name": "Pantalla",
-                "type": "Number",
+                "name": "Pantalla",                
                 "value": 6.49
             },
             {
-                "name": "Bateria",
-                "type": "String",
+                "name": "Bateria",               
                 "value": "5000 mAh"
             },
             {
-                "name": "Peso",
-                "type": "String",
+                "name": "Peso",                
                 "value": "180 g"
             }
         ]
@@ -228,28 +203,23 @@
         "category_id": 2,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "AMD Ryzen 7 5700U"
             },
             {
-                "name": "GPU",
-                "type": "String",
+                "name": "GPU",                
                 "value": "Intel UHD Graphics G1 (Ice Lake 32 EU)"
             },
             {
-                "name": "Pantalla",
-                "type": "Number",
+                "name": "Pantalla",                
                 "value": 15.6
             },
             {
-                "name": "Resolucion",
-                "type": "String",
+                "name": "Resolucion",                
                 "value": "1366px x 768px"
             },
             {
-                "name": "RAM",
-                "type": "String",
+                "name": "RAM",                
                 "value": "12GB DDR4 3200 MHz"
             }
         ]
@@ -268,28 +238,23 @@
         "category_id": 2,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Intel Core i7 1165G7"
             },
             {
-                "name": "GPU",
-                "type": "String",
+                "name": "GPU",                
                 "value": "Intel Iris Xe Graphics G7 96EUs"
             },
             {
-                "name": "Pantalla",
-                "type": "Number",
+                "name": "Pantalla",                
                 "value": 15.6
             },
             {
-                "name": "Resolucion",
-                "type": "String",
+                "name": "Resolucion",                
                 "value": "1920px x 1080px"
             },
             {
-                "name": "RAM",
-                "type": "String",
+                "name": "RAM",                
                 "value": "8GB DDR4 3200 MHz"
             }
         ]
@@ -308,28 +273,23 @@
         "category_id": 5,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Mali-G52 MP2 2 GHz"
             },
             {
-                "name": "Bateria",
-                "type": "String",
+                "name": "Bateria",                
                 "value": "7040 mAh"
             },
             {
-                "name": "Pantalla",
-                "type": "Number",
+                "name": "Pantalla",                
                 "value": 10.5
             },
             {
-                "name": "Resolucion",
-                "type": "String",
+                "name": "Resolucion",                
                 "value": "1920px x 1080px"
             },
             {
-                "name": "RAM",
-                "type": "String",
+                "name": "RAM",                
                 "value": "4GB"
             }
         ]
@@ -348,28 +308,23 @@
         "category_id": 5,
         "specifications": [
             {
-                "name": "Procesador",
-                "type": "String",
+                "name": "Procesador",                
                 "value": "Kryo 385 Gold 2.8 GHz"
             },
             {
-                "name": "Bateria",
-                "type": "String",
+                "name": "Bateria",                
                 "value": "7040 mAh"
             },
             {
-                "name": "Pantalla",
-                "type": "Number",
+                "name": "Pantalla",                
                 "value": 10.2
             },
             {
-                "name": "Resolucion",
-                "type": "String",
+                "name": "Resolucion",                
                 "value": "2160px x 1620px"
             },
             {
                 "name": "RAM",
-                "type": "String",
                 "value": "3GB"
             }
         ]

@@ -243,6 +243,13 @@ ALTER TABLE `user_roles`
   ADD CONSTRAINT `user_roles_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
+INSERT INTO categories (id, name) VALUES
+(1, 'celulares'),
+(2, 'computadoras'),
+(3, 'televisores'),
+(4, 'consolas'),
+(5, 'tablets');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
