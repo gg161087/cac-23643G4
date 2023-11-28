@@ -1,4 +1,4 @@
-const notNumber = (id, res) => {
+export const notNumber = (id, res) => {
     if (isNaN(Number(id))) {
         res.status(400).json({ message: "ID must be a positive integer" })
         return true
@@ -6,4 +6,3 @@ const notNumber = (id, res) => {
         return false
     }
 };
-module.exports = notNumber;

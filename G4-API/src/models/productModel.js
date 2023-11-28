@@ -1,51 +1,94 @@
-import { pool } from './../database/db.js';
+import { db } from './../database/dbConfig.js';
+import { DataTypes } from 'sequelize';
 
-export const getProducts = async () => {
-    const query = "SELECT * FROM products";
-    try {
-        return await pool.query(query);
-    } catch (error) {
-        error.message = error.code;
-        return error;
+export const productModel = db.define('products', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    brand: {
+        type: DataTypes.STRING(255),
+        allowNull: false
+    },
+    model: {
+        type: DataTypes.STRING(255),
+        allowNull: false
+    },
+    description: {
+        type: DataTypes.TEXT,
+        allowNull: true
+    },
+    price: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false
+    },
+    stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    discount: {
+        type: DataTypes.DECIMAL(5, 2),
+        allowNull: false
+    },
+    sku: {
+        type: DataTypes.STRING(50),
+        allowNull: false
+    },
+    dues: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    imgUrl: {
+        type: DataTypes.STRING(255),
+        allowNull: true
+    },
+    category_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+            model: 'categories',
+            key: 'id'
+        }
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: db.literal('CURRENT_TIMESTAMP')
+    },
+    updatedAt: {
+        type: DataTypes.DATE,
+        defaultValue: db.literal('CURRENT_TIMESTAMP')
     }
-};
+})
 
-export const getProduct = async (id) => {
-    const query = `SELECT * FROM products WHERE id = ${id} LIMIT 1`;
-    try {
-        return await pool.query(query);
-    } catch (error) {
-        error.message = error.code;
-        return error;
+export const productSpecificationsModel = db.define('product_specifications', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    category_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+            model: 'products',
+            key: 'id'
+        }
+    },
+    name: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    value: {
+        type: DataTypes.STRING(255),
+        allowNull: false
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: db.literal('CURRENT_TIMESTAMP')
+    },
+    updatedAt: {
+        type: DataTypes.DATE,
+        defaultValue: db.literal('CURRENT_TIMESTAMP')
     }
-};
-
-export const createProduct = async (user) => {
-    const query = `INSERT INTO products SET ?`;
-    try {
-        return await pool.query(query, user);
-    } catch (error) {
-        error.message = error.code;
-        return error;
-    }
-};
-
-export const updateProduct = async (id, user) => {
-    const query = `UPDATE product SET ? WHERE id = ${id}`;
-    try {
-        return await pool.query(query, user);
-    } catch (error) {
-        error.message = error.code;
-        return error;
-    }
-};
-
-export const deleteProduct = async (id) => {
-    const query = `DELETE FROM product WHERE id = ${id}`;
-    try {
-        return await pool.query(query);
-    } catch (error) {
-        error.message = error.code;
-        return error;
-    }
-};
+})
