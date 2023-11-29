@@ -42,7 +42,7 @@ export const ProductDetail = () => {
             <p>{product.description}</p>
             <p>Codigo: {product.sku}</p>
             <h2>Caracteristicas:</h2>
-            {product.specifications.map((specification) => (                
+            {product.product_specifications.map((specification) => (                
                 <div key={specification.name}>
                     <h3>{specification.name}</h3>
                     <p>{specification.value}</p>

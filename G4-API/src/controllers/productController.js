@@ -1,8 +1,8 @@
-import { productModel } from './../models/productModel.js';
+import { productModel, productSpecificationsModel } from './../models/productModel.js';
 
 export const getAllProducts = async (req, res, next) => {
     try {
-        const response = await productModel.findAll();
+        const response = await productModel.findAll({ include: productSpecificationsModel });
         if (!response) {
             res.status(404).json({
                 success: false,

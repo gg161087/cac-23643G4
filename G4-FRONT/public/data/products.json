@@ -11,7 +11,7 @@
         "dues": 6,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp",
         "category_id": 1,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Pantalla",                
                 "value": "Dynamic AMOLED 2X, 6.2 pulgadas"
@@ -46,7 +46,7 @@
         "dues": 12,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp",
         "category_id": 1,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Pantalla",                
                 "value": "Super Retina XDR, 6.1 pulgadas"
@@ -81,7 +81,7 @@
         "dues": 3,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_674875-MLU72745881148_112023-O.webp",
         "category_id": 4,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Tipo",                
                 "value": "Consola de videojuegos"
@@ -108,7 +108,7 @@
         "dues": 12,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_749310-MLA53433735956_012023-O.webp",
         "category_id": 3,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Tipo de pantalla",                
                 "value": "OLED"
@@ -135,7 +135,7 @@
         "dues": 12,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-O.webp",
         "category_id": 2,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "Intel Core i7 6-core"
@@ -166,7 +166,7 @@
         "dues": 6,
         "imgUrl": "https://images.fravega.com/f500/e724f044c05db50495f6066c5d474f22.jpg",
         "category_id": 1,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "Snapdragon 680 4G 2.4 GHz"
@@ -201,7 +201,7 @@
         "dues": 9,
         "imgUrl": "https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png",
         "category_id": 2,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "AMD Ryzen 7 5700U"
@@ -236,7 +236,7 @@
         "dues": 9,
         "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp",
         "category_id": 2,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "Intel Core i7 1165G7"
@@ -271,7 +271,7 @@
         "dues": 9,
         "imgUrl": "data:image/webp;base64,UklGRpoEAABXRUJQVlA4II4EAADQEwCdASpaADwAPl0Yl0ujoSOjlVBwC4lkANMRFHyHGjlohZ+Jt0q/MB50foR3ineXf3G/Z2bEcPC1GXkwQ07U07yYfVvAtTBEmNRJKusjig/MFNDWOxHLth0tkdlOpPRnteSlaviaH0CmkY/HHUYSrPOxioIahmK8PMRbtYF90TmHLGMM4dcs0YG1Bg8WM5xOMcBFA8bPvIpW7uI4aT9FjPtZun2oAAD+/73Cx05hiZ/p+ti4YGzCn/8VB/59/x0bD7o2n0/7GPW/7/+4WZWrHQqw1y/gbwdESXB7beCzb95L8jtHA5/6ioJ8X/Q9HetzMsZKNzDnZsxOHTQc2Gt/DsquyTv15E9Bv94JSk6iK61T6FWaCxU7q9nCOqtDcNWHtlOMFINJ0Kfy72j14pjx7Xk7JW1sWJECALWeA/+dAxH/5uX5nBXmXnO9yVc5Sv4e/bUbeuSD8fcNZRlFsmis1hX/4v0H9uYTDeMvNimRdsDf/BmLUqebi9s24p56Z+PPat3XbmaCTjZ8sOYoU4E2qTZx9yZtIv3nEG3uqc9radIEwr8J1g3YMGD9zgTEie+UL9P/mMu2qA7Z3sthx0MBPtDH/NUA6YgGS3lv/fnl/+f+PNhKN94YPEpUd2tazMCzvwKtuLHzTtJoeQa4a5hRqPIqVYjKc6Yz1uP/D/fCx5Nmwa33fA7ncIau6ucedKyoddbUWgpN1SqvvESMpbhPev/c//x8z3/1p//2miG52xfl28vP2iaPDUWPnu+bswHX+h42A/ZWUtJjj/vXPZD/u/FseppQbbnc7jUK/GdxQ+3bU7f7iILlj8AhVFRsUBgpWzmtvCIjS/DGsmOEiYXZWkMXHVw+2MO3/5GueubheGb7OdPyZbCH9R7gcb9lEjSUqvg0uGJOfvy2aJV0vXqqQrok2+fpgNAuXlWNbP5lHjrEsR6tXHcrw/iiv95ZeeGJ2VcUWPSQeGCwL3D99yAQmVhNB/T2gZG4eXSwZZh06SDR2XPataW5RrezxjYa3z8af3YrRP0owhxC7Ud/nDdAPZPiRjDd/nxmIz4vWCfNE9Sj8/yCa9TbGH9VKUs24w6vN+2WkkRg5UM8WgK4B/TsHGQbZcMeMMZvcoTd59tdtDpTyghd9pi4Z9u7ZXCuT6NuY0cXGzRGQLeAKX7VfXtjB4k+0sypnDLwDA0HAg3/Dz7swlhSkhC3gcqdVfH+aXpXnntGHQ5JZq+FXSxq92DLnWBy7vRMgLMaQ47XYUXyq8qwyj3KnMU+lf27inxG4/8mjEUTEU1+cddzJBX/+pNzf/+SFp182BbvnhNMbzvmW9onusntQbhga6K558o551XKN+LwWDgPTf/KjplgdQ5qn7VmItirlQj390U6t5pIC/avjRZjbUUJqoTZNC42qMS+EvLQv/0FSDGQMaKLEw26cYUUOL4GmgXdmA2CYpwRvF7jb6wrYDIhjMPP1gGoWUOT22VFJD2wrkVUPo8iEnR/XtN4/lf77WdT73a4WtrpNhybG28/39mM/14v5i4rAkIJxBwBsMlN3e9RC/gAAA==",
         "category_id": 5,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "Mali-G52 MP2 2 GHz"
@@ -306,7 +306,7 @@
         "dues": 9,
         "imgUrl": "data:image/webp;base64,UklGRt4DAABXRUJQVlA4INIDAADwFQCdASpaAFoAPkkOkkkikVFLwCgEhKANYkOHxHGKdLxhHbfL/zAdqfxNumH40WTLehX0p32q+0QU0DzJ/TGoAfqAuWoStGZUKRL2snOoIqF2i6TYHtD+WImqb9IsW1W8nKmX1Ptjx/kuqyC4tDW2tuBY585EUFPXKtK1q+1nVTHj34Lw1U5i2GyubciXpZudHoHpfT4nNWttiRCuGBD11YdPrj/Evx8I2G2jka9VNA2BIjP3jAwAAP7//pQkUXP+oAVLPr7+fGVf3n87iZjn7LLZvFDk3ZFqWlpwZOYZI61PyMhnnjoo8R3D4u489TQUIoNOqofyIQJjwgKW24BABxvnma+diJh6vwL8v8FK99v0R/hl1DN8Eaab7d+V//roNxf0OVtiYQwqUjk9FnGY0vFux3N4m9N2ijbA4yjhcjv6X+B5Z5sC58Aw3KqmWhQEwxcL/imGBOi+9KozfpF9O1IndnGILgvm+ZyfUJDvqOV7FgN/1NdzqT5LRPHhDa/cQQ8fJAdSwC7qyOyl53q/b/wb4vG9DEqxtceXV91jfPuA69KTf5s9Hntyhl8mYu5ybpHYYbsmgiLdF/pIJs/cmoVHvTfimbWD3wJ6pGAqYzWgGIvjkMbuLwhMBVL9pbMuO0iCIgkfa87KrZL3VGHL6PPfDPNGGmPRS6omxsXNx1zNuneVJOFJxAOfl+ocqx/11huNfFG93xmTCi8P4YVGFUi30UmtcmG0G//R5jbgIBZ3NWvPkm/4CYywx5wzIbHIhOvFYSX2VfzkvO0g+Uf6oYi8kxuwkX+DeXjQQyfs8BRswbDAbaJNDFFcNY2kofK9msB4Ngw16wcyQHifcl7A/jotYJWgL8pnYn763Puetl0TwxcAZSvxJ1y2qfHSEB+el+UnOcCCs+Af44eCfnxohOd1F/1uQzNSaqbspJAWCAcvaF96BzWJRI9axUoxuW1YYXlyvCYcYI/jsjmznkk2Lc8QM4VVsApxL4eS8tvt/f8FK/a/DjYRTe418t5X6guF0fqrxBdfe5UEPKjNSRWWB+Gju2usHCYf3bzMfVaoXUpgphDYPtI5PyOu8xexxQL1tefUL9fw8nmuZJR34l8ndnHP20rWZ+q8TC+td07W/OyunBLV3vnFjIXBWfFm+JT6WEFnUdCHensfV6Q1C9KOUUP/ty5vxB9PTYIWAAMB/5KiDDJTF9wKkvAKXFqIQlwbecZCtUiqembje9kQLit3Wc3yAK37TfRcib5vjTB8mz+L3In3aZ+ORzlpRlcfoSoX6BGVime4Uj7nWTAAARYQAAA=",
         "category_id": 5,
-        "specifications": [
+        "product_specifications": [
             {
                 "name": "Procesador",                
                 "value": "Kryo 385 Gold 2.8 GHz"

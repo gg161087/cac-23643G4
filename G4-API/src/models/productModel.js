@@ -67,7 +67,7 @@ export const productSpecificationsModel = db.define('product_specifications', {
         primaryKey: true,
         autoIncrement: true
     },
-    category_id: {
+    product_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
         references: {
@@ -92,3 +92,5 @@ export const productSpecificationsModel = db.define('product_specifications', {
         defaultValue: db.literal('CURRENT_TIMESTAMP')
     }
 })
+productModel.hasMany(productSpecificationsModel, { foreignKey: 'product_id' });
+productSpecificationsModel.belongsTo(productModel, { foreignKey: 'product_id' });
