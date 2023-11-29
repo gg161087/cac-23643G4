@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import FormularioAnulacionPedido from "./FormularioAnulacionPedido";
+import ContenidoCentroAyuda from "./ContenidoCentroAyuda";
 import "./CentroAyuda.css";
 
 const CentroAyuda = () => {
@@ -14,12 +15,12 @@ const CentroAyuda = () => {
   };
   // Funciones para definir el contenido
   const contenidoArrepentimiento = () => <FormularioAnulacionPedido />;
-  const contenidoCentroAyuda = () => "Contenido para Centro de Ayuda";
+  const contenidoCentroAyuda = () => <ContenidoCentroAyuda />;
 
   return (
     <Container fluid>
       <Row>
-        {/* Menú a la izquierda */}
+        
         <Col sm={3}>
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="1">
