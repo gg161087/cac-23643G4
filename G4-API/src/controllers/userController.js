@@ -12,7 +12,7 @@ export const getAllUsers = async (req, res, next) => {
                 message: 'bad request'
             })
         }
-        res.status(404).json({
+        res.status(200).json({
             success: true,
             results: response
         })
@@ -36,7 +36,7 @@ export const getUserById = async (req, res, next) => {
                 message: 'bad request'
             })
         }
-        res.status(404).json({
+        res.status(200).json({
             success: true,
             results: response
         })
