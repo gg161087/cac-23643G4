@@ -30,7 +30,7 @@ const CentroAyuda = () => {
   const contenidoTerminosYCondiciones = () => <ContenidoTerminosYCondiciones />;
 
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col sm={3}>
           <Accordion defaultActiveKey="0">
