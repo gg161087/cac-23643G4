@@ -1,11 +1,11 @@
 import { db } from './../database/dbConfig.js';
 import { DataTypes } from 'sequelize';
 
-export const roleModel = db.fedine('roles', {
+export const roleModel = db.define('roles', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING(50),
@@ -20,4 +20,4 @@ export const roleModel = db.fedine('roles', {
         type: DataTypes.DATE,
         defaultValue: db.literal('CURRENT_TIMESTAMP')
     }
-})
+});

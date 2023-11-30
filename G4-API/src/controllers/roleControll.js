@@ -1,8 +1,8 @@
-import { categoryModel } from './../models/categoryModel.js';
+import { roleModel } from './../models/roleModel.js';
 
-export const getAllCategories = async (req, res) => {
+export const getAllRoles = async (req, res) => {
     try {
-        const response = await  categoryModel.findAll();
+        const response = await  roleModel.findAll();
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -12,23 +12,23 @@ export const getAllCategories = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Categories obtained correctly.',
+            message: 'Roles obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error getting all categories.',
+            message: 'Error getting all roles.',
             results: null
         });
     };
 };
 
-export const getCategoryById = async (req, res) => {
+export const getRoleById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await categoryModel.findByPk(id);
+        const response = await roleModel.findByPk(id);
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -38,20 +38,20 @@ export const getCategoryById = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Category obtained correctly.',
+            message: 'Role obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error)
         res.status(500).json({
             success: false,
-            message: 'Error getting category.',
+            message: 'Error getting role.',
             results: null
         });
     };
 };
 
-export const createCategory = async (req, res) => {    
+export const createRole = async (req, res) => {    
     const { name } = req.body;
     if (!name) {
         return res.status(400).json({
@@ -61,19 +61,19 @@ export const createCategory = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.create({
+        const response = await roleModel.create({
             name:name
         });
         if (!response) {
             return res.status(403).json({
                 success: false,
-                message: 'Error trying to create the category.',
+                message: 'Error trying to create the role.',
                 results: null
             });
         };
         res.status(201).json({
             success: true,
-            message: 'Category created successfully.',
+            message: 'Role created successfully.',
             results: name
         });
     } catch (error) {
@@ -86,7 +86,7 @@ export const createCategory = async (req, res) => {
     };
 };
 
-export const updateCategoryById = async (req, res) => {
+export const updateRoleById = async (req, res) => {
     const { id } = req.params;
     const { name } = req.body;
     if (!name) {
@@ -97,47 +97,47 @@ export const updateCategoryById = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.update(
+        const response = await roleModel.update(
             { name: name },
             { where: { id: id } }
         );
         if (response[0] === 0 || !response) {
             return res.status(400).json({
                 success: false,
-                message: 'Error trying to update/find the category.',
+                message: 'Error trying to update/find the role.',
                 results: null
             });
         };
         res.status(200).json({
             success: true,
-            message: 'Category updated correctly.',
+            message: 'Role updated correctly.',
             results: name
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error when updating category.',
+            message: 'Error when updating Role.',
             results: null
         });
     };
 };
 
-export const deleteCategoryById = async (req, res) => {
+export const deleteRoleById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await categoryModel.destroy({
+        const response = await roleModel.destroy({
             where: { id: id }
         });
         if (response === 0) {
             return res.status(400).json({
                 success: false,                
-                message: 'Category not found or cannot be deleted.'
+                message: 'Role not found or cannot be deleted.'
             });
         };
         res.status(200).json({
             success: true,            
-            message: 'Category deleted successfully.'
+            message: 'Role deleted successfully.'
         });
     } catch (error) {
         console.error(error);

@@ -1,8 +1,8 @@
-import { categoryModel } from './../models/categoryModel.js';
+import { subscriberModel } from './../models/subscriberModel.js';
 
-export const getAllCategories = async (req, res) => {
+export const getAllSubscribers = async (req, res) => {
     try {
-        const response = await  categoryModel.findAll();
+        const response = await  subscriberModel.findAll();
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -12,23 +12,23 @@ export const getAllCategories = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Categories obtained correctly.',
+            message: 'Subcribers obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error getting all categories.',
+            message: 'Error getting all subcribers.',
             results: null
         });
     };
 };
 
-export const getCategoryById = async (req, res) => {
+export const getSubcriberById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await categoryModel.findByPk(id);
+        const response = await subscriberModel.findByPk(id);
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -38,22 +38,22 @@ export const getCategoryById = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Category obtained correctly.',
+            message: 'Subcriber obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error)
         res.status(500).json({
             success: false,
-            message: 'Error getting category.',
+            message: 'Error getting subcriber.',
             results: null
         });
     };
 };
 
-export const createCategory = async (req, res) => {    
-    const { name } = req.body;
-    if (!name) {
+export const createSubscriber = async (req, res) => {    
+    const { email } = req.body;
+    if (!email) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -61,19 +61,19 @@ export const createCategory = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.create({
-            name:name
+        const response = await subscriberModel.create({
+            email:email
         });
         if (!response) {
             return res.status(403).json({
                 success: false,
-                message: 'Error trying to create the category.',
+                message: 'Error trying to create the subcriber.',
                 results: null
             });
         };
         res.status(201).json({
             success: true,
-            message: 'Category created successfully.',
+            message: 'Subcriber created successfully.',
             results: name
         });
     } catch (error) {
@@ -86,10 +86,10 @@ export const createCategory = async (req, res) => {
     };
 };
 
-export const updateCategoryById = async (req, res) => {
+export const updateSubcriberById = async (req, res) => {
     const { id } = req.params;
-    const { name } = req.body;
-    if (!name) {
+    const { email } = req.body;
+    if (!email) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -97,47 +97,47 @@ export const updateCategoryById = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.update(
-            { name: name },
+        const response = await subscriberModel.update(
+            { email: email },
             { where: { id: id } }
         );
         if (response[0] === 0 || !response) {
             return res.status(400).json({
                 success: false,
-                message: 'Error trying to update/find the category.',
+                message: 'Error trying to update/find the subcriber.',
                 results: null
             });
         };
         res.status(200).json({
             success: true,
-            message: 'Category updated correctly.',
-            results: name
+            message: 'Subcriber updated correctly.',
+            results: email
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error when updating category.',
+            message: 'Error when updating subcriber.',
             results: null
         });
     };
 };
 
-export const deleteCategoryById = async (req, res) => {
+export const deleteSubcriberById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await categoryModel.destroy({
+        const response = await subscriberModel.destroy({
             where: { id: id }
         });
         if (response === 0) {
             return res.status(400).json({
                 success: false,                
-                message: 'Category not found or cannot be deleted.'
+                message: 'Subcriber not found or cannot be deleted.'
             });
         };
         res.status(200).json({
             success: true,            
-            message: 'Category deleted successfully.'
+            message: 'Subcriber deleted successfully.'
         });
     } catch (error) {
         console.error(error);

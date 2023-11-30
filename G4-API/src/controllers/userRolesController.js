@@ -1,8 +1,8 @@
-import { categoryModel } from './../models/categoryModel.js';
+import { userRolesModel } from './../models/userRolesModel.js';
 
-export const getAllCategories = async (req, res) => {
+export const getAllUserRoles = async (req, res) => {
     try {
-        const response = await  categoryModel.findAll();
+        const response = await  userRolesModel.findAll();
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -12,23 +12,23 @@ export const getAllCategories = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Categories obtained correctly.',
+            message: 'User Roles obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error getting all categories.',
+            message: 'Error getting all user roles.',
             results: null
         });
     };
 };
 
-export const getCategoryById = async (req, res) => {
-    const { id } = req.params;
+export const getUserRolesByUserId = async (req, res) => {
+    const { user_id } = req.params;
     try {
-        const response = await categoryModel.findByPk(id);
+        const response = await userRolesModel.findByPk(user_id);
         if (!response) {
             return res.status(400).json({
                 success: false,
@@ -38,22 +38,22 @@ export const getCategoryById = async (req, res) => {
         };
         res.status(200).json({
             success: true,
-            message: 'Category obtained correctly.',
+            message: 'User Roles obtained correctly.',
             results: response
         });
     } catch (error) {
         console.error(error)
         res.status(500).json({
             success: false,
-            message: 'Error getting category.',
+            message: 'Error getting user roles.',
             results: null
         });
     };
 };
 
-export const createCategory = async (req, res) => {    
-    const { name } = req.body;
-    if (!name) {
+export const createUserRoles = async (req, res) => {    
+    const { user_id, role_id } = req.body;
+    if (!user_id || !role_id) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -61,20 +61,24 @@ export const createCategory = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.create({
-            name:name
+        const response = await userRolesModel.create({
+            user_id:user_id,
+            role_id:role_id
         });
         if (!response) {
             return res.status(403).json({
                 success: false,
-                message: 'Error trying to create the category.',
+                message: 'Error trying to create the role for user.',
                 results: null
             });
         };
         res.status(201).json({
             success: true,
-            message: 'Category created successfully.',
-            results: name
+            message: 'Role for user created successfully.',
+            results: { 
+                user_id:user_id,
+                role_id:role_id
+            }
         });
     } catch (error) {
         console.error(error);
@@ -86,10 +90,10 @@ export const createCategory = async (req, res) => {
     };
 };
 
-export const updateCategoryById = async (req, res) => {
-    const { id } = req.params;
-    const { name } = req.body;
-    if (!name) {
+export const updateUserRolesByUserId = async (req, res) => {
+    const { user_id } = req.params;
+    const { role_id } = req.body;
+    if (!role_id) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -97,47 +101,50 @@ export const updateCategoryById = async (req, res) => {
         });
     };
     try {
-        const response = await categoryModel.update(
-            { name: name },
-            { where: { id: id } }
+        const response = await userRolesModel.update(
+            { role_id: role_id },
+            { where: { user_id: user_id } }
         );
         if (response[0] === 0 || !response) {
             return res.status(400).json({
                 success: false,
-                message: 'Error trying to update/find the category.',
+                message: 'Error trying to update/find the user roles.',
                 results: null
             });
         };
         res.status(200).json({
             success: true,
-            message: 'Category updated correctly.',
-            results: name
+            message: 'User roles updated correctly.',
+            results: {
+                user_id:user_id,
+                role_id:role_id
+            }
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: 'Error when updating category.',
+            message: 'Error when updating roles for user.',
             results: null
         });
     };
 };
 
-export const deleteCategoryById = async (req, res) => {
-    const { id } = req.params;
+export const deleteUserRolesByUserId = async (req, res) => {
+    const { user_id } = req.params;
     try {
-        const response = await categoryModel.destroy({
-            where: { id: id }
+        const response = await userRolesModel.destroy({
+            where: { user_id: user_id }
         });
         if (response === 0) {
             return res.status(400).json({
                 success: false,                
-                message: 'Category not found or cannot be deleted.'
+                message: 'User roles not found or cannot be deleted.'
             });
         };
         res.status(200).json({
             success: true,            
-            message: 'Category deleted successfully.'
+            message: 'User roles deleted successfully.'
         });
     } catch (error) {
         console.error(error);
