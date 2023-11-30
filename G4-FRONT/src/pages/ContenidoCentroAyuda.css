@@ -1,0 +1,37 @@
+.contenedor-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.boton-con-logo {
+  width: 25%;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+}
+
+.boton-con-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 0.5px rgb(150, 149, 149);
+}
+
+@media (max-width: 768px) {
+  .contenedor-botones {
+    justify-content: space-between;
+  }
+
+  .boton-con-logo {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-botones {
+    justify-items: center;
+  }
+
+  .boton-con-logo {
+    width: 100%;
+  }
+}

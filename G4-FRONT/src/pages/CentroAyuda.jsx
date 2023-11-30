@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import FormularioAnulacionPedido from "./FormularioAnulacionPedido";
 import ContenidoCentroAyuda from "./ContenidoCentroAyuda";
+import ContenidoCiberdelitos from "./ContenidoCiberdelitos";
+import ContenidoContactanos from "./ContenidoContactanos";
+import ContenidoInstitucional from "./ContenidoInstitucional";
+import ContenidoPoliticaDePrivacidad from "./ContenidoPoliticaDePrivacidad";
+import ContenidoSucursales from "./ContenidoSucursales";
+import ContenidoTerminosYCondiciones from "./ContenidoTerminosYCondiciones";
 import "./CentroAyuda.css";
 
 const CentroAyuda = () => {
@@ -16,11 +22,16 @@ const CentroAyuda = () => {
   // Funciones para definir el contenido
   const contenidoArrepentimiento = () => <FormularioAnulacionPedido />;
   const contenidoCentroAyuda = () => <ContenidoCentroAyuda />;
+  const contenidoCiberdelitos = () => <ContenidoCiberdelitos />;
+  const contenidoContactanos = () => <ContenidoContactanos />;
+  const contenidoInstitucional = () => <ContenidoInstitucional />;
+  const contenidoPoliticaDePrivacidad = () => <ContenidoPoliticaDePrivacidad />;
+  const contenidoSucursales = () => <ContenidoSucursales />;
+  const contenidoTerminosYCondiciones = () => <ContenidoTerminosYCondiciones />;
 
   return (
     <Container fluid>
       <Row>
-        
         <Col sm={3}>
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="1">
@@ -49,7 +60,7 @@ const CentroAyuda = () => {
             <Accordion.Item eventKey="3">
               <Accordion.Header
                 onClick={() =>
-                  handleItemClick("Contenido para Ciberdelitos", "Ciberdelitos")
+                  handleItemClick(contenidoCiberdelitos(), "Ciberdelitos")
                 }
               >
                 Ciberdelitos
@@ -59,7 +70,7 @@ const CentroAyuda = () => {
             <Accordion.Item eventKey="4">
               <Accordion.Header
                 onClick={() =>
-                  handleItemClick("Contenido para Contactanos", "Contactanos")
+                  handleItemClick(contenidoContactanos(), "Contactanos")
                 }
               >
                 Contactanos
@@ -69,10 +80,7 @@ const CentroAyuda = () => {
             <Accordion.Item eventKey="5">
               <Accordion.Header
                 onClick={() =>
-                  handleItemClick(
-                    "Contenido para Institucional",
-                    "Institucional"
-                  )
+                  handleItemClick(contenidoInstitucional(), "Institucional")
                 }
               >
                 Institucional
@@ -83,7 +91,7 @@ const CentroAyuda = () => {
               <Accordion.Header
                 onClick={() =>
                   handleItemClick(
-                    "Contenido para Política de Privacidad",
+                    contenidoPoliticaDePrivacidad(),
                     "Política de Privacidad"
                   )
                 }
@@ -95,7 +103,7 @@ const CentroAyuda = () => {
             <Accordion.Item eventKey="7">
               <Accordion.Header
                 onClick={() =>
-                  handleItemClick("Contenido para Sucursales", "Sucursales")
+                  handleItemClick(contenidoSucursales(), "Sucursales")
                 }
               >
                 Sucursales
@@ -106,7 +114,7 @@ const CentroAyuda = () => {
               <Accordion.Header
                 onClick={() =>
                   handleItemClick(
-                    "Contenido para Términos y Condiciones",
+                    contenidoTerminosYCondiciones(),
                     "Términos y Condiciones"
                   )
                 }

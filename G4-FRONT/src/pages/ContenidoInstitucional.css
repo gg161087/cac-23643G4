@@ -1,0 +1,24 @@
+.contenido-institucional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  margin: 40px;
+}
+
+.logo-empresa {
+  width: 50%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.parrafos-institucionales,
+.titulo {
+  margin-top: 20px;
+}
+
+.span1 {
+  font-size: 2rem;
+  font-weight: bold;
+}

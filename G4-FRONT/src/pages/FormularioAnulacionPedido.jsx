@@ -14,7 +14,7 @@ const FormularioAnulacionPedido = () => {
     <>
       <div>
         <p className="title">Solicitud de Anulación de Pedido</p>
-        <p style={{ fontSize: "1.5rem", color: "#0505d9" }}>
+        <p style={{ fontSize: "1.5rem" }}>
           Para contactarse con nuestra empresa, ponemos a su disposición el
           siguiente formulario. Los campos con (*) son obligatorios.
         </p>
@@ -79,7 +79,7 @@ const FormularioAnulacionPedido = () => {
           </Form.Label>
           <Form.Control
             as="select"
-            style={{ backgroundColor: "#ffffff", color: "#0505d9" }}
+            style={{ backgroundColor: "#ffffff", color: "#000000" }}
           >
             <option>Compra Online</option>
             <option>Compra en Sucursal Credito Argonauta</option>
@@ -94,10 +94,11 @@ const FormularioAnulacionPedido = () => {
         </Form.Group>
 
         <Button
+          variant="primary"
           type="submit"
           style={{
-            backgroundColor: "#ef7f13",
-            color: "#ffffff",
+            // backgroundColor: "#ef7f13",
+            // color: "#ffffff",
             transition: "background-color 0.3s",
             border: "none",
             marginTop: "10px",
