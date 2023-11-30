@@ -6,7 +6,26 @@
 .row1 {
   height: 70px;
 }
+.subscribe{
+  height: 5rem;
+  display: flex;
+  flex-direction: row;    
+}
+#email{
+  height: 3rem;
+  width: 24rem;
+  margin-right: 1rem;
+}
+.subscribe button{  
+  height: 3rem;
+}
+.subscribe #emailHelp{
+  color: #f2f2f2;
+}
 
+.subscribe .input-error {
+  border-color: #fc3e3e;
+}
 .link__footer {
   cursor: pointer;
 }
