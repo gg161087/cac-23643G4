@@ -1,8 +1,14 @@
 import { productModel, productSpecificationsModel } from './../models/productModel.js';
+import { categoryModel } from './../models/categoryModel.js';
 
 export const getAllProducts = async (req, res, next) => {
     try {
-        const response = await productModel.findAll({ include: productSpecificationsModel });
+        const response = await productModel.findAll({ 
+            include: [
+                { model: productSpecificationsModel },
+                { model: categoryModel }      
+            ]
+        });
         if (!response) {
             res.status(404).json({
                 success: false,
@@ -10,10 +16,22 @@ export const getAllProducts = async (req, res, next) => {
                 message: 'bad request'
             })
         }
-        res.status(404).json({
+        const categories = await categoryModel.findAll();
+        const categoriesMap = {};
+        categories.forEach(category => {
+            categoriesMap[category.id] = category.name;
+        });
+        
+        const mappedProducts = response.map(product => ({
+            ...product.toJSON(),
+            category: categoriesMap[product.category_id]
+        }));
+
+        res.status(200).json({
             success: true,
-            results: response
-        })
+            results: mappedProducts
+        });
+
     } catch (error) {
         res.status(404).json({
             success: false,
@@ -34,7 +52,7 @@ export const getProductById = async (req, res, next) => {
                 message: 'bad request'
             })
         }
-        res.status(404).json({
+        res.status(200).json({
             success: true,
             results: response
         })
