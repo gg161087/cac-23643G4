@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
-import Departamentos from "./Departamentos";
-import SucursalModal from "./SucursalModal";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
+import Departamentos from "../pages/Departamentos";
+import SucursalModal from "../pages/SucursalModal";
 
 const provincias = [
   {
@@ -52,6 +55,21 @@ const ContenidoSucursales = () => {
 
   return (
     <div>
+      <Tabs
+        defaultActiveKey="profile"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+      >
+        {provincias.map((provincia) => (
+          <Tab eventKey={provincia.nombre} title={provincia.nombre} key={provincia.nombre}>
+            {provincia.departamentos.map((departamento) =>(
+              <p>{departamento}</p>
+            ))}           
+          </Tab>
+        ))}        
+      </Tabs>
+              
+
       <Row>
         {provincias.map((provincia) => (
           <Col key={provincia.nombre} xs={4}>
@@ -65,7 +83,6 @@ const ContenidoSucursales = () => {
           </Col>
         ))}
       </Row>
-
       {selectedProvincia && (
         <Departamentos
           provincia={selectedProvincia}

@@ -1,6 +1,6 @@
 import "./ContenidoCentroAyuda.css";
 
-const BotonCentroAyuda = ({ imagenSrc, altTexto, titulo, onClick, linkTo }) => {
+export const BotonCentroAyuda = ({ imagenSrc, altTexto, titulo, onClick, linkTo }) => {
   return (
     <a href={linkTo} className="boton-con-logo">
       <img
@@ -13,5 +13,3 @@ const BotonCentroAyuda = ({ imagenSrc, altTexto, titulo, onClick, linkTo }) => {
     </a>
   );
 };
-
-export default BotonCentroAyuda;
