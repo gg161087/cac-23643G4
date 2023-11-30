@@ -9,24 +9,22 @@ import "./Slider.css";
 
 export const Slider = () => {
   return (
-    <div className="mt-4 ">
-      <Carousel>
-        <Carousel.Item className="carousel">
-          <Link to="">
-            <img className="imagen__carousel" src={slide4} alt="" />
-          </Link>
-        </Carousel.Item>
-        <Carousel.Item className="carousel">
-          <Link to="">
-            <img className="imagen__carousel" src={slide5} alt="" />
-          </Link>
-        </Carousel.Item>
-        <Carousel.Item className="carousel">
-          <Link to="">
-            <img className="imagen__carousel" src={slide6} alt="" />
-          </Link>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+    <Carousel className="w-100 mt-4">
+      <Carousel.Item className="carousel">
+        <Link to="">
+          <img className="imagen__carousel" src={slide4} alt="" />
+        </Link>
+      </Carousel.Item>
+      <Carousel.Item className="carousel">
+        <Link to="">
+          <img className="imagen__carousel" src={slide5} alt="" />
+        </Link>
+      </Carousel.Item>
+      <Carousel.Item className="carousel">
+        <Link to="">
+          <img className="imagen__carousel" src={slide6} alt="" />
+        </Link>
+      </Carousel.Item>
+    </Carousel>
   );
 };

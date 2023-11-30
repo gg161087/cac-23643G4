@@ -1,0 +1,7 @@
+* Dejar el header fixed
+* Estilos al menu categorias
+* Agregar un boton de whatsapp abajo a la derecha
+* Alinear perfecto los 3 container del header y tambien el texto de las esquinas
+* carrousel completo
+* Escojer mejores imagenes para el slider y los productos
+* Agregar el campo envio gratis retiralo ya y el nuevo producto

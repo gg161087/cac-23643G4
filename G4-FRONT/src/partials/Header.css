@@ -1,24 +1,41 @@
-.container__nav1,
+.container__nav1 {
+  background-color: #202020;
+}
 .container__nav2 {
-  background-color: #f2f2f2;
+  background-color: #132043;
+}
+.container__nav3 {
+  background-color: rgb(233, 233, 233);
+  color: #202020;
 }
 
-.nav1__link,
-.nav2__logo,
+.nav1__link {
+  font-family: "Roboto", sans-serif, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+.nav2__logo {
+  font-family: "Roboto", sans-serif, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #ffffff;
+}
 .miCuenta__link {
-  color: #333;
+  font-family: "Roboto", sans-serif, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #ffffff;
+}
+.nav3__link {
+  font-family: "Roboto", sans-serif, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 500;
+  color: #202020;
 }
 
-/* .nav1__link:hover,
-.nav2__logo:hover,
-.miCuenta__link:hover {
-  color: green;
-} */
-
-
-.input-wrapper>input::placeholder {
-  color: #999;
-  padding-left: 2rem;
+.input-wrapper > input::placeholder {
+  font-family: "Roboto", sans-serif, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #999999;
 }
 
 .header__search {
@@ -27,80 +44,35 @@
   justify-content: center;
   margin-bottom: 30px;
 }
-
 .header__search .search-bar-container {
   position: absolute;
   z-index: 5;
   width: 25%;
 }
 
-.container__nav3 {
-  background-color: #333;
-  height: 5.5rem;
-}
-
-
-.nav3__link {
-  color: #fff;
-  background-color: #51514f;
-  padding: 0.4rem 1rem;
-  letter-spacing: .1rem;
-}
-
-.nav3__link:hover {
-  background-color: #fff;
-  color: #333;
-}
-
-
-a.dropdown-item {
-  font-size: 1.5rem;
-  /* border-bottom: 1px solid black; */
-  display: block;
-
-}
-
-.dropdown-item a {
-  background-color: white;
-  color: #333;
-}
-
-
-.nav-link {
-  color: #fff;
-  width: 13rem;
-}
-
-/* .nav-link:hover {
-  color: #333;
-  transition: none;
-} */
-
 .dropdown-menu {
-  translate: -2.1rem .1rem;
+  width: 150px;
+  height: auto;
 }
-
-
-/* a.dropdown-toggle:link {
-  margin: 0 10px 0 10px;
-  padding: 0;
-  color: #fff !important;
-}  */
 
 a.dropdown-toggle {
-  margin: 0 10px 0 10px;
-  padding: 0;
-  color: #fff;
+  font-weight: 500;
+  color: #202020;
 }
-
 a.dropdown-toggle:hover {
-  color: #333;
+  /* color: #2c2c2c; */
 }
 
-.nav-link::after {
-  color: #333;
+a.dropdown-toggle:link {
+  color: #202020;
 }
 
+.categoryList {
+  color: #202020;
+  background-color: #ffffff;
+}
+.categoryList:hover {
+}
 
 @media (max-width: 870px) {
   .header {
@@ -112,18 +84,4 @@ a.dropdown-toggle:hover {
     background-color: green;
     display: none;
   }
-
-  .miCuenta__link {
-    font-size: 2.4rem;
-  }
-
-  .cuenta {
-    display: none;
-  }
-
-  .input-wrapper {
-    display: none;
-  }
-
-
 }
