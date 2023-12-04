@@ -35,23 +35,13 @@ export const ProductDetail = () => {
         <Row>
           <Col md={8} className=" p-5 d-flex flex-column">
             <h1 className=" text-center fw-bold">{product.brand}</h1>
-            <img src={product.imgUrl} alt="" className="m-auto" />
+            <img src={product.imgUrl} alt={product.model} className="m-auto" />
             <section className="d-flex justify-content-evenly  mt-2">
-              <div>
-                <img src={product.imgsUrl.imgUrl1} />
-              </div>
-              <div>
-                <img src={product.imgsUrl.imgUrl2} />
-              </div>
-              <div>
-                <img src={product.imgsUrl.imgUrl3} />
-              </div>
-              <div>
-                <img src={product.imgsUrl.imgUrl4} />
-              </div>
-              <div>
-                <img src={product.imgsUrl.imgUrl5} />
-              </div>
+              {product.product_imgsurls && product.product_imgsurls.map((link) =>(
+                <div>
+                  <img src={link.value}/>
+                </div>
+              ))}              
             </section>
           </Col>
           {console.log(product.imgsUrl)}

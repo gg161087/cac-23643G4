@@ -1,10 +1,11 @@
-import { productModel, productSpecificationsModel } from './../models/productModel.js';
+import { productModel, productSpecificationsModel, productImgsurlsModel } from './../models/productModel.js';
 
 export const getAllProducts = async (req, res, next) => {
     try {
         const response = await productModel.findAll({ 
             include: [
-                { model: productSpecificationsModel }                    
+                { model: productSpecificationsModel },
+                /* { model: productImgsUrlModel}  */                               
             ]
         });
         if (!response) {
@@ -21,6 +22,7 @@ export const getAllProducts = async (req, res, next) => {
         });
 
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             success: false,
             message: 'Error getting all products.',
@@ -32,7 +34,12 @@ export const getAllProducts = async (req, res, next) => {
 export const getProductById = async (req, res, next) => {
     const { id } = req.params
     try {
-        const response = await productModel.findByPk(id);
+        const response = await productModel.findByPk(id, { 
+            include: [
+                { model: productSpecificationsModel },
+                { model: productImgsurlsModel}                                
+            ]
+        });
         if (!response) {
             res.status(400).json({
                 success: false,
@@ -46,6 +53,7 @@ export const getProductById = async (req, res, next) => {
             results: response
         })
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             success: false,
             message: 'Error getting product.',
@@ -143,7 +151,7 @@ export const updateProductById = async (req, res) => {
             results: updateProduct
         });
     } catch (error) {
-        console.error(error);
+        console.error(error);        
         res.status(500).json({
             success: false,
             message: 'Error when updating product.',

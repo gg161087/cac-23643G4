@@ -45,13 +45,48 @@
     "sku": "iPhone12-001",
     "dues": 12,
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp",
-    "imgsUrl": {
-      "imgUrl1": "https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp",
-      "imgUrl2": "https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp",
-      "imgUrl3": "https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp",
-      "imgUrl4": "https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp",
-      "imgUrl5": "https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp"
-    },
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 2,
+        "name": "imgUrl1",
+        "value": "https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 2,
+        "name": "imgUrl2",
+        "value": "https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 2,
+        "name": "imgUrl3",
+        "value": "https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 2,
+        "name": "imgUrl4",
+        "value": "https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 5,
+        "product_id": 2,
+        "name": "imgUrl5",
+        "value": "https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 1,
     "product_specifications": [
       {
