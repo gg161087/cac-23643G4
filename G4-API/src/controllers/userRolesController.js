@@ -1,4 +1,4 @@
-import { userRolesModel } from './../models/userRolesModel.js';
+import { userRolesModel } from './../models/userModel';
 
 export const getAllUserRoles = async (req, res) => {
     try {
