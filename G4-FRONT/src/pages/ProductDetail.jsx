@@ -37,9 +37,9 @@ export const ProductDetail = () => {
             <h1 className=" text-center fw-bold">{product.brand}</h1>
             <img src={product.imgUrl} alt={product.model} className="m-auto" />
             <section className="d-flex justify-content-evenly  mt-2">
-              {product.product_imgsurls && product.product_imgsurls.map((link) =>(
+              {product.product_imgsurls && product.product_imgsurls.map((product) =>(
                 <div>
-                  <img src={link.value}/>
+                  <img src={product.img_url}/>
                 </div>
               ))}              
             </section>

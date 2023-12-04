@@ -108,12 +108,8 @@ export const productImgsurlsModel = db.define('product_imgsurls', {
             model: 'products',
             key: 'id'
         }
-    },
-    name: {
-        type: DataTypes.STRING(50),
-        allowNull: false
-    },
-    value: {
+    },    
+    img_url: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
