@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2023 a las 14:04:01
+-- Tiempo de generación: 04-12-2023 a las 14:19:46
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -92,8 +92,7 @@ INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`,
 CREATE TABLE `product_imgsurls` (
   `id` int(11) NOT NULL,
   `product_id` int(11) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `value` varchar(255) DEFAULT NULL,
+  `img_url` varchar(255) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -102,12 +101,12 @@ CREATE TABLE `product_imgsurls` (
 -- Volcado de datos para la tabla `product_imgsurls`
 --
 
-INSERT INTO `product_imgsurls` (`id`, `product_id`, `name`, `value`, `createdAt`, `updatedAt`) VALUES
-(1, 2, 'imgUrl1', 'https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp', NULL, NULL),
-(2, 2, 'imgUrl2', 'https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp', NULL, NULL),
-(3, 2, 'imgUrl3', 'https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp', NULL, NULL),
-(4, 2, 'imgUrl4', 'https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp', NULL, NULL),
-(5, 2, 'imgUrl5', 'https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp', NULL, NULL);
+INSERT INTO `product_imgsurls` (`id`, `product_id`, `img_url`, `createdAt`, `updatedAt`) VALUES
+(1, 2, 'https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp', NULL, NULL),
+(2, 2, 'https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp', NULL, NULL),
+(3, 2, 'https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp', NULL, NULL),
+(4, 2, 'https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp', NULL, NULL),
+(5, 2, 'https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp', NULL, NULL);
 
 -- --------------------------------------------------------
 
