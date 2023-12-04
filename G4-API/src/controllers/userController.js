@@ -4,13 +4,13 @@ import { hashPassword, checkPassword } from '../utils/handlePassword.js';
 
 export const getAllUsers = async (req, res) => {
     try {
-        const response = await  userModel.findAll();
+        const response = await userModel.findAll();
         if (!response) {
             return res.status(400).json({
                 success: false,
                 message: 'Bad request.',
                 results: null
-            }); 
+            });
         };
         res.status(200).json({
             success: true,
@@ -55,7 +55,7 @@ export const getUserById = async (req, res, next) => {
 
 export const createNewUser = async (req, res, next) => {
     const { name, last_name, telephone, email, password } = req.body;
-    if (!name || !last_name || !telephone|| !email|| !password) {
+    if (!name || !last_name || !telephone || !email || !password) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -63,14 +63,14 @@ export const createNewUser = async (req, res, next) => {
         });
     };
     const newUser = {
-        name:name,
-        last_name:last_name,
-        telephone:telephone,
-        email:email,
-        password:password        
+        name: name,
+        last_name: last_name,
+        telephone: telephone,
+        email: email,
+        password: password
     };
     try {
-        const response = await userModel.create({newUser});
+        const response = await userModel.create({ newUser });
         if (!response) {
             return res.status(403).json({
                 success: false,
@@ -96,7 +96,7 @@ export const createNewUser = async (req, res, next) => {
 export const updateUserById = async (req, res) => {
     const { id } = req.params;
     const { name, last_name, telephone, email, password } = req.body;
-    if (!name || !last_name || !telephone|| !email|| !password) {
+    if (!name || !last_name || !telephone || !email || !password) {
         return res.status(400).json({
             success: false,
             message: 'Bad request.',
@@ -104,11 +104,11 @@ export const updateUserById = async (req, res) => {
         });
     };
     const updateUser = {
-        name:name,
-        last_name:last_name,
-        telephone:telephone,
-        email:email,
-        password:password        
+        name: name,
+        last_name: last_name,
+        telephone: telephone,
+        email: email,
+        password: password
     };
     try {
         const response = await userModel.update(
@@ -137,11 +137,6 @@ export const updateUserById = async (req, res) => {
     };
 };
 
-
-export const login = async (req, res, next) => {
-   
-};
-
 export const deleteUserById = async (req, res, next) => {
     const { id } = req.params;
     try {
@@ -150,18 +145,18 @@ export const deleteUserById = async (req, res, next) => {
         });
         if (response === 0) {
             return res.status(400).json({
-                success: false,                
+                success: false,
                 message: 'User not found or cannot be deleted.'
             });
         };
         res.status(200).json({
-            success: true,            
+            success: true,
             message: 'User deleted successfully.'
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
-            success: false,            
+            success: false,
             message: 'Error when trying to delete.'
         });
     };

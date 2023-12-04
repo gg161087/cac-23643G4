@@ -3,7 +3,7 @@ import { DataTypes } from 'sequelize';
 
 export const userModel = db.define('users', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(11),
         primaryKey: true,
         autoIncrement: true
     },
@@ -16,11 +16,11 @@ export const userModel = db.define('users', {
         allowNull: false
     },
     telephone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(12),
         allowNull: false
     },
     email: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: false,
         unique: true
     },
@@ -30,30 +30,38 @@ export const userModel = db.define('users', {
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
 })
 export const roleModel = db.define('roles', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(11),
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
     },
     name: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(50),
         unique: true,
         allowNull: false
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    },
+    updatedAt: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
     }
 });
 
 export const userRolesModel = db.define('user_roles', {
     user_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(11),
         allowNull: false,
         references: {
             model: 'users',
@@ -61,7 +69,7 @@ export const userRolesModel = db.define('user_roles', {
         }
     },
     role_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(11),
         allowNull: false,
         references: {
             model: 'roles',
@@ -70,13 +78,16 @@ export const userRolesModel = db.define('user_roles', {
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
 });
 
-userModel.belongsToMany(roleModel, { through: 'user_roles', foreignKey: 'user_id' });
-roleModel.belongsToMany(userModel, { through: 'user_roles', foreignKey: 'role_id' });
+userRolesModel.hasMany(roleModel, { foreignKey: 'roles_id' });
+roleModel.belongsTo(userRolesModel, { foreignKey: 'roles_id' });
+
+userRolesModel.hasMany(userModel, { foreignKey: 'user_id' });
+userModel.belongsTo(userRolesModel, { foreignKey: 'user_id' });

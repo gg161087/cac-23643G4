@@ -10,6 +10,7 @@
         DB_NAME=cac-23643g4
         DB_USER=root
         DB_PASSWORD=''
+        JWT_SECRET=ClaveSecreta
 
     Donde administran su base de datos (phpmyadmin o workbench):
         -Crear base de datos con el nombre 'cac-23643g4' o el nombre de la variable de entorno anterior (DB_NAME).

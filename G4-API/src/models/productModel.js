@@ -87,11 +87,11 @@ export const productSpecificationsModel = db.define('product_specifications', {
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
 })
 
@@ -108,18 +108,18 @@ export const productImgsurlsModel = db.define('product_imgsurls', {
             model: 'products',
             key: 'id'
         }
-    },    
+    },
     img_url: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
 })
 

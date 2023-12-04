@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import cors from 'cors';
 
 import { PORT } from './config.js';
 
@@ -16,6 +17,7 @@ app.set('port', PORT);
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(cors());
 
 //Routes
 app.use('/api/categories', categoryRouter);
