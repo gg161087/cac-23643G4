@@ -60,22 +60,6 @@ export const roleModel = db.define('roles', {
 });
 
 export const userRolesModel = db.define('user_roles', {
-    user_id: {
-        type: DataTypes.INTEGER(11),
-        allowNull: false,
-        references: {
-            model: 'users',
-            key: 'id'
-        }
-    },
-    role_id: {
-        type: DataTypes.INTEGER(11),
-        allowNull: false,
-        references: {
-            model: 'roles',
-            key: 'id'
-        }
-    },
     createdAt: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
@@ -85,9 +69,5 @@ export const userRolesModel = db.define('user_roles', {
         defaultValue: DataTypes.NOW
     }
 });
-
-userRolesModel.hasMany(roleModel, { foreignKey: 'roles_id' });
-roleModel.belongsTo(userRolesModel, { foreignKey: 'roles_id' });
-
-userRolesModel.hasMany(userModel, { foreignKey: 'user_id' });
-userModel.belongsTo(userRolesModel, { foreignKey: 'user_id' });
+userModel.belongsToMany(roleModel, { through: userRolesModel, foreignKey: 'user_id' });
+roleModel.belongsToMany(userModel, { through: userRolesModel, foreignKey: 'role_id' });

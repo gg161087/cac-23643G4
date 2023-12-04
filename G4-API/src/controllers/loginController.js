@@ -6,9 +6,10 @@ import { userModel, userRolesModel, roleModel } from '../models/userModel.js';
 export const login = async (req, res, next) => {
     const { email, password } = req.body;    
     try {        
-        const user = await userModel.findOne({ where: { email } },{ 
+        const user = await userModel.findOne({ 
+            where: { email },
             include: [
-                { model: userRolesModel }                                              
+                roleModel
             ]
         });
         if (!user) {
@@ -27,11 +28,10 @@ export const login = async (req, res, next) => {
             });
         }        
         const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '24h' });  
-        const userRoles = await userRolesModel.findAll({where: {user_id : user.id}, include: [{model: roleModel}]})   
-        const roles = userRoles.map(userRole => userRole.role.name);   
+            
         return res.status(200).json({ 
             success: true,
-            results: [user, roles],
+            results: user,
             token: token,
             message: 'Inicio de sesión exitoso' 
         });
