@@ -14,10 +14,10 @@ export const categoryModel = db.define('categories', {
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
-})
+});

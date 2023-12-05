@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2023 a las 21:12:08
+-- Tiempo de generación: 05-12-2023 a las 15:12:20
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -20,6 +20,43 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `cac-23643g4`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `branch_offices`
+--
+
+CREATE TABLE `branch_offices` (
+  `id` int(11) NOT NULL,
+  `province_id` int(11) DEFAULT NULL,
+  `departments` varchar(50) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `telephone` varchar(20) DEFAULT NULL,
+  `createdAt` datetime DEFAULT current_timestamp(),
+  `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `branch_offices`
+--
+
+INSERT INTO `branch_offices` (`id`, `province_id`, `departments`, `address`, `telephone`, `createdAt`, `updatedAt`) VALUES
+(1, 1, 'Avellaneda', 'asd 123', '1151156987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(2, 1, 'Pergamino', 'asd 123', '1151256987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(3, 1, 'San Miguel', 'asd 123', '1151356987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(4, 2, 'Córdoba', 'asd 123', '35152156987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(5, 2, 'Río Cuarto', 'asd 123', '35152256987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(6, 2, 'Río Segundo', 'asd 123', '35152356987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(7, 3, 'General Güemes', 'asd 123', '38753156987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(8, 3, 'Orán', 'asd 123', '38753256987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(9, 3, 'Salta', 'asd 123', '38753356987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(10, 4, 'Rafaela', 'asd 123', '34054156987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(11, 4, 'Rosario', 'asd 123', '34054256987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(12, 4, 'Santa Fe', 'asd 123', '34054356987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(13, 5, 'Concepción', 'asd 123', '38155156987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(14, 5, 'Famaillá', 'asd 123', '38155256987', '2023-12-05 10:30:13', '2023-12-05 10:30:13'),
+(15, 5, 'San Miguel de Tucumán', 'asd 123', '38155356987', '2023-12-05 10:30:13', '2023-12-05 10:30:13');
 
 -- --------------------------------------------------------
 
@@ -178,6 +215,30 @@ INSERT INTO `product_specifications` (`id`, `product_id`, `name`, `value`, `crea
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `provinces`
+--
+
+CREATE TABLE `provinces` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `createdAt` datetime DEFAULT current_timestamp(),
+  `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `provinces`
+--
+
+INSERT INTO `provinces` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
+(1, 'Buenos Aires', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
+(2, 'Córdoba', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
+(3, 'Salta', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
+(4, 'Santa Fe', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
+(5, 'Tucumán', '2023-12-05 10:30:03', '2023-12-05 10:30:03');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `roles`
 --
 
@@ -260,6 +321,13 @@ INSERT INTO `user_roles` (`user_id`, `role_id`, `createdAt`, `updatedAt`) VALUES
 --
 
 --
+-- Indices de la tabla `branch_offices`
+--
+ALTER TABLE `branch_offices`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `province_id` (`province_id`);
+
+--
 -- Indices de la tabla `categories`
 --
 ALTER TABLE `categories`
@@ -285,6 +353,12 @@ ALTER TABLE `product_imgsurls`
 ALTER TABLE `product_specifications`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
+
+--
+-- Indices de la tabla `provinces`
+--
+ALTER TABLE `provinces`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `roles`
@@ -339,6 +413,12 @@ ALTER TABLE `product_imgsurls`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `branch_offices`
+--
+ALTER TABLE `branch_offices`
+  ADD CONSTRAINT `branch_offices_ibfk_1` FOREIGN KEY (`province_id`) REFERENCES `provinces` (`id`);
 
 --
 -- Filtros para la tabla `product_imgsurls`

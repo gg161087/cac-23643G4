@@ -1,0 +1,227 @@
+[
+    {
+        "id": 1,
+        "departments": "Avellaneda",
+        "address": "asd 123",
+        "telephone": "1151156987",
+        "province_id": 1,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 1,
+            "name": "Buenos Aires",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 2,
+        "departments": "Pergamino",
+        "address": "asd 123",
+        "telephone": "1151256987",
+        "province_id": 1,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 1,
+            "name": "Buenos Aires",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 3,
+        "departments": "San Miguel",
+        "address": "asd 123",
+        "telephone": "1151356987",
+        "province_id": 1,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 1,
+            "name": "Buenos Aires",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 4,
+        "departments": "Córdoba",
+        "address": "asd 123",
+        "telephone": "35152156987",
+        "province_id": 2,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 2,
+            "name": "Córdoba",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 5,
+        "departments": "Río Cuarto",
+        "address": "asd 123",
+        "telephone": "35152256987",
+        "province_id": 2,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 2,
+            "name": "Córdoba",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 6,
+        "departments": "Río Segundo",
+        "address": "asd 123",
+        "telephone": "35152356987",
+        "province_id": 2,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 2,
+            "name": "Córdoba",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 7,
+        "departments": "General Güemes",
+        "address": "asd 123",
+        "telephone": "38753156987",
+        "province_id": 3,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 3,
+            "name": "Salta",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 8,
+        "departments": "Orán",
+        "address": "asd 123",
+        "telephone": "38753256987",
+        "province_id": 3,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 3,
+            "name": "Salta",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 9,
+        "departments": "Salta",
+        "address": "asd 123",
+        "telephone": "38753356987",
+        "province_id": 3,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 3,
+            "name": "Salta",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 10,
+        "departments": "Rafaela",
+        "address": "asd 123",
+        "telephone": "34054156987",
+        "province_id": 4,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 4,
+            "name": "Santa Fe",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 11,
+        "departments": "Rosario",
+        "address": "asd 123",
+        "telephone": "34054256987",
+        "province_id": 4,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 4,
+            "name": "Santa Fe",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 12,
+        "departments": "Santa Fe",
+        "address": "asd 123",
+        "telephone": "34054356987",
+        "province_id": 4,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 4,
+            "name": "Santa Fe",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 13,
+        "departments": "Concepción",
+        "address": "asd 123",
+        "telephone": "38155156987",
+        "province_id": 5,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 5,
+            "name": "Tucumán",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 14,
+        "departments": "Famaillá",
+        "address": "asd 123",
+        "telephone": "38155256987",
+        "province_id": 5,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 5,
+            "name": "Tucumán",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    },
+    {
+        "id": 15,
+        "departments": "San Miguel de Tucumán",
+        "address": "asd 123",
+        "telephone": "38155356987",
+        "province_id": 5,
+        "createdAt": "2023-12-05T10:30:13.000Z",
+        "updatedAt": "2023-12-05T10:30:13.000Z",
+        "province": {
+            "id": 5,
+            "name": "Tucumán",
+            "createdAt": "2023-12-05T10:30:03.000Z",
+            "updatedAt": "2023-12-05T10:30:03.000Z"
+        }
+    }
+]

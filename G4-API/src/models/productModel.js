@@ -47,7 +47,7 @@ export const productModel = db.define('products', {
     },
     category_id: {
         type: DataTypes.INTEGER,
-        allowNull: true,
+        allowNull: false,
         references: {
             model: 'categories',
             key: 'id'
@@ -55,13 +55,13 @@ export const productModel = db.define('products', {
     },
     createdAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     },
     updatedAt: {
         type: DataTypes.DATE,
-        defaultValue: db.literal('CURRENT_TIMESTAMP')
+        defaultValue: DataTypes.NOW
     }
-})
+});
 
 export const productSpecificationsModel = db.define('product_specifications', {
     id: {
@@ -93,7 +93,7 @@ export const productSpecificationsModel = db.define('product_specifications', {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
     }
-})
+});
 
 export const productImgsurlsModel = db.define('product_imgsurls', {
     id: {
@@ -121,11 +121,11 @@ export const productImgsurlsModel = db.define('product_imgsurls', {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
     }
-})
+});
 
 productModel.hasMany(productSpecificationsModel, { foreignKey: 'product_id' });
 productSpecificationsModel.belongsTo(productModel, { foreignKey: 'product_id' });
 productModel.hasMany(productImgsurlsModel, { foreignKey: 'product_id' });
 productImgsurlsModel.belongsTo(productModel, { foreignKey: 'product_id' });
 
-productModel.belongsTo(categoryModel, { foreignKey: 'category_id' })
+productModel.belongsTo(categoryModel, { foreignKey: 'category_id' });
