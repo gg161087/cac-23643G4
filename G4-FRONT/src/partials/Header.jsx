@@ -10,12 +10,28 @@ import { BsFillCartFill } from "react-icons/bs";
 import { SearchBar } from "../components/SearchBar";
 import { SearchResultsList } from "../components/SearchResultsList";
 
+import { getDinamic } from './../utils/getDinamic.js';
 // import logo from "/logo.png";
 import logo from "/logo3.png";
 import "./Header.css";
 
-export const Header = ({ categories }) => {
+export const Header = () => {
     const [results, setResults] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+    const getCategories = async () => {
+        const response = await getDinamic("data/categories.json");
+        setCategories(response);
+        console.log(response);
+    };
+
+    useEffect(() => {
+        getCategories();
+    },[]);
+
+    if (!categories) {
+        return null
+    }
 
     return (
         <header className="header d-flex flex-wrap">
@@ -107,16 +123,16 @@ export const Header = ({ categories }) => {
             {/* ************************************************************************* */}
             <Container fluid className="container__nav3">
                 <Container className="d-flex justify-content-between align-items-center p-3 ">
-                    <Nav className="">
+                    <Nav>
                         <NavDropdown
                             className="m-0 text-decoration-none"
                             title="Categorías"
                         >
                             {categories.map((category) => (
-                                <NavDropdown.Item key={category.id} className="">
+                                <NavDropdown.Item key={category.id}>
                                     <Link
                                         className=" text-decoration-none ms-3 me-3 d-flex w-100 fs-4 categoryList"
-                                        to={category.name}
+                                        to={`products/${category.name}`}
                                     >
                                         {category.name.charAt(0).toUpperCase() +
                                             category.name.slice(1)}

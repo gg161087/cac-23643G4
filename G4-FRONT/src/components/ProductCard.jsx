@@ -25,7 +25,7 @@ export const ProductCard = ({ product }) => {
   }, [product]);
 
   return (
-    <Link to={`/${category.name}/${product.id}`}>
+    <Link to={`/products/${category.name}/${product.id}`}>
       <div className="card border-light">
         <img
           className="card-img-top"
