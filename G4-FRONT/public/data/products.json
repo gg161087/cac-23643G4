@@ -4,12 +4,35 @@
     "brand": "Samsung",
     "model": "Galaxy S20",
     "description": "El último smartphone de Samsung",
-    "price": 999.99,
+    "price": "386.000",
     "stock": 50,
-    "discount": 10,
+    "discount": "10% off",
     "sku": "S20-001",
-    "dues": 6,
-    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp",
+    "dues": "6",
+    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_784737-MLA70374838843_072023-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 1,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_663715-MLA53381689250_012023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 1,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_913084-MLA53381689251_012023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 1,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_726074-MLA53381689253_012023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 1,
     "product_specifications": [
       {
@@ -22,7 +45,7 @@
       },
       {
         "name": "RAM",
-        "value": 8
+        "value": "8 GB"
       },
       {
         "name": "Almacenamiento interno",
@@ -39,43 +62,36 @@
     "brand": "Apple",
     "model": "iPhone 12",
     "description": "El último smartphone de Apple",
-    "price": 1099.99,
+    "price": "840.000",
     "stock": 30,
-    "discount": 5,
+    "discount": "5% off",
     "sku": "iPhone12-001",
-    "dues": 12,
+    "dues": "12",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp",
     "product_imgsurls": [
       {
         "id": 1,
-        "product_id": 2,
-        "img_url": "https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp",
-        "createdAt": null,
-        "updatedAt": null
-      },
-      {
-        "id": 2,
         "product_id": 2,
         "img_url": "https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp",
         "createdAt": null,
         "updatedAt": null
       },
       {
-        "id": 3,
+        "id": 2,
         "product_id": 2,
         "img_url": "https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp",
         "createdAt": null,
         "updatedAt": null
       },
       {
-        "id": 4,
+        "id": 3,
         "product_id": 2,
         "img_url": "https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp",
         "createdAt": null,
         "updatedAt": null
       },
       {
-        "id": 5,
+        "id": 4,
         "product_id": 2,
         "img_url": "https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp",
         "createdAt": null,
@@ -111,12 +127,42 @@
     "brand": "Sony",
     "model": "PlayStation 5",
     "description": "La última consola de Sony",
-    "price": 499.99,
+    "price": "923.000",
     "stock": 20,
-    "discount": 0,
+    "discount": "15% off",
     "sku": "PS5-001",
-    "dues": 3,
+    "dues": "3",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_674875-MLU72745881148_112023-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 3,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_974395-MLU72933102575_112023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 3,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_711622-MLU71029781203_082023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 3,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_650667-MLA54817572386_042023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 3,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_965444-MLU72646582673_112023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 4,
     "product_specifications": [
       {
@@ -138,12 +184,35 @@
     "brand": "LG",
     "model": "OLED CX",
     "description": "Televisor OLED de alta gama",
-    "price": 1499.99,
+    "price": "1738.200",
     "stock": 25,
-    "discount": 15,
+    "discount": "15% off",
     "sku": "OLED-CX-001",
-    "dues": 12,
+    "dues": "12 ",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_749310-MLA53433735956_012023-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 4,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_689543-MLU72649511821_112023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 4,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_879013-MLA53433735971_012023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 4,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_899533-MLU69997705464_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 3,
     "product_specifications": [
       {
@@ -165,12 +234,42 @@
     "brand": "Apple",
     "model": "MacBook Pro",
     "description": "Potente portátil para profesionales",
-    "price": 1999.99,
+    "price": "1.200.000",
     "stock": 20,
-    "discount": 8,
+    "discount": "8% off",
     "sku": "MacBookPro-001",
-    "dues": 12,
+    "dues": "12",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 5,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_645799-MLA46516517280_062021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 5,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_640916-MLA46516517281_062021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 5,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_963629-MLU70010470210_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 5,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_628610-MLA46516504412_062021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 2,
     "product_specifications": [
       {
@@ -196,12 +295,42 @@
     "brand": "Motorola",
     "model": "Moto G G32",
     "description": "Potente portátil para profesionales",
-    "price": 1999.99,
+    "price": "160.000",
     "stock": 20,
-    "discount": 10,
+    "discount": "10% off",
     "sku": "MOTOG001G32",
-    "dues": 6,
-    "imgUrl": "https://images.fravega.com/f500/e724f044c05db50495f6066c5d474f22.jpg",
+    "dues": "6",
+    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_787601-MLA52773800407_122022-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 6,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_837590-MLA52773931076_122022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 6,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_684878-MLA52773811870_122022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 6,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_917327-MLA52773811872_122022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 6,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_942668-MLA52773931309_122022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 1,
     "product_specifications": [
       {
@@ -231,12 +360,42 @@
     "brand": "Lenovo",
     "model": "IdeaPad 15ITL05",
     "description": "Potente portátil para profesionales",
-    "price": 1200.0,
+    "price": "1.400.000",
     "stock": 20,
-    "discount": 20,
+    "discount": "20% off",
     "sku": "LENOVO015ITL05",
-    "dues": 9,
-    "imgUrl": "https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png",
+    "dues": "9",
+    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_872367-MLU69821389569_062023-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 8,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_976486-MLU69804915554_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 8,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_788383-MLU69804915560_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 8,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_811109-MLU69821389579_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 8,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_650365-MLU69821389573_062023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 2,
     "product_specifications": [
       {
@@ -266,12 +425,35 @@
     "brand": "HP",
     "model": "15-EF2081MS",
     "description": "Potente portátil para profesionales",
-    "price": 1200.0,
+    "price": "930.000",
     "stock": 20,
-    "discount": 20,
+    "discount": "20% off",
     "sku": "4W2K4UA",
-    "dues": 9,
+    "dues": "9 ",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 9,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_951088-MLA51839158436_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 9,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_964687-MLA51839158433_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 9,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_829616-MLA51839282136_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 2,
     "product_specifications": [
       {
@@ -301,13 +483,42 @@
     "brand": "Samsung",
     "model": "Galaxy Tab A8",
     "description": "Potente portátil para profesionales",
-    "price": 300.0,
+    "price": "300.000",
     "stock": 20,
-    "discount": 20,
+    "discount": "20% off",
     "sku": "SMX200",
-    "dues": 9,
-    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_819964-MLU72272775736_102023-O.webp",
-
+    "dues": "9 ",
+    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_883247-MLU72272571534_102023-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 10,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_793787-MLU72272571538_102023-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 10,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_887525-MLA52222796947_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 10,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_805875-MLA52222806805_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 4,
+        "product_id": 10,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_783651-MLA52222798936_102022-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 5,
     "product_specifications": [
       {
@@ -337,12 +548,35 @@
     "brand": "Apple",
     "model": "iPad 9na",
     "description": "Potente portátil para profesionales",
-    "price": 400.0,
+    "price": "377.000",
     "stock": 20,
-    "discount": 20,
+    "discount": "20% off",
     "sku": "A2602",
-    "dues": 9,
+    "dues": "6 ",
     "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp",
+    "product_imgsurls": [
+      {
+        "id": 1,
+        "product_id": 11,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_811627-MLA47871023475_102021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 2,
+        "product_id": 11,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_991281-MLA47871333051_102021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      },
+      {
+        "id": 3,
+        "product_id": 11,
+        "img_url": "https://http2.mlstatic.com/D_Q_NP_611573-MLA47871010510_102021-R.webp",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ],
     "category_id": 5,
     "product_specifications": [
       {

@@ -31,29 +31,37 @@ export const ProductDetail = () => {
 
   return (
     <>
-      <Container className="contenedor">
-        <Row>
-          <Col md={8} className=" p-5 d-flex flex-column">
-            <h1 className=" text-center fw-bold">{product.brand}</h1>
-            <img src={product.imgUrl} alt={product.model} className="m-auto" />
+      <Container className="contenedor  ">
+        <Row className="">
+          <Col md={8} className=" p-5 d-flex flex-column ">
+            <img
+              src={product.imgUrl}
+              alt={product.model}
+              className="m-auto h-75"
+            />
             <section className="d-flex justify-content-evenly  mt-2">
-              {product.product_imgsurls && product.product_imgsurls.map((product) =>(
-                <div>
-                  <img src={product.img_url}/>
-                </div>
-              ))}              
+              {product.product_imgsurls &&
+                product.product_imgsurls.map((product) => (
+                  <div>
+                    <img
+                      src={product.img_url}
+                      onMouseEnter={() => console.log("Cambiar imagen")}
+                    />
+                  </div>
+                ))}
             </section>
           </Col>
-          {console.log(product.imgsUrl)}
           <Col md={4} className="d-flex flex-column justify-content-center">
             <span>Nuevo | +100 vendidos</span>
+            {/* Este campo tiene que ser dinamico */}
             <h1>
               {product.brand} - {product.model}
             </h1>
             <span>4.8</span> ⭐⭐⭐⭐ <span>(3)</span>
-            <p className="price">${product.price}</p>
-            <p>{product.dues} sin interes</p>
-            <p>Pagando en efecto un {product.discount}% off</p>
+            {/* Este campo tiene que ser dinamico */}
+            <p className="price">{product.price}</p>
+            <p>{product.dues} </p>
+            <p>{product.discount}</p>
             <p>{product.description}</p>
             <p>Codigo: {product.sku}</p>
             <div className="btn-group">
@@ -64,6 +72,38 @@ export const ProductDetail = () => {
         </Row>
       </Container>
       <Container>
+        <Row>
+          <h1>
+            {product.brand} - {product.model}
+          </h1>
+        </Row>
+        <Row>
+          <h3>Caracteristicas tecnicas</h3>
+        </Row>
+        <Row>
+          <Col>Pantalla</Col>
+          <Col>Dynamic AMOLED 2X, 6.2 pulgadas</Col>
+        </Row>
+        <Row>
+          <Col>Procesador</Col>
+          <Col>Exynos 990</Col>
+        </Row>
+        <Row>
+          <Col>RAM</Col>
+          <Col>8 GB</Col>
+        </Row>
+        <Row>
+          <Col>Almacenamiento interno</Col>
+          <Col>128 GB</Col>
+        </Row>
+        <Row>
+          <Col>Camara</Col>
+          <Col>
+            Doble cámara trasera: 12 MP (principal) + 12 MP (ultra gran angular)
+          </Col>
+        </Row>
+      </Container>
+      <Container className="contenedor mt-5 p-5">
         <h1>Productos que te puede interesar:</h1>
         <ProductsGrid products={products} />
       </Container>
