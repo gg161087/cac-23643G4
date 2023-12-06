@@ -9,14 +9,17 @@ export const Home = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
-        const response = await getDinamic("api/products");
-        console.log(response);
+        const response = await getDinamic("api/products");        
         setProducts(response);
     };
 
     useEffect(() => {        
         getProducts();
-    }, []);
+    },[]);
+
+    if (!products) {
+        return null
+    }
 
     return (
         <>

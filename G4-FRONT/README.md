@@ -1,8 +1,7 @@
-# React + Vite
+# G4-FRONT React + Vite
+    En ./G4-FRONT correr el comando npm install
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    CREAR archivo .env en ./G4-FRONT con lo siguiente:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    VITE_API_URL=http://localhost
+    VITE_API_PORT=3000

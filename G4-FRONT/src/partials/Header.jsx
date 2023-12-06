@@ -22,7 +22,6 @@ export const Header = () => {
     const getCategories = async () => {
         const response = await getDinamic('api/categories');
         setCategories(response);
-        console.log(response);
     };
 
     useEffect(() => {
