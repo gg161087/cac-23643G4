@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 import { checkPassword } from './../utils/handlePassword.js';
-import { userModel, userRolesModel, roleModel } from '../models/userModel.js';
+import { userModel, roleModel } from '../models/userModel.js';
 
 export const login = async (req, res, next) => {
     const { email, password } = req.body;    
@@ -31,8 +31,14 @@ export const login = async (req, res, next) => {
             
         return res.status(200).json({ 
             success: true,
-            results: user,
-            token: token,
+            results: {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                telephone: user.telephone,
+                roles: user.roles,
+                token: token
+            },
             message: 'Inicio de sesión exitoso' 
         });
     } catch (error) {

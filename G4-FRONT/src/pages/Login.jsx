@@ -1,9 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { postLogin } from './../utils/postDinamic.js';
 
 export const Login = () => {
+    const navigate = useNavigate()
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [token, setToken] = useState('')
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -13,11 +18,20 @@ export const Login = () => {
         setPassword(e.target.value);
     };
 
+    const login = async (email, password) => {
+        const response = await postLogin('users/login', email, password)
+        if (response) {            
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('name', response.name); 
+            setToken(localStorage.getItem('token'))
+            navigate('/miCuenta')   
+        }
+    }
+
     const handleSubmit = (e) => {
-        e.preventDefault();        
-        console.log('Email:', email);
-        console.log('Contraseña:', password);
-    };
+        e.preventDefault();                               
+        login(email, password)
+    };    
 
     return (
         <div className="container d-flex justify-content-center">

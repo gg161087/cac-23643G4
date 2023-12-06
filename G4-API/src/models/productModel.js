@@ -42,7 +42,7 @@ export const productModel = db.define('products', {
         allowNull: false
     },
     imgUrl: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.TEXT,
         allowNull: true
     },
     category_id: {
@@ -110,7 +110,7 @@ export const productImgsurlsModel = db.define('product_imgsurls', {
         }
     },
     img_url: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.TEXT,
         allowNull: false
     },
     createdAt: {

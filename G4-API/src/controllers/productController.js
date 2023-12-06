@@ -1,3 +1,4 @@
+import { categoryModel } from '../models/categoryModel.js';
 import { productModel, productSpecificationsModel, productImgsurlsModel } from './../models/productModel.js';
 
 export const getAllProducts = async (req, res, next) => {
@@ -5,7 +6,8 @@ export const getAllProducts = async (req, res, next) => {
         const response = await productModel.findAll({ 
             include: [
                 { model: productSpecificationsModel },
-                /* { model: productImgsUrlModel}  */                               
+                { model: productImgsurlsModel},
+                { model: categoryModel }                                             
             ]
         });
         if (!response) {
@@ -37,7 +39,8 @@ export const getProductById = async (req, res, next) => {
         const response = await productModel.findByPk(id, { 
             include: [
                 { model: productSpecificationsModel },
-                { model: productImgsurlsModel}                                
+                { model: productImgsurlsModel},
+                { model: categoryModel },                                
             ]
         });
         if (!response) {

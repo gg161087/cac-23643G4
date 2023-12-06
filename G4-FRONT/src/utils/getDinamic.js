@@ -28,3 +28,8 @@ export const getDinamicById = async (path, id) => {
     const dataFilter = await data.results.find((element => element.id == id))
     return dataFilter
 }
+export const getDinamicByModel = async (path, model) => {
+    const { data } = await axios.get(`${API_BASE_URL}/${path}`)    
+    const dataFilter = await data.results.find((element => element.model == model))
+    return dataFilter
+}

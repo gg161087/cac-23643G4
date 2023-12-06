@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-12-2023 a las 15:12:20
+-- Tiempo de generación: 06-12-2023 a las 16:14:49
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -98,7 +98,7 @@ CREATE TABLE `products` (
   `discount` decimal(5,2) NOT NULL,
   `sku` varchar(50) NOT NULL,
   `dues` int(11) NOT NULL,
-  `imgUrl` varchar(255) DEFAULT NULL,
+  `imgUrl` text DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -117,8 +117,8 @@ INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`,
 (6, 'Motorola', 'Moto G G32', 'Potente portátil para profesionales', 1999.99, 20, 10.00, 'MOTOG001G32', 6, 'https://images.fravega.com/f500/e724f044c05db50495f6066c5d474f22.jpg', 1, NULL, NULL),
 (8, 'Lenovo', 'IdeaPad 15ITL05', 'Potente portátil para profesionales', 1200.00, 20, 20.00, 'LENOVO015ITL05', 9, 'https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png', 2, NULL, NULL),
 (9, 'HP', '15-EF2081MS', 'Potente portátil para profesionales', 1200.00, 20, 20.00, '4W2K4UA', 9, 'https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp', 2, NULL, NULL),
-(10, 'Samsung', 'Galaxy Tab A8', 'Potente portátil para profesionales', 300.00, 20, 20.00, 'SMX200', 9, 'data:image/webp;base64,UklGRpoEAABXRUJQVlA4II4EAADQEwCdASpaADwAPl0Yl0ujoSOjlVBwC4lkANMRFHyHGjlohZ+Jt0q/MB50foR3ineXf3G/Z2bEcPC1GXkwQ07U07yYfVvAtTBEmNRJKusjig/MFNDWOxHLth0tkdlOpPRnteSlaviaH0CmkY/HHUYSrPOxioIahmK8PMRbtYF90TmHLGMM4dcs0YG1Bg8WM5xOMcBFA8bPvIpW', 5, NULL, NULL),
-(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 20.00, 'A2602', 9, 'data:image/webp;base64,UklGRt4DAABXRUJQVlA4INIDAADwFQCdASpaAFoAPkkOkkkikVFLwCgEhKANYkOHxHGKdLxhHbfL/zAdqfxNumH40WTLehX0p32q+0QU0DzJ/TGoAfqAuWoStGZUKRL2snOoIqF2i6TYHtD+WImqb9IsW1W8nKmX1Ptjx/kuqyC4tDW2tuBY585EUFPXKtK1q+1nVTHj34Lw1U5i2GyubciXpZudHoHpfT4nNWtt', 5, NULL, NULL);
+(10, 'Samsung', 'Galaxy Tab A8', 'Potente portátil para profesionales', 300.00, 20, 20.00, 'SMX200', 9, 'https://http2.mlstatic.com/D_NQ_NP_883247-MLU72272571534_102023-O.webp', 5, NULL, '2023-12-06 12:08:49'),
+(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 20.00, 'A2602', 9, 'https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp', 5, NULL, '2023-12-06 12:12:15');
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,7 @@ INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`,
 CREATE TABLE `product_imgsurls` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `img_url` varchar(255) NOT NULL,
+  `img_url` text NOT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -143,7 +143,14 @@ INSERT INTO `product_imgsurls` (`id`, `product_id`, `img_url`, `createdAt`, `upd
 (2, 2, 'https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp', NULL, NULL),
 (3, 2, 'https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp', NULL, NULL),
 (4, 2, 'https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp', NULL, NULL),
-(5, 2, 'https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp', NULL, NULL);
+(5, 2, 'https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp', NULL, NULL),
+(6, 10, 'https://http2.mlstatic.com/D_Q_NP_793787-MLU72272571538_102023-R.webp', '2023-12-06 12:10:20', '2023-12-06 12:10:20'),
+(7, 10, 'https://http2.mlstatic.com/D_Q_NP_887525-MLA52222796947_102022-R.webp', '2023-12-06 12:10:51', '2023-12-06 12:10:51'),
+(8, 10, 'https://http2.mlstatic.com/D_Q_NP_805875-MLA52222806805_102022-R.webp', '2023-12-06 12:11:23', '2023-12-06 12:11:23'),
+(9, 10, 'https://http2.mlstatic.com/D_Q_NP_783651-MLA52222798936_102022-R.webp', '2023-12-06 12:11:23', '2023-12-06 12:11:23'),
+(10, 1, 'https://http2.mlstatic.com/D_Q_NP_663715-MLA53381689250_012023-R.webp', '2023-12-06 12:13:03', '2023-12-06 12:13:03'),
+(11, 1, 'https://http2.mlstatic.com/D_Q_NP_913084-MLA53381689251_012023-R.webp', '2023-12-06 12:13:38', '2023-12-06 12:13:38'),
+(12, 1, 'https://http2.mlstatic.com/D_Q_NP_726074-MLA53381689253_012023-R.webp', '2023-12-06 12:13:38', '2023-12-06 12:13:38');
 
 -- --------------------------------------------------------
 
@@ -408,7 +415,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `product_imgsurls`
 --
 ALTER TABLE `product_imgsurls`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
