@@ -44,11 +44,11 @@ const ContenidoSucursales = () => {
 
 
     const getProvinces = async () => {
-        const response = await getDinamic("data/provinces.json");
+        const response = await getDinamic("api/provinces");
         setProvinces(response);
     };
     const getBranchOffices = async () => {
-        const response = await getDinamic("data/branch_offices.json");
+        const response = await getDinamic("api/branch_offices");
         console.log(response);
         setBranchOffices(response);
     };

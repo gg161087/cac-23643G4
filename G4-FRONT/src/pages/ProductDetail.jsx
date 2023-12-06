@@ -13,13 +13,13 @@ export const ProductDetail = () => {
 
   useEffect(() => {
     const getProduct = async () => {
-      const findProduct = await getDinamicById("data/products.json", id);
+      const findProduct = await getDinamicById("api/products", id);
       setProduct(findProduct);
       console.log(product);
     };
     getProduct();
     const getProducts = async () => {
-      const response = await getDinamic("data/products.json");
+      const response = await getDinamic("api/products");
       setProducts(response);
     };
     getProducts();

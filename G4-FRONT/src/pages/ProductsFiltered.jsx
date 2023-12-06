@@ -13,9 +13,9 @@ export const ProductsFiltered = () => {
 
     useEffect(() =>{
         const getProductsByCategoryId = async () => {
-            const response = await getDinamicByName('data/categories.json', product)
+            const response = await getDinamicByName('api/categories', product)
             const {id} = response[0]
-            const dataFilter = await getDinamicByCategoryId('data/products.json', id)
+            const dataFilter = await getDinamicByCategoryId('api/products', id)
             setProducts(dataFilter);                       
         }
         getProductsByCategoryId()

@@ -9,7 +9,8 @@ export const Home = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
-        const response = await getDinamic("data/products.json");
+        const response = await getDinamic("api/products");
+        console.log(response);
         setProducts(response);
     };
 

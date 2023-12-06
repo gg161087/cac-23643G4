@@ -20,7 +20,7 @@ export const Header = () => {
     const [categories, setCategories] = useState([]);
 
     const getCategories = async () => {
-        const response = await getDinamic("data/categories.json");
+        const response = await getDinamic('api/categories');
         setCategories(response);
         console.log(response);
     };
