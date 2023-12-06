@@ -1,14 +1,14 @@
 import { db } from './../database/dbConfig.js';
 import { DataTypes } from 'sequelize';
 
-export const subscriberModel = db.define('subscribers_newletter', {
+export const subscriberModel = db.define('subscriber_newsletters', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER(11),
         primaryKey: true,
         autoIncrement: true
     },
     email: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: false,
         unique: true
     },

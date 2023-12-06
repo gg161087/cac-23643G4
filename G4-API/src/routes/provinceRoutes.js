@@ -6,6 +6,6 @@ export const provinceRouter = Router();
 
 provinceRouter.get('/:id', getProvinceById);
 provinceRouter.get('/', getAllProvinces);
-provinceRouter.post('/:id', createProvince);
+provinceRouter.post('/', createProvince);
 provinceRouter.put('/:id', updateProvinceById);
 provinceRouter.delete('/:id', deleteProvinceById);

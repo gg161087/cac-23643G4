@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2023 a las 16:14:49
+-- Tiempo de generación: 06-12-2023 a las 21:04:51
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -269,15 +269,24 @@ INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `subscribers_newsletter`
+-- Estructura de tabla para la tabla `subscriber_newsletters`
 --
 
-CREATE TABLE `subscribers_newsletter` (
+CREATE TABLE `subscriber_newsletters` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `subscriber_newsletters`
+--
+
+INSERT INTO `subscriber_newsletters` (`id`, `email`, `createdAt`, `updatedAt`) VALUES
+(1, 'test@test.com', '2023-12-06 16:49:37', '2023-12-06 16:53:55'),
+(2, 'registrado@itechnology.com', '2023-12-06 19:59:27', '2023-12-06 19:59:27'),
+(3, 'desdelaweb@ejemplo.com', '2023-12-06 20:03:35', '2023-12-06 20:03:35');
 
 -- --------------------------------------------------------
 
@@ -375,9 +384,9 @@ ALTER TABLE `roles`
   ADD UNIQUE KEY `unique_name` (`name`);
 
 --
--- Indices de la tabla `subscribers_newsletter`
+-- Indices de la tabla `subscriber_newsletters`
 --
-ALTER TABLE `subscribers_newsletter`
+ALTER TABLE `subscriber_newsletters`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_email` (`email`);
 
@@ -416,6 +425,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `product_imgsurls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `subscriber_newsletters`
+--
+ALTER TABLE `subscriber_newsletters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

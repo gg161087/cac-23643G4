@@ -9,6 +9,7 @@ import { productRouter } from './src/routes/productRoutes.js';
 import { userRouter } from './src/routes/userRoutes.js';
 import { provinceRouter } from './src/routes/provinceRoutes.js';
 import { branchOfficeRouter } from './src/routes/branchOfficeRoutes.js';
+import { subscriberRouter } from './src/routes/subcriberRoutes.js';
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/api/categories', categoryRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/provinces', provinceRouter);
-app.use('/api/branch_offices', branchOfficeRouter)
+app.use('/api/branch_offices', branchOfficeRouter);
+app.use('/api/subscribers', subscriberRouter);
 
 export default app;

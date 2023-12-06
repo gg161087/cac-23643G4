@@ -6,6 +6,6 @@ export const categoryRouter = Router();
 
 categoryRouter.get('/:id', getCategoryById);
 categoryRouter.get('/', getAllCategories);
-categoryRouter.post('/:id', createCategory);
+categoryRouter.post('/', createCategory);
 categoryRouter.put('/:id', updateCategoryById);
 categoryRouter.delete('/:id', deleteCategoryById);

@@ -1,4 +1,5 @@
-import { Container, Row, Col, Form, FormControl, Button } from "react-bootstrap";
+import { useState } from 'react';
+import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap';
 import {
     AiFillFacebook,
     AiFillTwitterCircle,
@@ -9,22 +10,48 @@ import {
     AiFillPhone,
     AiFillMail,
     AiOutlineOrderedList,
-} from "react-icons/ai";
-import { useFormik, Formik, Field } from 'formik'
+} from 'react-icons/ai';
+import { useFormik } from 'formik';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const mySwal = withReactContent(Swal);
 
 import { subscriberSchema } from './../schemas/subscriberSchema.js';
-import "./Footer.css";
-
-let showMessage = false
-
-const onSubmit = (values) => {
-    console.log('registrado');
-    console.log(values);
-    showMessage = true
-    console.log(showMessage);
-}
+import { postSubscriber } from './../utils/postDinamic.js';
+import './Footer.css';
 
 export const Footer = () => {
+
+    const [showMessage, setShowMessage] = useState(false)
+
+    const confirmSubscriber = (email) => {
+        Swal.fire({
+            title: '¿Estas Seguro/a que deseas subscribirte?',
+            text: "Seras añadido/a al newletter de promociones!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Deseo subscribirme!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log(email);
+                postSubscriber(email)
+                Swal.fire(
+                    'Subscripto!',
+                    'Te subscribiste correctamente.',
+                    'success'
+                )
+            }
+        })
+    }
+
+    const onSubmit = (values) => {        
+        setShowMessage(true)
+        console.log(showMessage);
+        confirmSubscriber(values)        
+    }
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: {
@@ -61,16 +88,6 @@ export const Footer = () => {
                             </div>
                             <Button type="submit" id="btn_subscribe">Suscribirme</Button>
                         </Form>
-                        {/* <FormControl 
-                            className="me-3" 
-                            type="text"                        
-                            onSubmit={handleSubmit} 
-                            autoComplete='off'
-                            placeholder={errors.email && touched.email ? errors.email : 'tu_correo@ejemplo.com'}
-				            value={values.email}
-				            onChange={handleChange}
-				            onBlur={handleBlur}
-                        /> */}
                     </Col>
                     <Col className="" xl={3}>
                         <AiFillFacebook className="link__footer fs-2 me-2 pe" />

@@ -22,7 +22,7 @@ export const Login = () => {
         const response = await postLogin('users/login', email, password)
         if (response) {            
             localStorage.setItem('token', response.token);
-            localStorage.setItem('name', response.name); 
+            localStorage.setItem('userId', response.id); 
             setToken(localStorage.getItem('token'))
             navigate('/miCuenta')   
         }

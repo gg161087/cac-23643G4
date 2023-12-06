@@ -6,6 +6,6 @@ export const branchOfficeRouter = Router();
 
 branchOfficeRouter.get('/:id', getBranchOfficeById);
 branchOfficeRouter.get('/', getAllBranchOffices);
-branchOfficeRouter.post('/:id', createBranchOffice);
+branchOfficeRouter.post('/', createBranchOffice);
 branchOfficeRouter.put('/:id', updateBranchOfficeById);
 branchOfficeRouter.delete('/:id', deleteBranchOfficeById);

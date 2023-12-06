@@ -25,7 +25,7 @@ export const getAllSubscribers = async (req, res) => {
     };
 };
 
-export const getSubcriberById = async (req, res) => {
+export const getSubscriberById = async (req, res) => {
     const { id } = req.params;
     try {
         const response = await subscriberModel.findByPk(id);
@@ -62,7 +62,7 @@ export const createSubscriber = async (req, res) => {
     };
     try {
         const response = await subscriberModel.create({
-            email:email
+            email: email,
         });
         if (!response) {
             return res.status(403).json({
@@ -74,7 +74,7 @@ export const createSubscriber = async (req, res) => {
         res.status(201).json({
             success: true,
             message: 'Subcriber created successfully.',
-            results: name
+            results: response
         });
     } catch (error) {
         console.error(error);
@@ -86,7 +86,7 @@ export const createSubscriber = async (req, res) => {
     };
 };
 
-export const updateSubcriberById = async (req, res) => {
+export const updateSubscriberById = async (req, res) => {
     const { id } = req.params;
     const { email } = req.body;
     if (!email) {
@@ -123,7 +123,7 @@ export const updateSubcriberById = async (req, res) => {
     };
 };
 
-export const deleteSubcriberById = async (req, res) => {
+export const deleteSubscriberById = async (req, res) => {
     const { id } = req.params;
     try {
         const response = await subscriberModel.destroy({
