@@ -5,10 +5,6 @@ import { ProductCard } from './ProductCard.jsx'
 import './ProductsGrid.css'
 
 export const ProductsGrid = ({products}) => { 
-    
-    if(!products){
-        return null
-    }
 
     return ( 
         <Container>

@@ -41,8 +41,8 @@ export const App = () => {
                     <Route path="/miCuenta" element={<MiCuenta />}></Route>
                     <Route path="/favoritos" element={<Favoritos />}></Route>
                     <Route path="/miCarrito" element={<MiCarrito />}></Route>
-                    <Route path="/products/:product/:id" element={<ProductDetail />}></Route>
-                    <Route path="/products/:product" element={<ProductsFiltered />}></Route>
+                    <Route path="/products/:category/:id" element={<ProductDetail />}></Route>
+                    <Route path="/products/:category" element={<ProductsFiltered />}></Route>
                     <Route path="/exclusivo-online" element={<ExclusivoOnline />}></Route>
                     <Route path="/ofertas" element={<Ofertas />}></Route>
                     <Route path="/*" element={<NotFound />}></Route>

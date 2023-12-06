@@ -7,24 +7,24 @@ import { getDinamicByName, getDinamicByCategoryId } from './../utils/getDinamic.
 
 export const ProductsFiltered = () => {
     
-    const { product } = useParams();
+    const { category } = useParams();
 
     const [products, setProducts] = useState([])
 
     useEffect(() =>{
         const getProductsByCategoryId = async () => {
-            const response = await getDinamicByName('api/categories', product)
+            const response = await getDinamicByName('categories', category)
             const {id} = response[0]
-            const dataFilter = await getDinamicByCategoryId('api/products', id)
+            const dataFilter = await getDinamicByCategoryId('products', id)
             setProducts(dataFilter);                       
         }
         getProductsByCategoryId()
                                 
-    },[product])
+    },[category])
 
     return (
         <Container>
-            <h1>{product.toLocaleUpperCase()}</h1>
+            <h1>{category.toLocaleUpperCase()}</h1>
             <ProductsGrid products={products}></ProductsGrid>            
             <Link to="/">VOLVER AL INICIO</Link>
         </Container>

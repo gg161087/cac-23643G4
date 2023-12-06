@@ -1,7 +1,11 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 export const MiCuenta = () => {
+
+    const [isLogin, setIsLogin] = useState(false)
+
     return (
         <Container>
             <h1>MI CUENTA</h1>

@@ -15,7 +15,7 @@ export const ProductCard = ({ product }) => {
 
     useEffect(() => {
         const getCategory = async () => {
-            const response = await getCategoryByCategoryId("api/categories", product.category_id);
+            const response = await getCategoryByCategoryId('categories', product.category_id);
             setCategory(response);
         };
         getCategory();

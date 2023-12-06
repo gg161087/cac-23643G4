@@ -10,7 +10,7 @@ export const SearchBar = ({ setResults }) => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const response = await getDinamic("api/products");
+      const response = await getDinamic('products');
       setProducts(response);
     };
     getProducts();
