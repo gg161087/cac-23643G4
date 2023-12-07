@@ -36,20 +36,30 @@ export const Footer = () => {
             confirmButtonText: 'Si, Deseo subscribirme!'
         }).then((result) => {
             if (result.isConfirmed) {
-                console.log(email);
-                postSubscriber(email)
-                Swal.fire(
-                    'Subscripto!',
-                    'Te subscribiste correctamente.',
-                    'success'
-                )
+                postSubscriber(email)   
+                .then((result) => {                    
+                    if (result) {
+                        Swal.fire(
+                            'Subscripto!',
+                            'Te subscribiste correctamente.',
+                            'success'
+                        )
+                    }else {                        
+                        Swal.fire(
+                            'Error!',
+                            'corrego electronico ya registrado',
+                            'error'
+                        )
+                    } 
+                })                                   
             }
         })
     }
 
     const onSubmit = (values) => {        
-        setShowMessage(true)
+        setShowMessage(!showMessage)
         console.log(showMessage);
+        console.log(values);
         confirmSubscriber(values)        
     }
 
@@ -73,7 +83,7 @@ export const Footer = () => {
                             <div>
                                 <FormControl
                                     type="text"
-                                    id="email"
+                                    id="emailSubscriber"
                                     name="email"
                                     placeholder={errors.email && touched.email ? errors.email : 'correo@ejemplo.com'}
                                     value={values.email}

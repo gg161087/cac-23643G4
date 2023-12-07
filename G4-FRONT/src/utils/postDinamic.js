@@ -16,8 +16,21 @@ export const postLogin = async (path, email, password) => {
     }
 };
 export const postSubscriber = async (email) => {
+    const { data } = await axios.post(`${API_BASE_URL}/subscribers`, email)
+    return data
+}
+export const postRegister = async (data) => {
+
+    const newUser = {
+        name: data.name,
+        last_name: data.last_name,
+        telephone: data.telephone,
+        email: data.email,
+        password: data.password
+    }
+
     try {
-        const { data } = await axios.post(`${API_BASE_URL}/subscribers`, email)
+        const { data } = await axios.post(`${API_BASE_URL}/users/register`, { newUser })
         if (data.success) {
             return data.results
         }        

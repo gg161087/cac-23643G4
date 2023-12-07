@@ -12,7 +12,7 @@ import { Sucursales } from "./pages/Sucursales.jsx";
 import { EnviosDomicilio } from "./pages/EnviosDomicilio.jsx";
 import { Login } from './pages/Login.jsx';
 import { ForgotPassword } from './pages/ForgotPassword.jsx';
-import { SignIn } from './pages/SignIn.jsx';
+import { Register } from './pages/Register.jsx';
 import { MiCuenta } from "./pages/MiCuenta.jsx";
 import { Favoritos } from "./pages/Favoritos.jsx";
 import { MiCarrito } from "./pages/MiCarrito.jsx";
@@ -33,7 +33,7 @@ export const App = () => {
                     <Route path="/envios-domicilio" element={<EnviosDomicilio />}></Route>
                     <Route path="/login" element={<Login/>}></Route>
                     <Route path="/forgot_password" element={<ForgotPassword/>}></Route>
-                    <Route path="/signin" element={<SignIn/>}></Route>
+                    <Route path="/register" element={<Register/>}></Route>
                     <Route path="/miCuenta" element={<MiCuenta />}></Route>
                     <Route path="/favoritos" element={<Favoritos />}></Route>
                     <Route path="/miCarrito" element={<MiCarrito />}></Route>

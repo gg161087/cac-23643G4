@@ -66,7 +66,7 @@ export const Login = () => {
                     </div>
                 </div>
                 <div className="d-flex justify-content-around">
-                    <Link to='/signin'>Registrarse</Link>
+                    <Link to='/register'>Registrarse</Link>
                     <button type="submit" className="btn btn-primary">
                         Iniciar sesión
                     </button>

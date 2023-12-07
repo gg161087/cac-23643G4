@@ -15,7 +15,7 @@ export const getAllSubscribers = async (req, res) => {
             message: 'Subcribers obtained correctly.',
             results: response
         });
-    } catch (error) {
+    } catch (error) {        
         console.error(error);
         res.status(500).json({
             success: false,
@@ -78,7 +78,7 @@ export const createSubscriber = async (req, res) => {
         });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
             message: 'Unexpected error with the server.',
             results: null
