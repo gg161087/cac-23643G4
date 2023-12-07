@@ -1,11 +1,11 @@
-import "./ContenidoInstitucional.css";
-import logoArgonautaImg from "../assets/botonesCentroAyuda/logoArgonauta.jpg";
+import "./Institucional.css";
+import Logo from "../assets/logo/logo2.png";
 
 const ContenidoInstitucional = () => {
   return (
     <div className="contenido-institucional">
       <img
-        src={logoArgonautaImg}
+        src={Logo}
         alt="Logo Argonauta"
         className="logo-empresa"
       />

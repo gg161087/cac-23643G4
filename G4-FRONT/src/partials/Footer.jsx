@@ -62,7 +62,7 @@ export const Footer = () => {
     })
 
     return (
-        <footer className="footer">
+        <footer className="footer mt-4">
             <Container>
                 <Row className="row1 d-flex align-items-center">
                     <Col className="" xl={4}>

@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 
 import FormularioAnulacionPedido from "./../components/FormularioAnulacionPedido";
-import ContenidoCentroAyuda from "./../components/ContenidoCentroAyuda";
-import ContenidoCiberdelitos from "./../components/ContenidoCiberdelitos";
-import ContenidoContactanos from "./../components/ContenidoContactanos";
-import ContenidoInstitucional from "./../components/ContenidoInstitucional";
-import ContenidoPoliticaDePrivacidad from "./../components/ContenidoPoliticaDePrivacidad";
-import ContenidoSucursales from "./../components/ContenidoSucursales";
-import ContenidoTerminosYCondiciones from "./../components/ContenidoTerminosYCondiciones";
+import ContenidoCentroAyuda from "./../components/CentroAyuda";
+import ContenidoCiberdelitos from "./../components/Ciberdelitos";
+import ContenidoContactanos from "./../components/Contactanos";
+import ContenidoInstitucional from "./../components/Institucional";
+import ContenidoPoliticaDePrivacidad from "./../components/PoliticaDePrivacidad";
+import ContenidoSucursales from "../components/DivSucursales";
+import ContenidoTerminosYCondiciones from "./../components/TerminosYCondiciones";
 import "./CentroAyuda.css";
 
 const CentroAyuda = () => {

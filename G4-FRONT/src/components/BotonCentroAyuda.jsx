@@ -1,4 +1,4 @@
-import "./ContenidoCentroAyuda.css";
+import "./CentroAyuda.css";
 
 export const BotonCentroAyuda = ({ imagenSrc, altTexto, titulo, onClick, linkTo }) => {
   return (

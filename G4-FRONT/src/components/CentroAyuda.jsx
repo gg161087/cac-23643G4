@@ -1,4 +1,4 @@
-import "./ContenidoCentroAyuda.css";
+import "./CentroAyuda.css";
 import { BotonCentroAyuda } from "./BotonCentroAyuda";
 import comoComprarOnlineImg from "../assets/botonesCentroAyuda/comoComprarOnline.jpg";
 import formasDePagoImg from "../assets/botonesCentroAyuda/formasDePago.jpg";

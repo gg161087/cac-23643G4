@@ -33,7 +33,7 @@ export const Header = () => {
     }
 
     return (
-        <header className="header d-flex flex-wrap">
+        <header className="header d-flex flex-wrap mb-4">
             <Container fluid className="container__nav1">
                 <Container className="d-flex justify-content-between align-items-center p-2 ">
                     <Nav className="">

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./partials/Header.jsx";
@@ -21,10 +20,7 @@ import { ExclusivoOnline } from "./pages/ExclusivoOnline.jsx";
 import { Ofertas } from "./pages/Ofertas.jsx";
 import { ProductsFiltered } from "./pages/ProductsFiltered.jsx";
 
-import { getDinamic } from "./utils/getDinamic.js";
-
 export const App = () => {
-
     return (
         <BrowserRouter>
             <Header/>
