@@ -22,7 +22,7 @@ const ContenidoInstitucional = () => {
           Para mantener esta posición, continuamos con la estrategia de
           expansión respaldada en las bases de nuestra misión, la cual es
           compartida y sostenida por toda la organización. El compromiso de
-          todas las personas que componemos <span className="span1">Argonauta</span> es continuar superándonos
+          todas las personas que componemos <span className="span1">Itechnology</span> es continuar superándonos
           para brindar cada vez más y mejores servicios a nuestros clientes. La
           identificación de los colaboradores con nuestros objetivos y valores,
           ha permitido el crecimiento mutuo: nuestro equipo está conformado por

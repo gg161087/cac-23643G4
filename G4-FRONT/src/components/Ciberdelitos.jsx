@@ -9,7 +9,7 @@ const ContenidoCiberdelitos = () => {
         style={{ width: "15%", height: "auto", margin: "20px" }}
       />
       <p>
-        Queremos contarte que Cetrogar sólo opera a través de cuentas que se
+        Queremos contarte que Itechnology sólo opera a través de cuentas que se
         encuentran verificadas, es decir que poseen una tilde azul al lado de su
         nombre.
         <br />
@@ -26,7 +26,7 @@ const ContenidoCiberdelitos = () => {
         <br />
         <br />
         Tampoco llames a números telefónicos o ingreses a links que compartan
-        otros usuarios en redes sociales, aunque señalen que son de Cetrogar.
+        otros usuarios en redes sociales, aunque señalen que son de Itechnology.
         Los números y contactos son comunicados en las redes oficiales
         verificadas.
         <br />
