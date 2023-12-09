@@ -1,0 +1,17 @@
+.terminos-y-condiciones {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.accordion-content {
+  display: none;
+  font-size: 12px;
+}
+
+

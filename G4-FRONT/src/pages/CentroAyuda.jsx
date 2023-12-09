@@ -8,7 +8,7 @@ import ContenidoContactanos from "./../components/Contactanos";
 import ContenidoInstitucional from "./../components/Institucional";
 import ContenidoPoliticaDePrivacidad from "./../components/PoliticaDePrivacidad";
 import ContenidoSucursales from "../components/DivSucursales";
-import ContenidoTerminosYCondiciones from "./../components/TerminosYCondiciones";
+import TerminosYCondiciones from "./../components/TerminosYCondiciones";
 import "./CentroAyuda.css";
 
 const CentroAyuda = () => {
@@ -28,7 +28,7 @@ const CentroAyuda = () => {
   const contenidoInstitucional = () => <ContenidoInstitucional />;
   const contenidoPoliticaDePrivacidad = () => <ContenidoPoliticaDePrivacidad />;
   const contenidoSucursales = () => <ContenidoSucursales />;
-  const contenidoTerminosYCondiciones = () => <ContenidoTerminosYCondiciones />;
+  const contenidoTerminosYCondiciones = () => <TerminosYCondiciones />;
 
   return (
     <Container>
