@@ -10,15 +10,17 @@ import consultasYReclamosImg from "../assets/botonesCentroAyuda/consultasYReclam
 import creditoArgonautaImg from "../assets/botonesCentroAyuda/creditoArgonauta.jpg";
 import informacionCovidImg from "../assets/botonesCentroAyuda/informacionCovid.jpg";
 
+
+
 const ContenidoCentroAyuda = () => {
   const handleButtonClick = () => {};
 
   return (
     <>
-      <p className="contenido-texto">
-        Si tenés algún inconveniente o consulta sobre tu compra, contactanos al
-        <strong>0800-123-45678</strong>.
-        <br />
+      <p className="contenido-texto2">
+        Si tenés algún inconveniente o consulta sobre tu compra, contactanos al: <br/></p>
+        <p className="contenido-texto-center"><strong >0800-123-45678</strong> </p>
+        <p className="contenido-texto">
         Nuestros horarios de atención son de lunes a sábado de 9 a 21hs, con
         excepción de los feriados. Te pedimos que tengas tu número de pedido a
         mano, vamos a solicitártelo para poder analizar tu caso. (El mismo

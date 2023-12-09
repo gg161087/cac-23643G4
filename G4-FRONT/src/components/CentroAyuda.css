@@ -1,3 +1,11 @@
+.contenido-texto {
+  text-align: justify;
+}
+
+.contenido-texto-center {
+  text-align: center;
+}
+
 .contenedor-botones {
   display: flex;
   flex-wrap: wrap;

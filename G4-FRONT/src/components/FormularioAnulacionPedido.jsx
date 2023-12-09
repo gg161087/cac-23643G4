@@ -25,7 +25,7 @@ const FormularioAnulacionPedido = () => {
             <Form.Label className="label-style">Nombre</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Nombre"
+              placeholder="Nombre (*)"
               style={{
                 width: "90%",
                 height: "5vh",
@@ -39,7 +39,7 @@ const FormularioAnulacionPedido = () => {
             <Form.Label className="label-style">Apellidos</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Apellidos"
+              placeholder="Apellidos (*)"
               style={{
                 width: "90%",
                 height: "5vh",
@@ -54,7 +54,7 @@ const FormularioAnulacionPedido = () => {
           <Form.Label className="label-style">DNI</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Número de documento"
+            placeholder="Número de documento  (*)"
             className="dni-input"
             value={dni}
             onChange={handleDniChange}
@@ -68,7 +68,7 @@ const FormularioAnulacionPedido = () => {
           <Form.Label className="label-style">Correo electrónico</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Dirección de email de contacto"
+            placeholder="Dirección de email de contacto (*)"
             className="dni-input"
           />
         </Form.Group>
@@ -82,23 +82,26 @@ const FormularioAnulacionPedido = () => {
             style={{ backgroundColor: "#ffffff", color: "#000000" }}
           >
             <option>Compra Online</option>
-            <option>Compra en Sucursal Credito Argonauta</option>
+            <option>Compra en Sucursal Credito Itechnology</option>
           </Form.Control>
         </Form.Group>
 
         <Form.Group controlId="formMotivo">
           <Form.Label className="label-style">
             Motivo de la solicitud
+            
           </Form.Label>
-          <Form.Control as="textarea" rows={5} />
+          
+          <Form.Control  
+            placeholder="Indiquenos su solicitud(*)" as="textarea" rows={5} />
         </Form.Group>
 
         <Button
+          
           variant="primary"
           type="submit"
           style={{
-            // backgroundColor: "#ef7f13",
-            // color: "#ffffff",
+
             transition: "background-color 0.3s",
             border: "none",
             marginTop: "10px",
