@@ -45,8 +45,9 @@ export const Login = () => {
                         aria-describedby="emailHelp"
                         value={email}
                         onChange={handleEmailChange}
+                        placeholder="Dirección de email (*)"
                     />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <div id="emailHelp" className="form-text">No compartiremos tu dirección de email</div>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Contraseña:</label>
@@ -57,9 +58,10 @@ export const Login = () => {
                         aria-describedby="passwordHelpBlock"
                         value={password}
                         onChange={handlePasswordChange}
+                        placeholder="Contraseña"
                     />
                     <div id="passwordHelpBlock" className="form-text">
-                        <small>Must be 8-20 characters long. </small>
+                        <small>De 8 a 20 characteres maximo. </small>
                         <p>
                             <Link to='/forgot_password'>Olvidé mi contraseña</Link>
                         </p>

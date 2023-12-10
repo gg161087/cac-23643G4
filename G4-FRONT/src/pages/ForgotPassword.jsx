@@ -13,6 +13,11 @@ export const ForgotPassword = () => {
         console.log('Email:', email);
     };
 
+    const mostrarVentanaEmergente = () => {
+        window.alert('¡Hola! Solicitud Enviada.');
+      };
+    
+
     return (
         <div className="container d-flex justify-content-center">
             <form onSubmit={handleSubmit} className='loginForm m-5'>
@@ -26,12 +31,12 @@ export const ForgotPassword = () => {
                         value={email}
                         onChange={handleEmailChange}
                     />
-                    <div id="emailForgotHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <div id="emailForgotHelp" className="form-text">Le enviaremos al correo las instrucciones para recuperar la cuenta</div>
                 </div>                
                 <div className="d-flex justify-content-around">                        
                     <Link to='/login'>Volver</Link>
-                    <button type="submit" className="btn btn-primary">
-                        Iniciar sesión
+                    <button type="submit" className="btn btn-primary" onClick={mostrarVentanaEmergente}>
+                        Enviar
                     </button>
                 </div>
             </form>

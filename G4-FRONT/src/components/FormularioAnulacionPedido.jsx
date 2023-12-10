@@ -4,11 +4,23 @@ import "./FormularioAnulacionPedido.css";
 
 const FormularioAnulacionPedido = () => {
   const [dni, setDni] = useState("");
+  const [nombre, setNombre] = useState("");
+
+  const handleNombreChange = (e) => {
+    const newNombre = e.target.value.slice(0, 20);
+    setNombre(newNombre);
+  };
 
   const handleDniChange = (e) => {
     const newDni = e.target.value.replace(/\D/g, "").slice(0, 8);
     setDni(newDni);
   };
+
+  const mostrarVentanaEmergente = () => {
+    window.alert('¡Hola! Solicitud Enviada.');
+  };
+
+
 
   return (
     <>
@@ -31,7 +43,10 @@ const FormularioAnulacionPedido = () => {
                 height: "5vh",
                 margin: "0 40px 10px 0",
                 paddingRight: "20px",
+
               }}
+              value={nombre}
+              onChange={handleNombreChange}
             />
           </Form.Group>
 
@@ -97,7 +112,8 @@ const FormularioAnulacionPedido = () => {
         </Form.Group>
 
         <Button
-          
+          disabled={(dni=='')||(nombre=='')}
+          onClick={mostrarVentanaEmergente}
           variant="primary"
           type="submit"
           style={{
