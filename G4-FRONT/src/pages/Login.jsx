@@ -61,7 +61,7 @@ export const Login = () => {
                         placeholder="Contraseña"
                     />
                     <div id="passwordHelpBlock" className="form-text">
-                        <small>De 8 a 20 characteres maximo. </small>
+                        <small>Minimo 5 caracteres, al menos 1 mayúscula y número requerido.</small>
                         <p>
                             <Link to='/forgot_password'>Olvidé mi contraseña</Link>
                         </p>
