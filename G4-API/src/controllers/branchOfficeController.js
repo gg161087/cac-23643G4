@@ -3,166 +3,90 @@ import { provinceModel } from './../models/provinceModel.js';
 
 export const getAllBranchOffices = async (req, res) => {
     try {
-        const response = await branchOfficeModel.findAll({ 
+        const branchOffices = await branchOfficeModel.findAll({ 
             include: [
                 { model: provinceModel },                                              
             ]
-        });
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            })
-        }       
-        res.status(200).json({
-            success: true,
-            message: 'Branch Offices obtained correctly.',
-            results: response
-        });
-
+        });        
+        res.status(200).json(branchOffices);     
     } catch (error) {
-        console.log(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting all Branch Offices.',
-            results: null
-        })
+        console.log(error);
+        res.status(500).json({ message: error.message });
     }
 };
 
 export const getBranchOfficeById = async (req, res, next) => {
     const { id } = req.params
     try {
-        const response = await branchOfficeModel.findByPk(id, { 
+        const branchOffice = await branchOfficeModel.findByPk(id, { 
             include: [
                 { model: provinceModel }                               
             ]
         });
-        if (!response) {
-            res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            })
-        }
-        res.status(200).json({
-            success: true,
-            message: 'Branch Office obtained correctly.',
-            results: response
-        })
+        res.status(200).json(branchOffice);      
     } catch (error) {
         console.log(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting Branch Office.',
-            results: null
-        })
+        res.status(500).json({ message: error.message });
     }
 };
 
 export const createBranchOffice = async (req, res) => {    
     const { departments, address, telephone, province_id } = req.body;
     if (!departments || !address || !telephone|| !province_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
-    const newBranchOffice = {
+    const branchOfficeSchema = {
         departments:departments,
         address:address,
         telephone:telephone,
         province_id:province_id
     };
     try {
-        const response = await branchOfficeModel.create({newBranchOffice});
-        if (!response) {
-            return res.status(403).json({
-                success: false,
-                message: 'Error trying to create the Branch Office.',
-                results: null
-            });
-        };
-        res.status(201).json({
-            success: true,
-            message: 'Branch Office created successfully.',
-            results: newBranchOffice
-        });
+        const newBranchOffice = await branchOfficeModel.create({branchOfficeSchema});
+        res.status(201).json(newBranchOffice);      
     } catch (error) {
-        console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Unexpected error with the server.',
-            results: null
-        });
+        console.error(error);        
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const updateBranchOfficeById = async (req, res) => {
     const { departments, address, telephone, province_id } = req.body;
     if (!departments || !address || !telephone|| !province_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
-    const updateBranchOffice = {
+    const branchOfficeSchema = {
         departments:departments,
         address:address,
         telephone:telephone,
         province_id:province_id
     };    
     try {
-        const response = await branchOfficeModel.update(
-            { updateBranchOffice },
-            { where: { id: id } }
-        );
-        if (response[0] === 0 || !response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Error trying to update/find the Branch Office.',
-                results: null
-            });
+        const branchOffice = await branchOfficeModel.findByPk(id);
+        if (!branchOffice) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await branchOffice.update({branchOfficeSchema});
+            res.json({ message: 'Branch Office updated correctly.' });
         };
-        res.status(200).json({
-            success: true,
-            message: 'Branch Office updated correctly.',
-            results: updateBranchOffice
-        });
     } catch (error) {
         console.error(error);        
-        res.status(500).json({
-            success: false,
-            message: 'Error when updating Branch Office.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const deleteBranchOfficeById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await branchOfficeModel.destroy({
-            where: { id: id }
-        });
-        if (response === 0) {
-            return res.status(400).json({
-                success: false,                
-                message: 'Branch Office not found or cannot be deleted.'
-            });
+        const branchOffice = await branchOfficeModel.findByPk(id);
+        if (!branchOffice) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await branchOffice.destroy();
+            res.status(202).json({ message: 'Branch Office deleted successfully.' });
         };
-        res.status(200).json({
-            success: true,            
-            message: 'Branch Office deleted successfully.'
-        });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,            
-            message: 'Error when trying to delete.'
-        });
+        res.status(500).json({ message: error.message });
     };
 };

@@ -3,65 +3,35 @@ import { productModel, productSpecificationsModel, productImgsurlsModel } from '
 
 export const getAllProducts = async (req, res, next) => {
     try {
-        const response = await productModel.findAll({ 
+        const products = await productModel.findAll({ 
             include: [
                 { model: productSpecificationsModel },
                 { model: productImgsurlsModel},
                 { model: categoryModel }                                             
             ]
-        });
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            })
-        }       
-        res.status(200).json({
-            success: true,
-            message: 'Products obtained correctly.',
-            results: response
-        });
+        });             
+        res.status(200).json(products);
 
     } catch (error) {
         console.log(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting all products.',
-            results: null
-        })
+        res.status(500).json({ message: error.message });
     }
 };
 
 export const getProductById = async (req, res, next) => {
     const { id } = req.params
     try {
-        const response = await productModel.findByPk(id, { 
+        const product = await productModel.findByPk(id, { 
             include: [
                 { model: productSpecificationsModel },
                 { model: productImgsurlsModel},
                 { model: categoryModel },                                
             ]
-        });
-        if (!response) {
-            res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            })
-        }
-        res.status(200).json({
-            success: true,
-            message: 'Product obtained correctly.',
-            results: response
-        })
+        });        
+        res.status(200).json(product);
     } catch (error) {
         console.log(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting product.',
-            results: null
-        })
+        res.status(500).json({ message: error.message });
     }
 };
 
@@ -70,13 +40,9 @@ export const createProduct = async (req, res) => {
         stock, discount, sku, dues, imgUrl, category_id } = req.body;
     if (!brand || !model || !description|| !price|| !stock || 
         !discount || !sku || !dues|| !imgUrl|| !category_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+            return res.status(404).json({message: 'Missing fields.'});
     };
-    const newProduct = {
+    const productSchema = {
         brand:brand,
         model:model,
         description:description,
@@ -89,26 +55,11 @@ export const createProduct = async (req, res) => {
         category_id:category_id
     };
     try {
-        const response = await productModel.create({newProduct});
-        if (!response) {
-            return res.status(403).json({
-                success: false,
-                message: 'Error trying to create the product.',
-                results: null
-            });
-        };
-        res.status(201).json({
-            success: true,
-            message: 'Product created successfully.',
-            results: newProduct
-        });
+        const newProduct = await productModel.create({productSchema});
+        return res.status(403).json(newProduct);
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Unexpected error with the server.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
@@ -118,13 +69,9 @@ export const updateProductById = async (req, res) => {
         stock, discount, sku, dues, imgUrl, category_id } = req.body;
     if (!brand || !model || !description|| !price|| !stock || 
         !discount || !sku || !dues|| !imgUrl|| !category_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+            return res.status(404).json({message: 'Missing fields.'});
     };
-    const updateProduct = {
+    const productSchema = {
             brand:brand,
             model:model,
             description:description,
@@ -137,53 +84,33 @@ export const updateProductById = async (req, res) => {
             category_id:category_id
     };
     try {
-        const response = await productModel.update(
-            { updateProduct },
-            { where: { id: id } }
-        );
-        if (response[0] === 0 || !response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Error trying to update/find the product.',
-                results: null
-            });
-        };
-        res.status(200).json({
-            success: true,
-            message: 'Product updated correctly.',
-            results: updateProduct
-        });
+        const product = await productModel.findByPk(id);
+
+        if (!product) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await product.update({productSchema});
+            res.json({ message: 'Product updated correctly.' });
+        }
     } catch (error) {
         console.error(error);        
-        res.status(500).json({
-            success: false,
-            message: 'Error when updating product.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const deleteProductById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await productModel.destroy({
-            where: { id: id }
-        });
-        if (response === 0) {
-            return res.status(400).json({
-                success: false,                
-                message: 'Product not found or cannot be deleted.'
-            });
-        };
-        res.status(200).json({
-            success: true,            
-            message: 'Product deleted successfully.'
-        });
+        const product = await productModel.findByPk(id);
+       
+        if (product) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await product.destroy();
+            res.status(202).json({ message: 'Product deleted successfully.' });
+        };        
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,            
-            message: 'Error when trying to delete.'
-        });
+        res.status(500).json({ message: error.message });
     };
 };

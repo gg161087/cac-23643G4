@@ -1,4 +1,6 @@
 .search-result {
+  text-decoration: none;
+  color: #202020;
   padding: 5px 20px;
 }
 

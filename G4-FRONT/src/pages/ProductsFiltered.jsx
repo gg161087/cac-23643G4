@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom"
 
 import { ProductsGrid } from '../components/ProductsGrid.jsx';
-import { getDinamicByName, getDinamicByCategoryId } from './../utils/getDinamic.js';
+import { getDinamic } from './../utils/getDinamic.js';
 
 export const ProductsFiltered = () => {
     
@@ -11,13 +11,17 @@ export const ProductsFiltered = () => {
 
     const [products, setProducts] = useState([])
 
+    const getProductsByCategoryId = async () => {
+        const categories = await getDinamic('categories');
+        const categoryName = await categories.filter((element => element.name == category));
+        const {id} = categoryName[0];        
+        const response = await getDinamic('products')        
+        const dataFilter = await response.filter((element => element.category_id == id));            
+        setProducts(dataFilter);                       
+    }
+
     useEffect(() =>{
-        const getProductsByCategoryId = async () => {
-            const response = await getDinamicByName('categories', category)
-            const {id} = response[0]
-            const dataFilter = await getDinamicByCategoryId('products', id)
-            setProducts(dataFilter);                       
-        }
+        
         getProductsByCategoryId()
                                 
     },[category])

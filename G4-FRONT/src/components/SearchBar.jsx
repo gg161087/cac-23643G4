@@ -7,12 +7,13 @@ import "./SearchBar.css";
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const [products, setProducts] = useState([]);
-
+  
+  const getProducts = async () => {
+    const response = await getDinamic('products');
+    setProducts(response);
+  };
+  
   useEffect(() => {
-    const getProducts = async () => {
-      const response = await getDinamic('products');
-      setProducts(response);
-    };
     getProducts();
   }, []);
 
@@ -23,7 +24,6 @@ export const SearchBar = ({ setResults }) => {
       );
     });
     setResults(results);
-    // });
   };
 
   const handleChange = (value) => {

@@ -2,87 +2,37 @@ import { subscriberModel } from './../models/subscriberModel.js';
 
 export const getAllSubscribers = async (req, res) => {
     try {
-        const response = await  subscriberModel.findAll();
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            }); 
-        };
-        res.status(200).json({
-            success: true,
-            message: 'Subcribers obtained correctly.',
-            results: response
-        });
+        const subscribers = await  subscriberModel.findAll();
+        res.status(200).json(subscribers)
     } catch (error) {        
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Error getting all subcribers.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const getSubscriberById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await subscriberModel.findByPk(id);
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            });
-        };
-        res.status(200).json({
-            success: true,
-            message: 'Subcriber obtained correctly.',
-            results: response
-        });
+        const subscriber = await subscriberModel.findByPk(id);
+        res.status(200).json(subscriber);
     } catch (error) {
         console.error(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting subcriber.',
-            results: null
-        });
-    };
+        res.status(500).json({ message: error.message });
+    }
 };
 
 export const createSubscriber = async (req, res) => {    
     const { email } = req.body;
     if (!email) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
     try {
-        const response = await subscriberModel.create({
-            email: email,
-        });
-        if (!response) {
-            return res.status(403).json({
-                success: false,
-                message: 'Error trying to create the subcriber.',
-                results: null
-            });
-        };
-        res.status(201).json({
-            success: true,
-            message: 'Subcriber created successfully.',
-            results: response
-        });
+        const response = await subscriberModel.create();
+        const newSubscriber = await subscriberModel.create({email});
+        res.status(201).json(newSubscriber);
     } catch (error) {
         console.error(error);
-        return res.status(500).json({
-            success: false,
-            message: 'Unexpected error with the server.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
@@ -90,60 +40,34 @@ export const updateSubscriberById = async (req, res) => {
     const { id } = req.params;
     const { email } = req.body;
     if (!email) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
     try {
-        const response = await subscriberModel.update(
-            { email: email },
-            { where: { id: id } }
-        );
-        if (response[0] === 0 || !response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Error trying to update/find the subcriber.',
-                results: null
-            });
-        };
-        res.status(200).json({
-            success: true,
-            message: 'Subcriber updated correctly.',
-            results: email
-        });
+        const subscriber = await subscriberModel.findByPk(id);
+        if (!subscriber) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await subscriber.update({email});
+            res.json({ message: 'Subscriber updated correctly.' });
+        };        
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Error when updating subcriber.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const deleteSubscriberById = async (req, res) => {
     const { id } = req.params;
     try {
-        const response = await subscriberModel.destroy({
-            where: { id: id }
-        });
-        if (response === 0) {
-            return res.status(400).json({
-                success: false,                
-                message: 'Subcriber not found or cannot be deleted.'
-            });
+        const subscriber = await subscriberModel.findByPk(id);
+        if (!subscriber) {
+            res.status(404).json({ message: 'Not found.' });
+        }else {
+            await subscriber.destroy();
+            res.status(202).json({ message: 'Subscriber deleted successfully.' });
         };
-        res.status(200).json({
-            success: true,            
-            message: 'Subcriber deleted successfully.'
-        });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,            
-            message: 'Error when trying to delete.'
-        });
+        res.status(500).json({ message: error.message });
     };
 };

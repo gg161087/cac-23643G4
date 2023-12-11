@@ -9,16 +9,20 @@ export const Home = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
-        const response = await getDinamic('products');        
+        const response = await getDinamic('products');
         setProducts(response);
     };
 
-    useEffect(() => {        
+    useEffect(() => {
         getProducts();
-    },[]);
+    }, []);
 
     if (!products) {
-        return null
+        return (
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        )
     }
 
     return (

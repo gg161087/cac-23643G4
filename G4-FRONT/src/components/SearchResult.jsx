@@ -1,29 +1,37 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 import './SearchResult.css';
-import { getDinamicByModel } from './../utils/getDinamic.js';
+import { getDinamic } from './../utils/getDinamic.js';
 
 export const SearchResult = ({ result }) => {  
     const navigate = useNavigate()  
     const [product, setProduct] = useState('')
 
     const getProductByModel = async (model) => {
-        const response = await getDinamicByModel('products', model);
-        setProduct(response);        
+        const response = await getDinamic('products')
+        const dataFilter = await response.find((element => element.model == model))
+        setProduct(dataFilter);        
     };
-    const handleClick = (content) => {        
-        getProductByModel(content)
-        if(!product){
-            return null
-        }
-        navigate(`products/${product.category.name}/${product.id}`)
+    
+    useEffect(() => {
+        getProductByModel(result)
+    },[result])
+
+    if (!product) {
+        return (
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        )
     }
+    
     return (
-        <div
+        <Link
             className="search-result"
-            onClick={(e) => handleClick(e.target.textContent)}>
-            {result}
-        </div>
+            to={`products/${product.category.name}/${product.id}`}
+        >
+        {result}
+        </Link>
     );
 };

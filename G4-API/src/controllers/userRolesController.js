@@ -2,91 +2,36 @@ import { userRolesModel } from './../models/userModel.js';
 
 export const getAllUserRoles = async (req, res) => {
     try {
-        const response = await  userRolesModel.findAll();
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            }); 
-        };
-        res.status(200).json({
-            success: true,
-            message: 'User Roles obtained correctly.',
-            results: response
-        });
+        const userRoles = await  userRolesModel.findAll();
+        res.status(200).json(userRoles);
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Error getting all user roles.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const getUserRolesByUserId = async (req, res) => {
     const { user_id } = req.params;
     try {
-        const response = await userRolesModel.findByPk(user_id);
-        if (!response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Bad request.',
-                results: null
-            });
-        };
-        res.status(200).json({
-            success: true,
-            message: 'User Roles obtained correctly.',
-            results: response
-        });
+        const userRoles = await userRolesModel.findByPk(user_id);     
+        res.status(200).json(userRoles);
     } catch (error) {
         console.error(error)
-        res.status(500).json({
-            success: false,
-            message: 'Error getting user roles.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const createUserRoles = async (req, res) => {    
     const { user_id, role_id } = req.body;
     if (!user_id || !role_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
     try {
-        const response = await userRolesModel.create({
-            user_id:user_id,
-            role_id:role_id
-        });
-        if (!response) {
-            return res.status(403).json({
-                success: false,
-                message: 'Error trying to create the role for user.',
-                results: null
-            });
-        };
-        res.status(201).json({
-            success: true,
-            message: 'Role for user created successfully.',
-            results: { 
-                user_id:user_id,
-                role_id:role_id
-            }
-        });
+        const newUserRoles = await userRolesModel.create({user_id, role_id});
+        res.status(201).json(newUserRoles);
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Unexpected error with the server.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
@@ -94,63 +39,34 @@ export const updateUserRolesByUserId = async (req, res) => {
     const { user_id } = req.params;
     const { role_id } = req.body;
     if (!role_id) {
-        return res.status(400).json({
-            success: false,
-            message: 'Bad request.',
-            results: null
-        });
+        return res.status(404).json({message: 'Missing fields.'});
     };
     try {
-        const response = await userRolesModel.update(
-            { role_id: role_id },
-            { where: { user_id: user_id } }
-        );
-        if (response[0] === 0 || !response) {
-            return res.status(400).json({
-                success: false,
-                message: 'Error trying to update/find the user roles.',
-                results: null
-            });
-        };
-        res.status(200).json({
-            success: true,
-            message: 'User roles updated correctly.',
-            results: {
-                user_id:user_id,
-                role_id:role_id
-            }
-        });
+        const userRoles = await userRolesModel.findByPk(user_id);         
+        if (!userRoles) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await userRoles.update({role_id});
+            res.json({ message: 'Branch Office updated correctly.' });
+        }
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: 'Error when updating roles for user.',
-            results: null
-        });
+        res.status(500).json({ message: error.message });
     };
 };
 
 export const deleteUserRolesByUserId = async (req, res) => {
     const { user_id } = req.params;
     try {
-        const response = await userRolesModel.destroy({
-            where: { user_id: user_id }
-        });
-        if (response === 0) {
-            return res.status(400).json({
-                success: false,                
-                message: 'User roles not found or cannot be deleted.'
-            });
+        const userRoles = await userRolesModel.findByPk(user_id);
+        if (!userRoles) {
+            res.status(404).json({ message: 'Not found.' });
+        } else {
+            await userRoles.destroy();
+            res.status(202).json({ message: 'User Role deleted successfully.' });
         };
-        res.status(200).json({
-            success: true,            
-            message: 'User roles deleted successfully.'
-        });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,            
-            message: 'Error when trying to delete.'
-        });
+        res.status(500).json({ message: error.message });
     };
 };

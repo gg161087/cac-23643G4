@@ -21,7 +21,7 @@ export const Header = () => {
 
     const getCategories = async () => {
         const response = await getDinamic('categories');
-        setCategories(response);
+        setCategories(response);        
     };
 
     useEffect(() => {
@@ -29,7 +29,11 @@ export const Header = () => {
     },[]);
 
     if (!categories) {
-        return null
+        return (
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        )
     }
 
     return (
@@ -127,17 +131,15 @@ export const Header = () => {
                             className="m-0 text-decoration-none"
                             title="Categorías"
                         >
-                            {categories.map((category) => (
-                                <NavDropdown.Item key={category.id}>
-                                    <Link
-                                        className=" text-decoration-none ms-3 me-3 d-flex w-100 fs-4 categoryList"
-                                        to={`products/${category.name}`}
-                                    >
-                                        {category.name.charAt(0).toUpperCase() +
-                                            category.name.slice(1)}
-                                    </Link>
-                                </NavDropdown.Item>
-                            ))}
+                        {categories.map((category) => (
+                                <Link key={category.id}
+                                    className="text-decoration-none ms-3 me-3  d-flex fs-4 categoryList"
+                                    to={`products/${category.name}`}
+                                >
+                                {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
+                                </Link>
+                            ))                        
+                        }                            
                         </NavDropdown>
                     </Nav>
                     <Nav className="ultima">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getDinamic, getDinamicByCategoryId } from "../utils/getDinamic.js";
+import { getDinamic } from "../utils/getDinamic.js";
 import { ProductsGrid } from "../components/ProductsGrid.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 import "./ProductDetail.css";
@@ -14,8 +14,9 @@ export const ProductDetail = () => {
     const [image, setImage] = useState('')
 
     const getProductsByCategoryId = async () => {
-        const response = await getDinamicByCategoryId('products', categoryId);        
-        setProducts(response);
+        const response = await getDinamic('products'); 
+        const dataFilter = await response.filter((element => element.category_id == categoryId))       
+        setProducts(dataFilter);
     };
 
     const getProductById = async () => {
@@ -30,7 +31,7 @@ export const ProductDetail = () => {
         getProductById();         
     }, [id, categoryId]);
 
-    if (!product) {
+    if (!product && products) {
         return <p>Cargando...</p>;
     }
 

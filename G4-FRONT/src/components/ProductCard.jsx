@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { getCategoryByCategoryId } from "./../utils/getDinamic.js";
+import { getDinamic } from "./../utils/getDinamic.js";
 import "./ProductCard.css";
 
 export const ProductCard = ({ product }) => {
@@ -15,7 +15,7 @@ export const ProductCard = ({ product }) => {
 
     useEffect(() => {
         const getCategory = async () => {
-            const response = await getCategoryByCategoryId('categories', product.category_id);
+            const response = await getDinamic(`categories/${product.category_id}`);
             setCategory(response);
         };
         getCategory();
