@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./partials/Header.jsx";
@@ -21,12 +22,31 @@ import { Ofertas } from "./pages/Ofertas.jsx";
 import { ProductsFiltered } from "./pages/ProductsFiltered.jsx";
 
 export const App = () => {
+    const [allProducts, setAllProducts] = useState([]);
+    const [total, setTotal] = useState(0);
+    const [countProducts, setCountProducts] = useState(0);
+
     return (
         <BrowserRouter>
-            <Header/>
+            <Header 
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}                 
+             />
             <main>
                 <Routes>
-                    <Route index element={<Home />}></Route>
+                    <Route index element={<Home
+                        allProducts={allProducts}
+                        setAllProducts={setAllProducts}
+                        total={total}
+                        setTotal={setTotal}
+                        countProducts={countProducts}
+                        setCountProducts={setCountProducts} 
+                    />}>
+                    </Route>
                     <Route path="/centro-de-ayuda" element={<CentroAyuda />} />
                     <Route path="/venta-telefonica" element={<VentaTelefonica />}></Route>
                     <Route path="/sucursales" element={<Sucursales />}></Route>
@@ -37,7 +57,15 @@ export const App = () => {
                     <Route path="/miCuenta" element={<MiCuenta />}></Route>
                     <Route path="/favoritos" element={<Favoritos />}></Route>
                     <Route path="/miCarrito" element={<MiCarrito />}></Route>
-                    <Route path="/products/:category/:id" element={<ProductDetail />}></Route>
+                    <Route path="/products/:category/:id" element={<ProductDetail 
+                        allProducts={allProducts}
+                        setAllProducts={setAllProducts}
+                        total={total}
+                        setTotal={setTotal}
+                        countProducts={countProducts}
+                        setCountProducts={setCountProducts}                        
+                    />}>                        
+                    </Route>
                     <Route path="/products/:category" element={<ProductsFiltered />}></Route>
                     <Route path="/exclusivo-online" element={<ExclusivoOnline />}></Route>
                     <Route path="/ofertas" element={<Ofertas />}></Route>

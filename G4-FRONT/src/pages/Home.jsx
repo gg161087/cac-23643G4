@@ -5,7 +5,7 @@ import { ProductsGrid } from "./../components/ProductsGrid.jsx";
 
 import { getDinamic } from "./../utils/getDinamic.js";
 
-export const Home = () => {
+export const Home = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
@@ -28,7 +28,15 @@ export const Home = () => {
     return (
         <>
             <Slider />
-            <ProductsGrid products={products} />
+            <ProductsGrid 
+                products={products} 
+                allProducts={allProducts} 
+                setAllProducts={setAllProducts}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+                total={total} 
+                setTotal={setTotal} 
+            />
         </>
     );
 };

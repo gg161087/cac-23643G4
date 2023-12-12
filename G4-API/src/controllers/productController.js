@@ -77,6 +77,7 @@ export const updateProductById = async (req, res) => {
             description:description,
             price:price,
             stock:stock,
+            quantity: 1,
             discount:discount,
             sku:sku,
             dues:dues,

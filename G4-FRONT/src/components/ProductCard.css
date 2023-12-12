@@ -24,3 +24,12 @@
 .price {
   font-weight: bold;
 }
+
+.chango{
+  display: flex;
+  justify-content: center;
+  text-align: center;   
+}
+.chango svg{
+  cursor: pointer;
+}

@@ -5,11 +5,11 @@ import { ProductsGrid } from "../components/ProductsGrid.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 import "./ProductDetail.css";
 
-export const ProductDetail = () => {
+export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => {
     const { id } = useParams();
 
     const [products, setProducts] = useState([]);
-    const [product, setProduct] = useState("");
+    const [product, setProduct] = useState('');
     const [categoryId, setCategoryId] = useState(null)
     const [image, setImage] = useState('')
 
@@ -20,12 +20,26 @@ export const ProductDetail = () => {
     };
 
     const getProductById = async () => {
-        const response = await getDinamic(`products/${id}`)//getDinamicById('products', id);
+        const response = await getDinamic(`products/${id}`)        
         setProduct(response);
         setCategoryId(product.category_id)
         getProductsByCategoryId();
         setImage(response.imgUrl)            
     };
+
+    const onAddProduct = product => {        
+        if(allProducts.find(element => element.id === product.id)){            
+            const cardProducts = allProducts.map(element =>                
+                element.id === product.id ? {...element, quantity: element.quantity + 1} : element
+            )            
+            setTotal(total + product.price * product.quantity)
+            setCountProducts(countProducts + product.quantity)
+            return setAllProducts([...cardProducts])
+        }
+        setTotal(total + product.price * product.quantity)
+        setCountProducts(countProducts + product.quantity)
+        setAllProducts([...allProducts, product])
+    }
 
     useEffect(() => {        
         getProductById();         
@@ -34,6 +48,8 @@ export const ProductDetail = () => {
     if (!product && products) {
         return <p>Cargando...</p>;
     }
+
+    console.log(allProducts);
 
     return (
         <>
@@ -74,7 +90,7 @@ export const ProductDetail = () => {
                         <p>Codigo: {product.sku}</p>
                         <div className="btn-group">
                             <button className="btn-dark">Comprar ahora</button>
-                            <button className="btn-light">Agregar al carrito</button>
+                            <button className="btn-light" onClick={()=> onAddProduct(product)}>Agregar al carrito</button>
                         </div>
                     </Col>
                 </Row>

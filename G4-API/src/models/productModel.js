@@ -29,6 +29,10 @@ export const productModel = db.define('products', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    quantity: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
     discount: {
         type: DataTypes.DECIMAL(5, 2),
         allowNull: false

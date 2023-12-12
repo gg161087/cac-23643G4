@@ -4,13 +4,23 @@ import { ProductCard } from './ProductCard.jsx'
 
 import './ProductsGrid.css'
 
-export const ProductsGrid = ({products}) => { 
-
+export const ProductsGrid = ({products, allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal}) => { 
     return ( 
         <Container>
             <Container className="grid_container">
                 {products.map((product) =>(
-                    <ProductCard key={product.id} product={product}></ProductCard>              
+                    <ProductCard 
+                        key={product.id} 
+                        product={product}
+                        products={products} 
+                        allProducts={allProducts} 
+                        setAllProducts={setAllProducts}
+                        countProducts={countProducts}
+                        setCountProducts={setCountProducts}
+                        total={total} 
+                        setTotal={setTotal}
+                    >                        
+                    </ProductCard>              
                 ))}
             </Container>
         </Container>
