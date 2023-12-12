@@ -53,3 +53,15 @@
   color: #000;
   border: transparent;
 }
+.sectionImgs{
+  height: 7rem;
+}
+.imgs{
+  width: 7rem;
+  height: 7rem;
+}
+.imgs img {
+  max-height: 7rem;
+  object-fit: contain;
+  width: 100%;
+}

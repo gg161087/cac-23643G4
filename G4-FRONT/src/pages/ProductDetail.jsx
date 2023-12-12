@@ -37,22 +37,22 @@ export const ProductDetail = () => {
 
     return (
         <>
-            <Container className="contenedor  ">
+            <Container className="contenedor">
                 <Row className="">
-                    <Col md={8} className=" p-5 d-flex flex-column ">
+                    <Col md={8} className="p-5 d-flex flex-column">
                         <img
                             src={image}
                             alt={product.model}
-                            className="m-auto h-75"
+                            className="m-auto h-75 imgs1"
                         />
-                        <section className="d-flex justify-content-evenly  mt-2">
+                        <section className="d-flex justify-content-evenly mt-2 sectionImgs">
                             {product.product_imgsurls &&
                                 product.product_imgsurls.map((product) => (
-                                    <div key={product.img_url}>
+                                    <div key={product.img_url} className="imgs">
                                         <img
                                             src={product.img_url}
                                             alt={product.model}
-                                            className="m-auto h-75"
+                                            className=""
                                             onMouseEnter={() => setImage(product.img_url)}
                                         />
                                     </div>
