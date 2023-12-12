@@ -16,7 +16,7 @@ export const userModel = db.define('users', {
         allowNull: false
     },
     telephone: {
-        type: DataTypes.INTEGER(12),
+        type: DataTypes.STRING(13),
         allowNull: false
     },
     email: {

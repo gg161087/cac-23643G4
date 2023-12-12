@@ -21,5 +21,5 @@
 POST localhost:3000/api/users/login
 {
   "email": "admin@itechnology.com",
-  "password": "admin"
+  "password": "Admin1"
 }

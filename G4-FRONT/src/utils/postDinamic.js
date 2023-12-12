@@ -8,8 +8,8 @@ export const postLogin = async (path, email, password) => {
             email: email,
             password: password
         })
-        if (data.success) {
-            return data.results
+        if (data) {
+            return data
         }        
     } catch (error) {
         console.error(error)
@@ -19,20 +19,18 @@ export const postSubscriber = async (email) => {
     const { data } = await axios.post(`${API_BASE_URL}/subscribers`, email)
     return data
 }
-export const postRegister = async (data) => {
-
-    const newUser = {
-        name: data.name,
-        last_name: data.last_name,
-        telephone: data.telephone,
-        email: data.email,
-        password: data.password
+export const postRegister = async (user) => {
+    const userSchema = {
+        name: user.name,
+        last_name: user.last_name,
+        telephone: user.telephone,
+        email: user.email,
+        password: user.password
     }
-
     try {
-        const { data } = await axios.post(`${API_BASE_URL}/users/register`, { newUser })
-        if (data.success) {
-            return data.results
+        const { data } = await axios.post(`${API_BASE_URL}/users/register`, userSchema)
+        if (data) {
+            return data
         }        
     } catch (error) {
         console.error(error)

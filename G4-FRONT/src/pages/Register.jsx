@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -9,8 +8,7 @@ import { registerSchema } from './../schemas/registerSchema.js';
 import { postRegister } from './../utils/postDinamic.js';
 
 export const Register = () => {
-
-    const [showMessage, setShowMessage] = useState(false)
+    const navigate = useNavigate();
 
     const confirmRegister = (values) => {
         Swal.fire({
@@ -22,44 +20,46 @@ export const Register = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, Deseo registrarme!'
         }).then((result) => {
-            if (result.isConfirmed) {                
-                postRegister(values).then((res) => {
-                    if (res) {
+            if (result.isConfirmed) {
+                const register = async (values) => {
+                    const response = await postRegister(values)
+                    console.log(response);
+                    if (response) {
                         Swal.fire(
                             'Registrado!',
                             'Te registraste correctamente.',
                             'success'
                         )
+                        navigate('/login')
                     } else {
                         Swal.fire(
                             'Lo sentimos! no se registro!',
-                            'Error inesperado al registrarse.',
+                            'Intente más tarde o con otro email.',
                             'error'
                         )
                     }
-                })                
+                }
+                register(values)
             }
         })
     }
-    
+
     const onSubmit = (values) => {
-        setShowMessage(!showMessage)        
-        console.log(values);
         confirmRegister(values)
     }
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
-		initialValues: {
-			name: '',
-			last_name: '',
-			telephone: '',
-			email: '',
-			password: '',
-			confirmPass: ''
-		},
-		validationSchema: registerSchema,
-		onSubmit,
-	})
+        initialValues: {
+            name: '',
+            last_name: '',
+            telephone: '',
+            email: '',
+            password: '',
+            confirmPass: ''
+        },
+        validationSchema: registerSchema,
+        onSubmit,
+    })
 
     return (
         <div className="container d-flex justify-content-center">
@@ -72,8 +72,8 @@ export const Register = () => {
                         className="form-control"
                         aria-describedby="nameHelp"
                         value={values.name}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
                     <div id="nameHelp" className="form-text">{errors.name && touched.name ? errors.name : 'John'}</div>
                 </div>
@@ -84,9 +84,9 @@ export const Register = () => {
                         id="last_name"
                         className="form-control"
                         aria-describedby="lastNameHelp"
-                        value={values.lastName}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        value={values.last_name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
                     <div id="lastNameHelp" className="form-text">{errors.last_name && touched.last_name ? errors.last_name : 'Doe'}</div>
                 </div>
@@ -98,10 +98,10 @@ export const Register = () => {
                         className="form-control"
                         aria-describedby="telephoneHelp"
                         value={values.telephone}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
-                    <div id="telephoneHelp" className="form-text">{errors.tel && touched.telephone ? errors.telephone : '542215123478'}</div>
+                    <div id="telephoneHelp" className="form-text">{errors.telephone && touched.telephone ? errors.telephone : '542215123478'}</div>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Correo electrónico:</label>
@@ -111,8 +111,8 @@ export const Register = () => {
                         className="form-control"
                         aria-describedby="emailHelp"
                         value={values.email}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
                     <div id="emailHelp" className="form-text">{errors.email && touched.email ? errors.email : 'john.doe@itechnology.com'}</div>
                 </div>
@@ -124,11 +124,11 @@ export const Register = () => {
                         className="form-control"
                         aria-describedby="passwordHelpBlock"
                         value={values.password}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
                     <div id="passwordHelpBlock" className="form-text">
-                        <small>{errors.password && touched.password ? errors.password :'Contraseña1'}</small>
+                        <small>{errors.password && touched.password ? errors.password : 'Contraseña1'}</small>
                     </div>
                 </div>
                 <div className="mb-3">
@@ -139,8 +139,8 @@ export const Register = () => {
                         className="form-control"
                         aria-describedby="confirmPassHelpBlock"
                         value={values.confirmPass}
-				        onChange={handleChange}
-				        onBlur={handleBlur}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                     />
                     <div id="confirmPassHelpBlock" className="form-text">
                         <small>{errors.confirmPass && touched.confirmPass ? errors.confirmPass : 'Confirmar Contraseña'}</small>

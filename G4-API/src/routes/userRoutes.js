@@ -8,7 +8,7 @@ export const userRouter = Router();
 
 userRouter.get("/", getAllUsers);
 userRouter.get("/:id", getUserById);
-userRouter.post("/register", validatorCreateUser, createNewUser);
+userRouter.post("/register", createNewUser);
 userRouter.post("/login", login);
 userRouter.patch("/:id", updateUserById);
 userRouter.delete("/:id", deleteUserById);

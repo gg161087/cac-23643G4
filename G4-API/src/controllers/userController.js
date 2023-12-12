@@ -1,4 +1,4 @@
-import { userModel } from '../models/userModel.js';
+import { userModel, userRolesModel } from '../models/userModel.js';
 import { roleModel } from '../models/userModel.js';
 import { hashPassword } from '../utils/handlePassword.js';
 
@@ -36,7 +36,7 @@ export const createNewUser = async (req, res, next) => {
     if (!name || !last_name || !telephone || !email || !password) {
         return res.status(404).json({message: 'Missing fields.'});
     };
-    const hashedPass = hashPassword(password);
+    const hashedPass = await hashPassword(password);    
     const userSchema = {
         name: name,
         last_name: last_name,
@@ -45,7 +45,8 @@ export const createNewUser = async (req, res, next) => {
         password: hashedPass
     };
     try {
-        const newUser = await userModel.create({ userSchema });  
+        const newUser = await userModel.create(userSchema);
+        const newUserRole = await userRolesModel.create({user_id: newUser.id, role_id: 2})
         res.status(201).json(newUser);
     } catch (error) {
         console.error(error);

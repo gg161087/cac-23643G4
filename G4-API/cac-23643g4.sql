@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2023 a las 03:33:55
+-- Tiempo de generación: 12-12-2023 a las 15:44:20
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -261,9 +261,9 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (1, 'administrator', '2023-12-04 19:12:02', '2023-12-04 19:12:02'),
-(3, 'guest', '2023-12-04 19:12:02', '2023-12-04 19:12:02'),
-(4, 'seller', '2023-12-04 19:12:02', '2023-12-04 19:12:02'),
-(5, 'client', '2023-12-04 19:12:02', '2023-12-04 19:12:02');
+(2, 'guest', '2023-12-04 19:12:02', '2023-12-12 10:48:16'),
+(3, 'seller', '2023-12-04 19:12:02', '2023-12-12 10:48:21'),
+(4, 'client', '2023-12-04 19:12:02', '2023-12-12 10:48:27');
 
 -- --------------------------------------------------------
 
@@ -297,7 +297,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
-  `telephone` int(12) NOT NULL,
+  `telephone` varchar(13) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(100) NOT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
@@ -309,7 +309,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `last_name`, `telephone`, `email`, `password`, `createdAt`, `updatedAt`) VALUES
-(1, 'Administrador', 'Itechnology', 221123456, 'admin@itechnology.com', '$2b$10$bWHX441ePFDE2cK3oIQKqeUlgqUryubcv6CV52LFWdvQyLeU.sFLS', '2023-12-04 16:14:20', '2023-12-04 16:14:20');
+(1, 'Administrador', 'Itechnology', '542215123478', 'admin@itechnology.com', '$2b$10$DwS8ByBVKeeKmMj9vGVHb.bAazoDI9JklgZKOjGNL22NJbC8vX92a', '2023-12-12 14:11:34', '2023-12-12 14:11:34');
 
 -- --------------------------------------------------------
 
@@ -329,7 +329,7 @@ CREATE TABLE `user_roles` (
 --
 
 INSERT INTO `user_roles` (`user_id`, `role_id`, `createdAt`, `updatedAt`) VALUES
-(1, 1, '2023-12-04 17:11:42', '2023-12-04 17:11:42');
+(1, 2, '2023-12-12 14:11:34', '2023-12-12 14:11:34');
 
 --
 -- Índices para tablas volcadas
@@ -426,10 +426,22 @@ ALTER TABLE `product_imgsurls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT de la tabla `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `subscriber_newsletters`
 --
 ALTER TABLE `subscriber_newsletters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

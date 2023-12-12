@@ -20,7 +20,7 @@ export const Login = () => {
 
     const login = async (email, password) => {
         const response = await postLogin('users/login', email, password)
-        if (response) {            
+        if (response) {                       
             localStorage.setItem('token', response.token);
             localStorage.setItem('userId', response.id); 
             setToken(localStorage.getItem('token'))
