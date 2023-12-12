@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2023 a las 21:04:51
+-- Tiempo de generación: 12-12-2023 a las 03:33:55
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -139,18 +139,17 @@ CREATE TABLE `product_imgsurls` (
 --
 
 INSERT INTO `product_imgsurls` (`id`, `product_id`, `img_url`, `createdAt`, `updatedAt`) VALUES
-(1, 2, 'https://http2.mlstatic.com/D_Q_NP_743195-MLA45719932493_042021-R.webp', NULL, NULL),
-(2, 2, 'https://http2.mlstatic.com/D_Q_NP_784571-MLA45729987876_042021-R.webp', NULL, NULL),
-(3, 2, 'https://http2.mlstatic.com/D_Q_NP_915882-MLA45730353081_042021-R.webp', NULL, NULL),
-(4, 2, 'https://http2.mlstatic.com/D_Q_NP_688182-MLA45730353083_042021-R.webp', NULL, NULL),
-(5, 2, 'https://http2.mlstatic.com/D_Q_NP_741474-MLA46104512792_052021-R.webp', NULL, NULL),
-(6, 10, 'https://http2.mlstatic.com/D_Q_NP_793787-MLU72272571538_102023-R.webp', '2023-12-06 12:10:20', '2023-12-06 12:10:20'),
-(7, 10, 'https://http2.mlstatic.com/D_Q_NP_887525-MLA52222796947_102022-R.webp', '2023-12-06 12:10:51', '2023-12-06 12:10:51'),
-(8, 10, 'https://http2.mlstatic.com/D_Q_NP_805875-MLA52222806805_102022-R.webp', '2023-12-06 12:11:23', '2023-12-06 12:11:23'),
-(9, 10, 'https://http2.mlstatic.com/D_Q_NP_783651-MLA52222798936_102022-R.webp', '2023-12-06 12:11:23', '2023-12-06 12:11:23'),
-(10, 1, 'https://http2.mlstatic.com/D_Q_NP_663715-MLA53381689250_012023-R.webp', '2023-12-06 12:13:03', '2023-12-06 12:13:03'),
-(11, 1, 'https://http2.mlstatic.com/D_Q_NP_913084-MLA53381689251_012023-R.webp', '2023-12-06 12:13:38', '2023-12-06 12:13:38'),
-(12, 1, 'https://http2.mlstatic.com/D_Q_NP_726074-MLA53381689253_012023-R.webp', '2023-12-06 12:13:38', '2023-12-06 12:13:38');
+(1, 2, 'https://http2.mlstatic.com/D_NQ_NP_784571-MLA45729987876_042021-O.webp', NULL, '2023-12-11 23:13:28'),
+(2, 2, 'https://http2.mlstatic.com/D_NQ_NP_915882-MLA45730353081_042021-O.webp', NULL, '2023-12-11 23:14:06'),
+(3, 2, 'https://http2.mlstatic.com/D_NQ_NP_688182-MLA45730353083_042021-O.webp', NULL, '2023-12-11 23:14:22'),
+(4, 2, 'https://http2.mlstatic.com/D_NQ_NP_741474-MLA46104512792_052021-O.webp', NULL, '2023-12-11 23:14:35'),
+(6, 10, 'https://http2.mlstatic.com/D_NQ_NP_614641-MLU72748616617_112023-O.webp', '2023-12-06 12:10:20', '2023-12-11 23:16:01'),
+(7, 10, 'https://http2.mlstatic.com/D_NQ_NP_717500-MLU72630961370_112023-O.webp', '2023-12-06 12:10:51', '2023-12-11 23:16:13'),
+(8, 10, 'https://http2.mlstatic.com/D_NQ_NP_703358-MLU72748588279_112023-O.webp', '2023-12-06 12:11:23', '2023-12-11 23:16:26'),
+(9, 10, 'https://http2.mlstatic.com/D_NQ_NP_747438-MLU69492859693_052023-O.webp', '2023-12-06 12:11:23', '2023-12-11 23:16:42'),
+(10, 1, 'https://http2.mlstatic.com/D_NQ_NP_658507-MLA44281674445_122020-O.webp', '2023-12-06 12:13:03', '2023-12-11 23:00:57'),
+(11, 1, 'https://http2.mlstatic.com/D_NQ_NP_784247-MLA44281644545_122020-O.webp', '2023-12-06 12:13:38', '2023-12-11 23:06:52'),
+(12, 1, 'https://http2.mlstatic.com/D_NQ_NP_960888-MLA44281644546_122020-O.webp', '2023-12-06 12:13:38', '2023-12-11 23:07:13');
 
 -- --------------------------------------------------------
 
