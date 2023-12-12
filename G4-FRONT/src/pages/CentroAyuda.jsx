@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 
 import FormularioAnulacionPedido from "./../components/FormularioAnulacionPedido";
@@ -9,6 +9,7 @@ import ContenidoInstitucional from "./../components/Institucional";
 import ContenidoPoliticaDePrivacidad from "./../components/PoliticaDePrivacidad";
 import ContenidoSucursales from "../components/DivSucursales";
 import TerminosYCondiciones from "./../components/TerminosYCondiciones";
+
 import "./CentroAyuda.css";
 
 const CentroAyuda = () => {
@@ -29,6 +30,10 @@ const CentroAyuda = () => {
   const contenidoPoliticaDePrivacidad = () => <ContenidoPoliticaDePrivacidad />;
   const contenidoSucursales = () => <ContenidoSucursales />;
   const contenidoTerminosYCondiciones = () => <TerminosYCondiciones />;
+
+  useEffect(() => {
+    handleItemClick(contenidoCentroAyuda(), "Centro de Ayuda");
+  }, []);
 
   return (
     <Container>
