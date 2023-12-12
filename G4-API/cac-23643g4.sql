@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2023 a las 15:44:20
+-- Tiempo de generación: 12-12-2023 a las 19:56:30
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -95,6 +95,7 @@ CREATE TABLE `products` (
   `description` text DEFAULT NULL,
   `price` decimal(10,2) NOT NULL,
   `stock` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
   `discount` decimal(5,2) NOT NULL,
   `sku` varchar(50) NOT NULL,
   `dues` int(11) NOT NULL,
@@ -108,17 +109,17 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`, `discount`, `sku`, `dues`, `imgUrl`, `category_id`, `createdAt`, `updatedAt`) VALUES
-(1, 'Samsung', 'Galaxy S20', 'El último smartphone de Samsung', 999.99, 50, 10.00, 'S20-001', 6, 'https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp', 1, NULL, NULL),
-(2, 'Apple', 'iPhone 12', 'El último smartphone de Apple', 1099.99, 30, 5.00, 'iPhone12-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp', 1, NULL, NULL),
-(3, 'Sony', 'PlayStation 5', 'La última consola de Sony', 499.99, 20, 0.00, 'PS5-001', 3, 'https://http2.mlstatic.com/D_NQ_NP_674875-MLU72745881148_112023-O.webp', 4, NULL, NULL),
-(4, 'LG', 'OLED CX', 'Televisor OLED de alta gama', 1499.99, 25, 15.00, 'OLED-CX-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_749310-MLA53433735956_012023-O.webp', 3, NULL, NULL),
-(5, 'Apple', 'MacBook Pro', 'Potente portátil para profesionales', 1999.99, 20, 8.00, 'MacBookPro-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-O.webp', 2, NULL, NULL),
-(6, 'Motorola', 'Moto G G32', 'Potente portátil para profesionales', 1999.99, 20, 10.00, 'MOTOG001G32', 6, 'https://images.fravega.com/f500/e724f044c05db50495f6066c5d474f22.jpg', 1, NULL, NULL),
-(8, 'Lenovo', 'IdeaPad 15ITL05', 'Potente portátil para profesionales', 1200.00, 20, 20.00, 'LENOVO015ITL05', 9, 'https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png', 2, NULL, NULL),
-(9, 'HP', '15-EF2081MS', 'Potente portátil para profesionales', 1200.00, 20, 20.00, '4W2K4UA', 9, 'https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp', 2, NULL, NULL),
-(10, 'Samsung', 'Galaxy Tab A8', 'Potente portátil para profesionales', 300.00, 20, 20.00, 'SMX200', 9, 'https://http2.mlstatic.com/D_NQ_NP_883247-MLU72272571534_102023-O.webp', 5, NULL, '2023-12-06 12:08:49'),
-(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 20.00, 'A2602', 9, 'https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp', 5, NULL, '2023-12-06 12:12:15');
+INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`, `quantity`, `discount`, `sku`, `dues`, `imgUrl`, `category_id`, `createdAt`, `updatedAt`) VALUES
+(1, 'Samsung', 'Galaxy S20', 'El último smartphone de Samsung', 999.99, 50, 1, 10.00, 'S20-001', 6, 'https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp', 1, NULL, '2023-12-12 15:03:17'),
+(2, 'Apple', 'iPhone 12', 'El último smartphone de Apple', 1099.99, 30, 1, 5.00, 'iPhone12-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp', 1, NULL, '2023-12-12 15:03:25'),
+(3, 'Sony', 'PlayStation 5', 'La última consola de Sony', 499.99, 20, 1, 0.00, 'PS5-001', 3, 'https://http2.mlstatic.com/D_NQ_NP_674875-MLU72745881148_112023-O.webp', 4, NULL, '2023-12-12 15:03:32'),
+(4, 'LG', 'OLED CX', 'Televisor OLED de alta gama', 1499.99, 25, 1, 15.00, 'OLED-CX-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_749310-MLA53433735956_012023-O.webp', 3, NULL, '2023-12-12 15:03:39'),
+(5, 'Apple', 'MacBook Pro', 'Potente portátil para profesionales', 1999.99, 20, 1, 8.00, 'MacBookPro-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-O.webp', 2, NULL, '2023-12-12 15:03:46'),
+(6, 'Motorola', 'Moto G G32', 'Potente portátil para profesionales', 1999.99, 20, 1, 10.00, 'MOTOG001G32', 6, 'https://images.fravega.com/f500/e724f044c05db50495f6066c5d474f22.jpg', 1, NULL, '2023-12-12 15:03:53'),
+(8, 'Lenovo', 'IdeaPad 15ITL05', 'Potente portátil para profesionales', 1200.00, 20, 1, 20.00, 'LENOVO015ITL05', 9, 'https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png', 2, NULL, '2023-12-12 15:04:02'),
+(9, 'HP', '15-EF2081MS', 'Potente portátil para profesionales', 1200.00, 20, 1, 20.00, '4W2K4UA', 9, 'https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp', 2, NULL, '2023-12-12 15:04:10'),
+(10, 'Samsung', 'Galaxy Tab A8', 'Potente portátil para profesionales', 300.00, 20, 1, 20.00, 'SMX200', 9, 'https://http2.mlstatic.com/D_NQ_NP_883247-MLU72272571534_102023-O.webp', 5, NULL, '2023-12-12 15:04:17'),
+(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 1, 20.00, 'A2602', 9, 'https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp', 5, NULL, '2023-12-12 15:04:24');
 
 -- --------------------------------------------------------
 
