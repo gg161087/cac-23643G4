@@ -73,17 +73,17 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
                                 ))}
                         </section>
                     </Col>
-                    <Col md={4} className="d-flex flex-column justify-content-center">
+                    <Col md={4} className="d-flex flex-column info-card justify-content-center">
                         <span>Nuevo | +100 vendidos</span>
                         {/* Este campo tiene que ser dinamico */}
                         <h1>
                             {product.brand} - {product.model}
                         </h1>
-                        <span>4.8</span> ⭐⭐⭐⭐ <span>(3)</span>
+                        <div className="rating"><span>4.8</span> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(3)</span></div>
                         {/* Este campo tiene que ser dinamico */}
-                        <p className="price">{product.price}</p>
-                        <p>{product.dues} </p>
-                        <p>{product.discount}</p>
+                        <p className="price"><span className="price-discount">${product.price}</span> <br /> ${Number.parseFloat(product.price*((100-product.discount)/100)).toFixed(2)} </p>
+                        <p className="discount">-{Math.round(product.discount)}% off</p>
+                        <p>Hasta {product.dues} cuotas sin interés</p>
                         <p>{product.description}</p>
                         <p>Codigo: {product.sku}</p>
                         <div className="btn-group">

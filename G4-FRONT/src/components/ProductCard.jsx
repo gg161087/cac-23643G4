@@ -58,11 +58,11 @@ export const ProductCard = ({ product, allProducts, setAllProducts, countProduct
                             </li>
                             <li className="list-group-item price fs-2 ">${product.price}</li>
                             <li className="list-group-item">
-                                {product.dues} cuotas sin interes
+                                {product.dues} cuotas sin interés
                             </li>
                             {precio > 0 && (
                                 <li className="list-group-item ">
-                                    ${precio.toFixed(2)} con el {product.discount}% off
+                                    ${precio.toFixed(2)} con el <span className="discount">{Math.round(product.discount)}% off</span>
                                 </li>
                             )}
                         </ul>

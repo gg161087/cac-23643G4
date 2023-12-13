@@ -33,3 +33,8 @@
 .chango svg{
   cursor: pointer;
 }
+
+.discount {
+  color: green;
+  font-weight: 500;
+}
