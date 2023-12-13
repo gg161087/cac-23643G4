@@ -1,20 +1,11 @@
 import { useState, useEffect } from "react";
-import { Button, Row, Col } from "react-bootstrap";
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-
-import Departamentos from "../pages/Departamentos.jsx";
-import SucursalModal from "../pages/SucursalModal.jsx";
+import { Tab, Tabs } from "react-bootstrap";
 
 import { getDinamic } from '../utils/getDinamic.js';
 
 const DivSucursales = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [selectedProvincia, setSelectedProvincia] = useState(null);
-    const [selectedDepartamento, setSelectedDepartamento] = useState(null);
     const [branchOffices, setBranchOffices] = useState([]);
     const [provinces, setProvinces] = useState([]);
-
 
     const getProvinces = async () => {
         const response = await getDinamic('provinces');
@@ -31,23 +22,12 @@ const DivSucursales = () => {
         getBranchOffices();
     }, []);
 
-    const handleProvinciaClick = (provincia) => {
-        setSelectedProvincia(provincia.nombre);
-    };
-
-    const handleDepartamentoClick = (departamento) => {
-        setSelectedDepartamento(departamento);
-        setShowModal(true);
-        console.log(showModal);
-    };
-
-    const handleCloseModal = () => {
-        setShowModal(false);
-        setSelectedDepartamento(null);
-    };
-
     if (!provinces && !branchOffices) {
-        return null
+        <div className="container">
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div>
     }
 
     return (

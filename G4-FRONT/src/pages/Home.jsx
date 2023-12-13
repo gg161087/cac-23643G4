@@ -10,7 +10,8 @@ export const Home = ({allProducts, setAllProducts, countProducts, setCountProduc
 
     const getProducts = async () => {
         const response = await getDinamic('products');
-        setProducts(response);
+        const Allproducts = response.filter(producto => producto.category_id !== 6);
+        setProducts(Allproducts);
     };
 
     useEffect(() => {
@@ -19,8 +20,10 @@ export const Home = ({allProducts, setAllProducts, countProducts, setCountProduc
 
     if (!products) {
         return (
-            <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
+            <div className="container">
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
             </div>
         )
     }

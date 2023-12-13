@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 const mySwal = withReactContent(Swal);
 
+import { CrudsAdmin } from '../components/crud/CrudsAdmin.jsx';
+
 import { registerSchema } from './../schemas/registerSchema.js';
 
 import { postRegister } from './../utils/postDinamic.js';
@@ -57,7 +59,8 @@ export const MiCuenta = () => {
             <div>
                 <p>{user.name} {user.last_name}</p>                
                 <p>{user.email}</p>                
-            </div>           
+            </div>
+            <CrudsAdmin></CrudsAdmin>           
             <div>
                 <Link to="/">VOLVER AL INICIO</Link>
             </div>

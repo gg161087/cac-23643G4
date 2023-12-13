@@ -107,3 +107,10 @@ body {
     transform: scale(1.03);
     border-radius: 0;
 }
+
+.table-limit-tr-width tbody tr td {
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
