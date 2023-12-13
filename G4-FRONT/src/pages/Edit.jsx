@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom';
 
-import { EditProduct } from './../components/edit/EditProduct.jsx';
+import { EditProducto } from '../components/edit/EditProducto.jsx';
+import { EditCategory } from './../components/edit/EditCategory.jsx';
+import { EditBranchOffice } from './../components/edit/EditBranchOffice.jsx';
+import { EditProvince } from './../components/edit/EditProvince.jsx';
+import { EditRole } from './../components/edit/EditRole.jsx';
+import { EditSubscribers } from './../components/edit/EditSubscribers.jsx';
+import { EditUser } from './../components/edit/EditUser.jsx';
 
 export const Edit = () => {
     const { category } = useParams();
@@ -11,15 +17,26 @@ export const Edit = () => {
     const getParam = (category) => {
         switch (category) {
             case 'products':
-                return <EditProduct id={id}/>                
-                break;       
+                return <EditProducto id={id}/>
+            case 'categories':
+                return <EditCategory id={id}/>
+            case 'branch_offices':
+                return <EditBranchOffice id={id}/>
+            case 'provinces':
+                return <EditProvince id={id}/>
+            case 'roles':
+                return <EditRole id={id}/>
+            case 'subscribers':
+                return <EditSubscribers id={id}/> 
+            case 'users':
+                return <EditUser id={id}/> 
             default:
-                return <div>Default</div>                
+                return <div>Default</div>
         }
     }
-    useEffect(() =>{               
-        setComponent(getParam(category))        
-    },[category])
+    useEffect(() => {
+        setComponent(getParam(category))
+    }, [category])
     if (!component) {
         return (
             <div className="container">
@@ -29,10 +46,10 @@ export const Edit = () => {
             </div>
         )
     }
-    
+
     return (
         <div className='container'>
-           {component}
+            {component}
         </div>
     )
 }
