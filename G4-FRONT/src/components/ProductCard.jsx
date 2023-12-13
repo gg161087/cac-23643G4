@@ -17,11 +17,11 @@ export const ProductCard = ({ product, allProducts, setAllProducts, countProduct
         if(allProducts.find(element => element.id === product.id)){            
             const cardProducts = allProducts.map(element =>                
                 element.id === product.id ? {...element, quantity: element.quantity + 1} : element
-            )            
+            )                      
             setTotal(total + product.price * product.quantity)
             setCountProducts(countProducts + product.quantity)
             return setAllProducts([...cardProducts])
-        }
+        }        
         setTotal(total + product.price * product.quantity)
         setCountProducts(countProducts + product.quantity)
         setAllProducts([...allProducts, product])

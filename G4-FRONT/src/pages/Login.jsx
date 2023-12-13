@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+const mySwal = withReactContent(Swal);
 
 import { postLogin } from './../utils/postDinamic.js';
 
@@ -25,6 +28,12 @@ export const Login = () => {
             localStorage.setItem('userId', response.id); 
             setToken(localStorage.getItem('token'))
             navigate('/miCuenta')   
+        } else {
+            Swal.fire({
+                title: "Error al iniciar.",
+                text: "Credenciales invalidas",
+                icon: "error"
+            });
         }
     }
 

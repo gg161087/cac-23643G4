@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2023 a las 19:56:30
+-- Tiempo de generación: 13-12-2023 a las 14:42:14
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -80,7 +80,8 @@ INSERT INTO `categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (2, 'computadoras', NULL, NULL),
 (3, 'televisores', NULL, NULL),
 (4, 'consolas', NULL, NULL),
-(5, 'tablets', NULL, NULL);
+(5, 'tablets', NULL, NULL),
+(6, 'online', '2023-12-13 13:28:50', '2023-12-13 13:28:50');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,9 @@ INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`,
 (8, 'Lenovo', 'IdeaPad 15ITL05', 'Potente portátil para profesionales', 1200.00, 20, 1, 20.00, 'LENOVO015ITL05', 9, 'https://d1zktoovjdma6n.cloudfront.net/media/catalog/product/cache/2868dafe2b4ec8474f3b444cfc8b532a/e/s/eshop_x515ja-bq2678w_1.png', 2, NULL, '2023-12-12 15:04:02'),
 (9, 'HP', '15-EF2081MS', 'Potente portátil para profesionales', 1200.00, 20, 1, 20.00, '4W2K4UA', 9, 'https://http2.mlstatic.com/D_NQ_NP_889990-MLA51839158430_102022-O.webp', 2, NULL, '2023-12-12 15:04:10'),
 (10, 'Samsung', 'Galaxy Tab A8', 'Potente portátil para profesionales', 300.00, 20, 1, 20.00, 'SMX200', 9, 'https://http2.mlstatic.com/D_NQ_NP_883247-MLU72272571534_102023-O.webp', 5, NULL, '2023-12-12 15:04:17'),
-(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 1, 20.00, 'A2602', 9, 'https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp', 5, NULL, '2023-12-12 15:04:24');
+(11, 'Apple', 'iPad 9na', 'Potente portátil para profesionales', 400.00, 20, 1, 20.00, 'A2602', 9, 'https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-O.webp', 5, NULL, '2023-12-12 15:04:24'),
+(12, 'Level Up', 'Ares Ryn', 'Apoyacabezas regulables en altura y giratorio. Almohadillas apoya cervical y lumbar. Respaldo reclinable 170 (modo trabajo 90, modo lectura 130, modo descanso 170). Apoyabrazos confortable. Confortable sistema de sujeción. Marco de acero.', 179.99, 5, 1, 0.00, 'SGLUAR1', 12, 'https://coppelar.vtexassets.com/arquivos/ids/1870642-1200-auto?v=638377870029800000&width=1200&height=auto&aspect=true', 6, '2023-12-13 10:33:09', '2023-12-13 10:33:09'),
+(13, 'Level Up', 'Bushmaster Transparente', 'Joystick compatible para Ps4 Ps3 y Pc. Peso óptimo para mejor confort.', 48.99, 5, 1, 5.00, 'JLUBT01', 12, 'https://coppelar.vtexassets.com/arquivos/ids/1875927-1200-auto?v=638379894259570000&width=1200&height=auto&aspect=true', 6, '2023-12-13 10:36:22', '2023-12-13 10:36:22');
 
 -- --------------------------------------------------------
 
@@ -412,13 +415,13 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `product_imgsurls`

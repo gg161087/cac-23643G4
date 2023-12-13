@@ -4,7 +4,7 @@ import { ProductCard } from './ProductCard.jsx'
 
 import './ProductsGrid.css'
 
-export const ProductsGrid = ({products, allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal}) => { 
+export const ProductsGrid = ({products, allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => { 
     return ( 
         <Container>
             <Container className="grid_container">
@@ -18,7 +18,7 @@ export const ProductsGrid = ({products, allProducts, setAllProducts, countProduc
                         countProducts={countProducts}
                         setCountProducts={setCountProducts}
                         total={total} 
-                        setTotal={setTotal}
+                        setTotal={setTotal}                        
                     >                        
                     </ProductCard>              
                 ))}
