@@ -1,0 +1,30 @@
+.accordion-pagos {
+  margin: 0 100px;
+}
+
+.accordion-pagos .accordion-button {
+  font-size: 13px;
+}
+
+.accordion-pagos .accordion-body {
+  font-size: 13px;
+}
+
+.volver-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.volver-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volver-button:hover {
+  background-color: #0056b3;
+}
