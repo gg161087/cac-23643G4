@@ -49,12 +49,10 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
         return <p>Cargando...</p>;
     }
 
-    console.log(allProducts);
-
     return (
         <>
-            <Container className="contenedor">
-                <Row className="">
+            <div className="container contenedor">
+                <div className="row">
                     <Col md={8} className="p-5 d-flex flex-column">
                         <img
                             src={image}
@@ -93,44 +91,32 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
                             <button className="btn-light" onClick={()=> onAddProduct(product)}>Agregar al carrito</button>
                         </div>
                     </Col>
-                </Row>
-            </Container>
-            <Container>
-                <Row>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
                     <h1>
                         {product.brand} - {product.model}
                     </h1>
-                </Row>
-                <Row>
-                    <h3>Caracteristicas tecnicas</h3>
-                </Row>
-                <Row>
-                    <Col>Pantalla</Col>
-                    <Col>Dynamic AMOLED 2X, 6.2 pulgadas</Col>
-                </Row>
-                <Row>
-                    <Col>Procesador</Col>
-                    <Col>Exynos 990</Col>
-                </Row>
-                <Row>
-                    <Col>RAM</Col>
-                    <Col>8 GB</Col>
-                </Row>
-                <Row>
-                    <Col>Almacenamiento interno</Col>
-                    <Col>128 GB</Col>
-                </Row>
-                <Row>
-                    <Col>Camara</Col>
-                    <Col>
-                        Doble cámara trasera: 12 MP (principal) + 12 MP (ultra gran angular)
-                    </Col>
-                </Row>
-            </Container>
-            <Container className="contenedor mt-5 p-5">
+                </div>
+                <div className="row">
+                    <h3>Descripción</h3>
+                </div>
+                <div className="row">
+                    <div className="col">{product.description}</div>                    
+                </div>
+                {product.product_specifications && <h3>Caracteristicas</h3>}                
+                {product.product_specifications && product.product_specifications.map((specification)=> (
+                    <div className="row">
+                    <div className="col">{specification.name}</div>
+                    <div className="col">{specification.value}</div>
+                </div>
+                ))}                
+            </div>
+            <div className="container contenedor mt-5 p-5">
                 <h1>Productos que te puede interesar:</h1>
                 <ProductsGrid products={products}/>                
-            </Container>
+            </div>
         </>
     );
 };

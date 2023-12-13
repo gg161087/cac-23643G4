@@ -21,6 +21,7 @@ import { ExclusivoOnline } from "./pages/ExclusivoOnline.jsx";
 import { Ofertas } from "./pages/Ofertas.jsx";
 import { ProductsFiltered } from "./pages/ProductsFiltered.jsx";
 import ComprasOnline from "./pages/ComprasOnline.jsx";
+import { Edit } from './pages/Edit.jsx';
 
 export const App = () => {
     const [allProducts, setAllProducts] = useState([]);
@@ -82,7 +83,8 @@ export const App = () => {
                     ></Route>
                     <Route path="/exclusivo-online" element={<ExclusivoOnline />}></Route>
                     <Route path="/ofertas" element={<Ofertas />}></Route>
-                    <Route path="/*" element={<NotFound />}></Route>
+                    <Route path="/edit/:category/:id" element={<Edit />}></Route>
+                    <Route path="/*" element={<NotFound />}></Route>                   
                 </Routes>
             </main>
             <Footer />

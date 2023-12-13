@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom"
 
 import { ProductsGrid } from '../components/ProductsGrid.jsx';
@@ -27,10 +26,10 @@ export const ProductsFiltered = () => {
     },[category])
 
     return (
-        <Container>
+        <div className='container'>
             <h1>{category.toLocaleUpperCase()}</h1>
             <ProductsGrid products={products}></ProductsGrid>            
             <Link to="/">VOLVER AL INICIO</Link>
-        </Container>
+        </div>
     );
 };
