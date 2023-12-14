@@ -1,13 +1,10 @@
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
-export const EditProduct = ({id}) => {
-    console.log(id);
+export const EditProducto = ({id}) => {
     const [product, setProduct] = useState('');
-
     const [brand, setBrand] = useState('');
     const [model, setModel] = useState('');
     const [description, setDescription] = useState('');
