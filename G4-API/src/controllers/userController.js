@@ -73,8 +73,8 @@ export const updateUserById = async (req, res) => {
         if (!user) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await user.update({userSchema});
-            res.json({ message: 'User updated correctly.' });
+            const result = await user.update({userSchema});
+            res.json({ message: 'User updated correctly.', result: result });
         };
     } catch (error) {
         console.error(error);

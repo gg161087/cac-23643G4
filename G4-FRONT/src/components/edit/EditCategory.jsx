@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditCategory = ({id}) => {
+    const navigate = useNavigate();
+
     const [category, setCategory] = useState('');
 
     const [name, setName] = useState('');
@@ -20,7 +23,7 @@ export const EditCategory = ({id}) => {
 
     const updateCategory = async (e) => {
         e.preventDefault()        
-        updateDinamic('categories', {name:name})
+        const result = await updateDinamic('categories', id, {name:name})
     }
 
     if (!category) {

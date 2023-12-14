@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditRole = ({id}) => {
+    const navigate = useNavigate();
+
     const [role, setRole] = useState('');
 
     const [name, setName] = useState('');
@@ -20,7 +23,7 @@ export const EditRole = ({id}) => {
 
     const updateRole = async (e) => {
         e.preventDefault()        
-        updateDinamic('roles', {name:name})
+        const result = await updateDinamic('roles', id, {name:name})
     }
 
     if (!role) {

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditProvince = ({id}) => {
+    const navigate = useNavigate();
+
     const [province, setProvince] = useState('');
 
     const [name, setName] = useState('');
@@ -20,7 +23,11 @@ export const EditProvince = ({id}) => {
 
     const updateProvince = async (e) => {
         e.preventDefault()        
-        updateDinamic('provinces', {name:name})
+        const { result, message } = await updateDinamic('provinces', id, {name:name})
+        if (result) {
+            alert(message)
+            navigate('/miCuenta')
+        }        
     }
 
     if (!province) {

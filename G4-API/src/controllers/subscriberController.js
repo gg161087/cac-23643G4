@@ -47,8 +47,8 @@ export const updateSubscriberById = async (req, res) => {
         if (!subscriber) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await subscriber.update({email});
-            res.json({ message: 'Subscriber updated correctly.' });
+            const result = await subscriber.update({email});
+            res.json({ message: 'Subscriber updated correctly.', result:result });
         };        
     } catch (error) {
         console.error(error);

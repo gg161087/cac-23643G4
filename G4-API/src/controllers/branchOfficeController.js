@@ -51,23 +51,24 @@ export const createBranchOffice = async (req, res) => {
 };
 
 export const updateBranchOfficeById = async (req, res) => {
+    const { id } = req.params;
     const { departments, address, telephone, province_id } = req.body;
-    if (!departments || !address || !telephone|| !province_id) {
+    if (!departments || !address || !telephone || !province_id) {
         return res.status(404).json({message: 'Missing fields.'});
     };
     const branchOfficeSchema = {
+        province_id:province_id,
         departments:departments,
         address:address,
-        telephone:telephone,
-        province_id:province_id
-    };    
+        telephone:telephone
+    };       
     try {
         const branchOffice = await branchOfficeModel.findByPk(id);
         if (!branchOffice) {
             res.status(404).json({ message: 'Not found.' });
-        } else {
-            await branchOffice.update({branchOfficeSchema});
-            res.json({ message: 'Branch Office updated correctly.' });
+        } else {           
+            const result = await branchOffice.update({branchOfficeSchema});
+            res.json({ message: 'Branch Office updated correctly.', result:result });
         };
     } catch (error) {
         console.error(error);        

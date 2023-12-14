@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2023 a las 14:42:14
+-- Tiempo de generación: 14-12-2023 a las 17:36:51
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `branch_offices` (
   `id` int(11) NOT NULL,
-  `province_id` int(11) DEFAULT NULL,
-  `departments` varchar(50) DEFAULT NULL,
-  `address` varchar(100) DEFAULT NULL,
-  `telephone` varchar(20) DEFAULT NULL,
+  `province_id` int(11) NOT NULL,
+  `departments` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `telephone` varchar(20) NOT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -76,7 +76,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
-(1, 'celulares', NULL, NULL),
+(1, 'celulares', NULL, '2023-12-14 14:48:23'),
 (2, 'computadoras', NULL, NULL),
 (3, 'televisores', NULL, NULL),
 (4, 'consolas', NULL, NULL),
@@ -94,12 +94,12 @@ CREATE TABLE `products` (
   `brand` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `description` text DEFAULT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `stock` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `discount` decimal(5,2) NOT NULL,
+  `price` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `stock` int(11) DEFAULT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
+  `discount` decimal(5,2) DEFAULT 0.00,
   `sku` varchar(50) NOT NULL,
-  `dues` int(11) NOT NULL,
+  `dues` int(11) DEFAULT 0,
   `imgUrl` text DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
@@ -111,7 +111,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `brand`, `model`, `description`, `price`, `stock`, `quantity`, `discount`, `sku`, `dues`, `imgUrl`, `category_id`, `createdAt`, `updatedAt`) VALUES
-(1, 'Samsung', 'Galaxy S20', 'El último smartphone de Samsung', 999.99, 50, 1, 10.00, 'S20-001', 6, 'https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp', 1, NULL, '2023-12-12 15:03:17'),
+(1, 'Samsung', 'Galaxy S20', 'El último smartphone de Samsung', 999.99, 50, 1, 9.99, 'S20-001', 6, 'https://http2.mlstatic.com/D_NQ_NP_716191-MLA44281674442_122020-O.webp', 1, NULL, '2023-12-14 16:36:05'),
 (2, 'Apple', 'iPhone 12', 'El último smartphone de Apple', 1099.99, 30, 1, 5.00, 'iPhone12-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_743195-MLA45719932493_042021-O.webp', 1, NULL, '2023-12-12 15:03:25'),
 (3, 'Sony', 'PlayStation 5', 'La última consola de Sony', 499.99, 20, 1, 0.00, 'PS5-001', 3, 'https://http2.mlstatic.com/D_NQ_NP_674875-MLU72745881148_112023-O.webp', 4, NULL, '2023-12-12 15:03:32'),
 (4, 'LG', 'OLED CX', 'Televisor OLED de alta gama', 1499.99, 25, 1, 15.00, 'OLED-CX-001', 12, 'https://http2.mlstatic.com/D_NQ_NP_749310-MLA53433735956_012023-O.webp', 3, NULL, '2023-12-12 15:03:39'),
@@ -230,7 +230,7 @@ INSERT INTO `product_specifications` (`id`, `product_id`, `name`, `value`, `crea
 
 CREATE TABLE `provinces` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -242,7 +242,7 @@ CREATE TABLE `provinces` (
 INSERT INTO `provinces` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (1, 'Buenos Aires', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
 (2, 'Córdoba', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
-(3, 'Salta', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
+(3, 'Salta', '2023-12-05 10:30:03', '2023-12-14 14:47:52'),
 (4, 'Santa Fe', '2023-12-05 10:30:03', '2023-12-05 10:30:03'),
 (5, 'Tucumán', '2023-12-05 10:30:03', '2023-12-05 10:30:03');
 
@@ -287,7 +287,7 @@ CREATE TABLE `subscriber_newsletters` (
 --
 
 INSERT INTO `subscriber_newsletters` (`id`, `email`, `createdAt`, `updatedAt`) VALUES
-(1, 'test@test.com', '2023-12-06 16:49:37', '2023-12-06 16:53:55'),
+(1, 'testEditado@test.com', '2023-12-06 16:49:37', '2023-12-14 14:00:17'),
 (2, 'registrado@itechnology.com', '2023-12-06 19:59:27', '2023-12-06 19:59:27'),
 (3, 'desdelaweb@ejemplo.com', '2023-12-06 20:03:35', '2023-12-06 20:03:35');
 
@@ -333,7 +333,7 @@ CREATE TABLE `user_roles` (
 --
 
 INSERT INTO `user_roles` (`user_id`, `role_id`, `createdAt`, `updatedAt`) VALUES
-(1, 2, '2023-12-12 14:11:34', '2023-12-12 14:11:34');
+(1, 1, '2023-12-12 14:11:34', '2023-12-13 10:54:11');
 
 --
 -- Índices para tablas volcadas

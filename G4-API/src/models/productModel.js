@@ -27,7 +27,7 @@ export const productModel = db.define('products', {
     },
     stock: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     quantity: {
         type: DataTypes.INTEGER,
@@ -35,7 +35,7 @@ export const productModel = db.define('products', {
     },
     discount: {
         type: DataTypes.DECIMAL(5, 2),
-        allowNull: false
+        allowNull: true
     },
     sku: {
         type: DataTypes.STRING(50),
@@ -43,7 +43,7 @@ export const productModel = db.define('products', {
     },
     dues: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     imgUrl: {
         type: DataTypes.TEXT,

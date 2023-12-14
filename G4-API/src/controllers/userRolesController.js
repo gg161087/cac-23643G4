@@ -46,8 +46,8 @@ export const updateUserRolesByUserId = async (req, res) => {
         if (!userRoles) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await userRoles.update({role_id});
-            res.json({ message: 'Branch Office updated correctly.' });
+            const result = await userRoles.update({role_id});
+            res.json({ message: 'Branch Office updated correctly.', result: result });
         }
     } catch (error) {
         console.error(error);

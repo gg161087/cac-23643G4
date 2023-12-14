@@ -19,7 +19,6 @@ export const CrudsAdmin = () => {
     const [subscribers, setSubscribers] = useState([]);
     const [users, setUsers] = useState([]);
 
-
     const getProducts = async () => {
         const response = await getDinamic('products');        
         setProducts(response);

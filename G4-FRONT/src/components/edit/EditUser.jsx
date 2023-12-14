@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditUser = ({id}) => {
+    const navigate = useNavigate();
+
     const [user, setUser] = useState('');
 
     const [name, setName] = useState('');
@@ -15,7 +18,11 @@ export const EditUser = ({id}) => {
     const getUserById = async () => {
         const response = await getDinamic(`users/${id}`)
         setUser(response)
-        setName(response.name)    
+        setName(response.name) 
+        setLastName(response.last_name) 
+        setTelephone(response.telephone)
+        setEmail(response.email)
+        setPassword(response.password)  
     }
 
     useEffect(() => {
@@ -23,11 +30,12 @@ export const EditUser = ({id}) => {
     }, [id])
 
     const updateUser = async (e) => {
+        console.log(user);
         e.preventDefault()
         const updateUser = {
             name:name,
         }        
-        updateDinamic('users', updateUser)
+        const result = await updateDinamic('users', id, updateUser)
     }
 
     if (!user) {
@@ -76,7 +84,7 @@ export const EditUser = ({id}) => {
                         className="form-control"/>
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Nombre</label>
+                    <label className="form-label">Contraseña</label>
                     <input
                         type="password"
                         value={passwowrd}

@@ -50,8 +50,8 @@ export const updateCategoryById = async (req, res) => {
         if (!category) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await category.update({ name });
-            res.json({ message: 'Category updated correctly.' });
+            const result = await category.update({ name });
+            res.json({ message: 'Category updated correctly.', result:result });
         };      
     } catch (error) {
         console.error(error);

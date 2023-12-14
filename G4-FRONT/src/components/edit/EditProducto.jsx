@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditProducto = ({id}) => {
+    const navigate = useNavigate();
+
     const [product, setProduct] = useState('');
     const [brand, setBrand] = useState('');
     const [model, setModel] = useState('');
@@ -23,6 +26,7 @@ export const EditProducto = ({id}) => {
         setModel(response.model)
         setDescription(response.description)
         setPrice(response.price)
+        setStock(response.stock)
         setDiscount(response.discount)
         setSku(response.sku)
         setDues(response.dues)
@@ -47,8 +51,9 @@ export const EditProducto = ({id}) => {
             dues: dues,
             imgUrl: imgUrl,
             category_id: categoryId
-        }
-        updateDinamic('products', updateProduct)
+        }        
+        const {result} = await updateDinamic('products', id, updateProduct)
+        console.log(result);
     }
 
     if (!product) {

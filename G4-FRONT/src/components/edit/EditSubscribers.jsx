@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getDinamic } from '../../utils/getDinamic.js';
 import { updateDinamic } from '../../utils/updateDinamic.js';
 
 export const EditSubscribers = ({id}) => {
+    const navigate = useNavigate();
+
     const [subscriber, setSubscriber] = useState('');
 
     const [email, setEmail] = useState('');
@@ -20,7 +23,7 @@ export const EditSubscribers = ({id}) => {
 
     const updateSubscribers = async (e) => {
         e.preventDefault()        
-        updateDinamic('subscribers', {email:email})
+        const result = await updateDinamic('subscribers', id, {email:email})
     }
 
     if (!subscriber) {

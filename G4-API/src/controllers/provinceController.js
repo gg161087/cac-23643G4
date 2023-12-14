@@ -43,11 +43,11 @@ export const updateProvinceById = async (req, res) => {
     };
     try {
         const province = await provinceModel.findByPk(id);
-        if (province) {
+        if (!province) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await province.update({name});
-            res.json({ message: 'Province updated correctly.' });
+            const result = await province.update({name});
+            res.json({ message: 'Province updated correctly.', result:result});
         }
     } catch (error) {
         console.error(error);
@@ -62,8 +62,8 @@ export const deleteProvinceById = async (req, res) => {
         if (province) {
             res.status(404).json({ message: 'Not found.' });
         } else {
-            await province.destroy();
-            res.status(202).json({ message: 'Province deleted successfully.' });
+            const result = await province.destroy();
+            res.status(202).json({ message: 'Province deleted successfully.', result:result });
         }
     } catch (error) {
         console.error(error);
