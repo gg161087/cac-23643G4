@@ -1,7 +1,7 @@
 import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
-
 import "./Entregas.css";
+//import ContenidoContactanos from "./../components/Contactanos";
 
 const Entregas = () => {
   return (
@@ -146,31 +146,53 @@ const Entregas = () => {
               Los puntos Pickit son una red de comercios de todo el país
               habilitados para entregas de compras online. Los envíos se
               realizan a través de un operador logístico externo y tienen costo.
+              <br />
               Podrás comprar con retiro en puntos Pickit únicamente los
               productos habilitados para esta modalidad, si no encontrás esta
               opción al seleccionar tu producto significa que el mismo no está
               disponible para este método de entrega. En ese caso, podés optar
-              por otra forma de entrega. SEGUIMIENTO DE ENVÍOS: Podés realizar
-              el seguimiento del envío a puntos Pickit ingresando a “Mis
-              compras”. Seleccioná la compra sobre la que querés realizar la
-              consulta y podrás verificar el estado actual de la misma y
-              realizar el seguimiento del envío con el número de tracking del
-              operador logístico. PLAZOS Y HORARIOS DE ENTREGA: El plazo de
-              entrega será el informado al momento de la compra. Cuando tu
-              pedido llegue al Punto Pickit, recibirás un mail de confirmación
-              con un código de seguimiento. Podrás pasar a retirar tu pedido en
-              los días y horarios de atención del punto Pickit que hayas
-              seleccionado. Podés consultar esta información en la página de
-              Pickit. ¿QUÉ DOCUMENTACIÓN ES REQUERIDA AL MOMENTO DE LA ENTREGA?
+              por otra forma de entrega.
+              <br />
+              <br /> <b>SEGUIMIENTO DE ENVÍOS:</b>
+              <br /> Podés realizar el seguimiento del envío a puntos Pickit
+              ingresando a “Mis compras”. Seleccioná la compra sobre la que
+              querés realizar la consulta y podrás verificar el estado actual de
+              la misma y realizar el seguimiento del envío con el número de
+              tracking del operador logístico.
+              <br />
+              <br /> <b>PLAZOS Y HORARIOS DE ENTREGA:</b>
+              <br /> El plazo de entrega será el informado al momento de la
+              compra. Cuando tu pedido llegue al Punto Pickit, recibirás un mail
+              de confirmación con un código de seguimiento.
+              <br /> Podrás pasar a retirar tu pedido en los días y horarios de
+              atención del punto Pickit que hayas seleccionado. Podés consultar
+              esta información en la página de
+              <Link to="/https://pickit.com.ar/">Pickit.</Link>
+              <br />
+              <br />{" "}
+              <b>¿QUÉ DOCUMENTACIÓN ES REQUERIDA AL MOMENTO DE LA ENTREGA?</b>
+              <br />
               La compra podrá ser retirada por el titular de la misma o por la
               persona que hayas autorizado para retirarla, presentando DNI y
               código de seguimiento Pickit que recibiste en la confirmación de
-              recepción. Al momento de la entrega, verificá el buen estado del
+              recepción.
+              <br /> Al momento de la entrega, verificá el buen estado del
               producto antes de firmar el remito. La firma, aclaración y DNI al
-              momento de la entrega será muestra de tu conformidad. IMPORTANTE:
-              No se realizarán cambios por detalle estético cuando el remito de
-              entrega haya sido firmado. Para información sobre Cambios y
-              Devoluciones, revisá el siguiente enlace.
+              momento de la entrega será muestra de tu conformidad.
+              <br />
+              <br />{" "}
+              <em>
+                IMPORTANTE: No se realizarán cambios por detalle estético cuando
+                el remito de entrega haya sido firmado.
+              </em>{" "}
+              <br />
+              Para información sobre Cambios y Devoluciones, revisá el{" "}
+              <Link
+                to="/centro-de-ayuda"
+                // onClick={() => handleItemClick(<ContenidoContactanos />)}
+              >
+                siguiente enlace.
+              </Link>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
