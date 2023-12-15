@@ -6,21 +6,13 @@
 .row1 {
   height: 70px;
 }
-.subscribe {
-  height: 5rem;
+.subscribe {  
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-#email {
-  height: 3rem;
-  width: 24rem;
-  margin-right: 1rem;
-}
-.subscribe button {
-  height: 2.5rem;
-}
-.subscribe #emailHelp {
+
+#emailHelp {
   color: #f2f2f2;
 }
 
@@ -30,8 +22,14 @@
 .link__footer {
   cursor: pointer;
 }
-
-.row3 {
-  background-color: #f2f2f2;
-  color: #333;
+.copyright{
+  background-color: #202020;
+}
+@media (max-width: 1024px) {
+  .footer .container .row, #footer__contendor .footer__contendor__column{    
+    justify-content: center;
+    align-items: center;
+    text-align: center!important;
+    flex-direction: column;
+  }
 }
