@@ -1,26 +1,26 @@
 .footer {
   color: #fff;
-  background-color: #333;
+  background-color: #132043;
 }
 
 .row1 {
   height: 70px;
 }
-.subscribe{
+.subscribe {
   height: 5rem;
   display: flex;
   flex-direction: row;
-  gap: 1rem;    
+  gap: 1rem;
 }
-#email{
+#email {
   height: 3rem;
   width: 24rem;
   margin-right: 1rem;
 }
-.subscribe button{  
+.subscribe button {
   height: 2.5rem;
 }
-.subscribe #emailHelp{
+.subscribe #emailHelp {
   color: #f2f2f2;
 }
 

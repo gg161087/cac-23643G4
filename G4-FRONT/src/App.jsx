@@ -22,6 +22,8 @@ import { Ofertas } from "./pages/Ofertas.jsx";
 import { ProductsFiltered } from "./pages/ProductsFiltered.jsx";
 import ComprasOnline from "./pages/ComprasOnline.jsx";
 import FormasDePago from "./pages/FormasDePago.jsx";
+import Entregas from "./pages/Entregas.jsx";
+import AutorizacionRetiroForm from "./pages/AutorizacionRetiroForm.jsx";
 import { Edit } from "./pages/Edit.jsx";
 
 export const App = () => {
@@ -56,7 +58,12 @@ export const App = () => {
           ></Route>
           <Route path="/centro-de-ayuda" element={<CentroAyuda />} />
           <Route path="/como-comprar-online" element={<ComprasOnline />} />
-          <Route path="//formas-de-pago" element={<FormasDePago />} />
+          <Route path="/formas-de-pago" element={<FormasDePago />} />
+          <Route path="/entregas" element={<Entregas />} />
+          <Route
+            path="/autorizacion-retiro"
+            element={<AutorizacionRetiroForm />}
+          />
           <Route path="/venta-telefonica" element={<VentaTelefonica />}></Route>
           <Route path="/sucursales" element={<Sucursales />}></Route>
           <Route path="/envios-domicilio" element={<EnviosDomicilio />}></Route>

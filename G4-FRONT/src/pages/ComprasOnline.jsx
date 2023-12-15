@@ -6,7 +6,7 @@ const ComprasOnline = () => {
     <>
       <div className="accordion-compras-online">
         <h1 className="titulo-compras">Comprar Online</h1>
-        <Accordion accordion-compras-online>
+        <Accordion>
           <Accordion.Item eventKey="0" flush>
             <Accordion.Header>¿CÓMO COMPRAR EN ITECHNOLOGY?</Accordion.Header>
             <Accordion.Body>

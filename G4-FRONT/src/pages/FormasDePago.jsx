@@ -11,8 +11,8 @@ const FormasDePago = () => {
   return (
     <>
       <div className="accordion-pagos">
-        <h1 className="titulo-pagos">Comprar Online</h1>
-        <Accordion accordion-pagos>
+        <h1 className="titulo-pagos">Formas de Pago</h1>
+        <Accordion>
           <Accordion.Item eventKey="0" flush>
             <Accordion.Header>
               TARJETAS DE CRÉDITO - DE TODOS LOS BANCOS{" "}

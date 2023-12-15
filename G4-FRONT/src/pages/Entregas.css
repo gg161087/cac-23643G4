@@ -1,16 +1,16 @@
-.titulo-pagos {
+.titulo-entregas {
   margin-bottom: 10px;
 }
 
-.accordion-pagos {
+.accordion-entregas {
   margin: 0 100px;
 }
 
-.accordion-pagos .accordion-button {
+.accordion-entregas .accordion-button {
   font-size: 13px;
 }
 
-.accordion-pagos .accordion-body {
+.accordion-entregas .accordion-body {
   font-size: 13px;
 }
 
