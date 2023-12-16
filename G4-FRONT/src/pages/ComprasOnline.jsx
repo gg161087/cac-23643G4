@@ -1,5 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import "./ComprasOnline.css";
+import { Link } from "react-router-dom";
 
 const ComprasOnline = () => {
   return (
@@ -140,14 +141,11 @@ const ComprasOnline = () => {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        <div className="volver-container">
-          <button
-            className="volver-button"
-            onClick={() => (window.location.href = "/centro-de-ayuda")}
-          >
-            Volver
-          </button>
-        </div>
+        <Link to="/centro-de-ayuda">
+          <div className="volver-container">
+            <button className="volver-button">Volver</button>
+          </div>
+        </Link>
       </div>
     </>
   );

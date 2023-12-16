@@ -72,14 +72,11 @@ const FormasDePago = () => {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        <div className="volver-container">
-          <button
-            className="volver-button"
-            onClick={() => (window.location.href = "/centro-de-ayuda")}
-          >
-            Volver
-          </button>
-        </div>
+        <Link to="/centro-de-ayuda">
+          <div className="volver-container">
+            <button className="volver-button">Volver</button>
+          </div>
+        </Link>
       </div>
     </>
   );
