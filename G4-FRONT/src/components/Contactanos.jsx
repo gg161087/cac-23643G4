@@ -2,7 +2,7 @@ import "./FormularioAnulacionPedido.css";
 import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
-const ContenidoContactanos = () => {
+const Contactanos = () => {
   const [dni, setDni] = useState("");
   const [pedido, setPedido] = useState("");
   const [motivo, setMotivo] = useState("");
@@ -185,4 +185,4 @@ const ContenidoContactanos = () => {
   );
 };
 
-export default ContenidoContactanos;
+export default Contactanos;

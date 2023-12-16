@@ -4,7 +4,7 @@ import { Accordion, Col, Container, Row } from "react-bootstrap";
 import FormularioAnulacionPedido from "./../components/FormularioAnulacionPedido";
 import ContenidoCentroAyuda from "./../components/CentroAyuda";
 import ContenidoCiberdelitos from "./../components/Ciberdelitos";
-import ContenidoContactanos from "./../components/Contactanos";
+import ContenidoContactanos from "../components/Contactanos";
 import ContenidoInstitucional from "./../components/Institucional";
 import ContenidoPoliticaDePrivacidad from "./../components/PoliticaDePrivacidad";
 import ContenidoSucursales from "../components/DivSucursales";

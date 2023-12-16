@@ -36,7 +36,7 @@ const Entregas = () => {
               <br />
               <br /> Las entregas se realizan de Lunes a Sábados en los horarios
               de atención de cada sucursal. Consultá direcciones y horarios
-              aquí.
+              <Link to="/sucursales"> AQUÍ.</Link>
               <br />
               <br /> <b>¿QUÉ DOCUMENTACIÓN ES REQUERIDA PARA LA ENTREGA?</b>
               <br /> La compra podrá ser retirada por el titular de la tarjeta o
@@ -125,10 +125,12 @@ const Entregas = () => {
               <br /> Si el producto no se encuentra en condiciones o no cumple
               con tus expectativas, podés rechazarlo al momento de la entrega.
               Deberás ponerte en contacto con nuestro equipo de atención para
-              coordinar los próximos pasos. Contactate AQUÍ
+              coordinar los próximos pasos. Contactate{" "}
+              <Link to="/centro-de-ayuda/contactanos"> AQUÍ</Link>
               <br />
               <br /> Para más información sobre Cambios y Devoluciones, revisá
-              el siguiente enlace.
+              el{" "}
+              <Link to="/centro-de-ayuda/contactanos">siguiente enlace.</Link>
               <br />
               <br /> <b>¿PROBLEMAS CON LA ENTREGA DE TU COMPRA?</b>
               <br /> Si tuviste algún problema con la entrega de tu pedido,
@@ -187,12 +189,7 @@ const Entregas = () => {
               </em>{" "}
               <br />
               Para información sobre Cambios y Devoluciones, revisá el{" "}
-              <Link
-                to="/centro-de-ayuda"
-                // onClick={() => handleItemClick(<ContenidoContactanos />)}
-              >
-                siguiente enlace.
-              </Link>
+              <Link to="/centro-de-ayuda/contactanos">siguiente enlace.</Link>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
