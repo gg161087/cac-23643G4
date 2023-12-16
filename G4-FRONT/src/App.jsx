@@ -31,6 +31,7 @@ import ConfiguracionDeCuenta from "./pages/ConfiguracionDeCuenta.jsx";
 import CreditoItechnology from "./pages/CreditoItechnology.jsx";
 import CiberdelitosPage from "./pages/CiberdelitosPage.jsx";
 import InformacionCovid from "./pages/InformacionCovid.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 
 export const App = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -117,6 +118,7 @@ export const App = () => {
           <Route path="/*" element={<NotFound />}></Route>
         </Routes>
       </main>
+      <WhatsAppButton />
       <Footer />
     </BrowserRouter>
   );
