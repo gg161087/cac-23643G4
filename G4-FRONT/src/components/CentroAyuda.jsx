@@ -7,10 +7,8 @@ import cambiosYDevolucionesImg from "../assets/botonesCentroAyuda/cambiosYDevolu
 import ciberdelitosImg from "../assets/botonesCentroAyuda/ciberdelitos.jpg";
 import configuracionDeCuentaImg from "../assets/botonesCentroAyuda/configuracionDeCuenta.jpg";
 import consultasYReclamosImg from "../assets/botonesCentroAyuda/consultasYReclamos.jpg";
-import creditoArgonautaImg from "../assets/botonesCentroAyuda/creditoArgonauta.jpg";
+import creditoItechnologyImg from "../assets/botonesCentroAyuda/creditoItechnology.jpg";
 import informacionCovidImg from "../assets/botonesCentroAyuda/informacionCovid.jpg";
-
-
 
 const ContenidoCentroAyuda = () => {
   const handleButtonClick = () => {};
@@ -18,9 +16,13 @@ const ContenidoCentroAyuda = () => {
   return (
     <>
       <p className="contenido-texto2">
-        Si tenés algún inconveniente o consulta sobre tu compra, contactanos al: <br/></p>
-        <p className="contenido-texto-center"><strong >0800-123-45678</strong> </p>
-        <p className="contenido-texto">
+        Si tenés algún inconveniente o consulta sobre tu compra, contactanos al:{" "}
+        <br />
+      </p>
+      <p className="contenido-texto-center">
+        <strong>0800-123-45678</strong>{" "}
+      </p>
+      <p className="contenido-texto">
         Nuestros horarios de atención son de lunes a sábado de 9 a 21hs, con
         excepción de los feriados. Te pedimos que tengas tu número de pedido a
         mano, vamos a solicitártelo para poder analizar tu caso. (El mismo
@@ -85,13 +87,13 @@ const ContenidoCentroAyuda = () => {
         />
 
         <BotonCentroAyuda
-          imagenSrc={creditoArgonautaImg}
-          altTexto="Crédito Argonauta"
-          titulo="Crédito Argonauta"
+          imagenSrc={creditoItechnologyImg}
+          altTexto="Crédito Itechnology"
+          titulo="Crédito Itechnology"
           onClick={() =>
-            handleButtonClick("Crédito Argonauta", "/credito-argonauta")
+            handleButtonClick("Crédito Itechnology", "/credito-itechnology")
           }
-          linkTo="/credito-argonauta"
+          linkTo="/credito-itechnology"
         />
 
         <BotonCentroAyuda
@@ -99,9 +101,12 @@ const ContenidoCentroAyuda = () => {
           altTexto="Consultas y Reclamos"
           titulo="Consultas y Reclamos"
           onClick={() =>
-            handleButtonClick("Consultas y Reclamos", "/consultas-y-reclamos")
+            handleButtonClick(
+              "Consultas y Reclamos",
+              "/centro-de-ayuda/contactanos"
+            )
           }
-          linkTo="/consultas-y-reclamos"
+          linkTo="/centro-de-ayuda/contactanos"
         />
 
         <BotonCentroAyuda

@@ -26,6 +26,11 @@ import Entregas from "./pages/Entregas.jsx";
 import AutorizacionRetiroForm from "./pages/AutorizacionRetiroForm.jsx";
 import { Edit } from "./pages/Edit.jsx";
 import ContactanosPage from "./pages/ContactanosPage.jsx";
+import CambiosYDevoluciones from "./pages/CambiosYDevoluciones.jsx";
+import ConfiguracionDeCuenta from "./pages/ConfiguracionDeCuenta.jsx";
+import CreditoItechnology from "./pages/CreditoItechnology.jsx";
+import CiberdelitosPage from "./pages/CiberdelitosPage.jsx";
+import InformacionCovid from "./pages/InformacionCovid.jsx";
 
 export const App = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -69,6 +74,17 @@ export const App = () => {
             path="/autorizacion-retiro"
             element={<AutorizacionRetiroForm />}
           />
+          <Route
+            path="/cambios-y-devoluciones"
+            element={<CambiosYDevoluciones />}
+          />
+          <Route
+            path="/configuracion-de-cuenta"
+            element={<ConfiguracionDeCuenta />}
+          />
+          <Route path="/informacion-covid" element={<InformacionCovid />} />
+          <Route path="/ciberdelitos" element={<CiberdelitosPage />} />
+          <Route path="/credito-itechnology" element={<CreditoItechnology />} />
           <Route path="/venta-telefonica" element={<VentaTelefonica />}></Route>
           <Route path="/sucursales" element={<Sucursales />}></Route>
           <Route path="/envios-domicilio" element={<EnviosDomicilio />}></Route>

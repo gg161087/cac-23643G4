@@ -1,11 +1,11 @@
 import { Container } from "react-bootstrap";
-import Contactanos from "../components/Contactanos.jsx";
+import Ciberdelitos from "../components/Ciberdelitos.jsx";
 
-const ContactanosPage = () => {
+const CiberdelitosPage = () => {
   return (
     <Container>
-      <h1>CONTACTANOS</h1>
-      <Contactanos />
+      <h1>CIBERDELITOS</h1>
+      <Ciberdelitos />
       <div className="volver-container">
         <button
           className="volver-button"
@@ -18,4 +18,4 @@ const ContactanosPage = () => {
   );
 };
 
-export default ContactanosPage;
+export default CiberdelitosPage;

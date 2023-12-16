@@ -1,7 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import "./Entregas.css";
-//import ContenidoContactanos from "./../components/Contactanos";
 
 const Entregas = () => {
   return (
