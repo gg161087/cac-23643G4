@@ -2,7 +2,7 @@ import "./WhatsAppButton.css";
 import botonWhatsapp from "./../assets/botonWhatsapp/botonWhatsapp.png";
 
 const WhatsAppButton = () => {
-  const whatsappLink = "https://wa.me/XXXXXXXXXX?text=Hola"; 
+  const whatsappLink = "https://wa.me/XXXXXXXXXX?text=Hola";
 
   return (
     <a
