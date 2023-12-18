@@ -1,13 +1,11 @@
-import { Container } from "react-bootstrap";
-
 import { ProductCard } from './ProductCard.jsx'
 
 import './ProductsGrid.css'
 
 export const ProductsGrid = ({products, allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => { 
     return ( 
-        <Container>
-            <Container className="grid_container">
+        <div className='container'>
+            <div className="grid_container">
                 {products.map((product) =>(
                     <ProductCard 
                         key={product.id} 
@@ -22,7 +20,7 @@ export const ProductsGrid = ({products, allProducts, setAllProducts, countProduc
                     >                        
                     </ProductCard>              
                 ))}
-            </Container>
-        </Container>
+            </div>
+        </div>
     )
 }

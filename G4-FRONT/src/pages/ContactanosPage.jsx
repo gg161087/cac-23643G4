@@ -1,10 +1,9 @@
-import { Container } from "react-bootstrap";
 import Contactanos from "../components/Contactanos.jsx";
 import { Link } from "react-router-dom";
 
 const ContactanosPage = () => {
   return (
-    <Container>
+    <div className="container">
       <h1>CONTACTANOS</h1>
       <Contactanos />
       <Link to="/centro-de-ayuda">
@@ -16,7 +15,7 @@ const ContactanosPage = () => {
           </button>
         </div>
       </Link>
-    </Container>
+    </div>
   );
 };
 

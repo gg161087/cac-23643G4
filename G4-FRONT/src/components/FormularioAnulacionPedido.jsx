@@ -1,4 +1,3 @@
-import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import "./FormularioAnulacionPedido.css";
 
@@ -31,29 +30,32 @@ const FormularioAnulacionPedido = () => {
           siguiente formulario. Los campos con (*) son obligatorios.
         </p>
       </div>
-      <Form className="form-container">
+      <form className="form-container">
         <div className="name-row">
-          <Form.Group controlId="formNombre">
-            <Form.Label className="label-style">Nombre</Form.Label>
-            <Form.Control
+          <div className="form-group">
+            <label htmlFor="formNombre" className="label-style">Nombre</label>
+            <input
               type="text"
+              className="form-control"
+              id="formNombre"
               placeholder="Nombre (*)"
               style={{
                 width: "90%",
                 height: "5vh",
                 margin: "0 40px 10px 0",
                 paddingRight: "20px",
-
               }}
               value={nombre}
               onChange={handleNombreChange}
             />
-          </Form.Group>
+          </div>
 
-          <Form.Group controlId="formApellidos">
-            <Form.Label className="label-style">Apellidos</Form.Label>
-            <Form.Control
+          <div className="form-group">
+            <label htmlFor="formApellidos" className="label-style">Apellidos</label>
+            <input
               type="text"
+              className="form-control"
+              id="formApellidos"
               placeholder="Apellidos (*)"
               style={{
                 width: "90%",
@@ -62,62 +64,62 @@ const FormularioAnulacionPedido = () => {
                 paddingRight: "20px",
               }}
             />
-          </Form.Group>
+          </div>
         </div>
 
-        <Form.Group controlId="formDNI">
-          <Form.Label className="label-style">DNI</Form.Label>
-          <Form.Control
+        <div className="form-group">
+          <label htmlFor="formDNI" className="label-style">DNI</label>
+          <input
             type="text"
-            placeholder="Número de documento  (*)"
-            className="dni-input"
+            className="form-control dni-input"
+            id="formDNI"
+            placeholder="Número de documento (*)"
             value={dni}
             onChange={handleDniChange}
           />
           <small style={{ color: "#ef7f13", fontSize: "1.2rem" }}>
             Máximo de 8 dígitos. Usado actualmente: {dni.length} dígitos.
           </small>
-        </Form.Group>
+        </div>
 
-        <Form.Group controlId="formCorreo">
-          <Form.Label className="label-style">Correo electrónico</Form.Label>
-          <Form.Control
+        <div className="form-group">
+          <label htmlFor="formCorreo" className="label-style">Correo electrónico</label>
+          <input
             type="email"
+            className="form-control dni-input"
+            id="formCorreo"
             placeholder="Dirección de email de contacto (*)"
-            className="dni-input"
           />
-        </Form.Group>
+        </div>
 
-        <Form.Group controlId="formComoCompra">
-          <Form.Label className="label-style">
-            ¿Cómo realizaste tu compra?
-          </Form.Label>
-          <Form.Control
-            as="select"
+        <div className="form-group">
+          <label htmlFor="formComoCompra" className="label-style">¿Cómo realizaste tu compra?</label>
+          <select
+            className="form-control"
+            id="formComoCompra"
             style={{ backgroundColor: "#ffffff", color: "#000000" }}
           >
             <option>Compra Online</option>
             <option>Compra en Sucursal Credito Itechnology</option>
-          </Form.Control>
-        </Form.Group>
+          </select>
+        </div>
 
-        <Form.Group controlId="formMotivo">
-          <Form.Label className="label-style">
-            Motivo de la solicitud
-            
-          </Form.Label>
-          
-          <Form.Control  
-            placeholder="Indiquenos su solicitud(*)" as="textarea" rows={5} />
-        </Form.Group>
+        <div className="form-group">
+          <label htmlFor="formMotivo" className="label-style">Motivo de la solicitud</label>
+          <textarea
+            className="form-control"
+            id="formMotivo"
+            placeholder="Indiquenos su solicitud(*)"
+            rows={5}
+          />
+        </div>
 
-        <Button
-          disabled={(dni=='')||(nombre=='')}
+        <button
+          disabled={(dni === '') || (nombre === '')}
           onClick={mostrarVentanaEmergente}
-          variant="primary"
+          className="btn btn-primary"
           type="submit"
           style={{
-
             transition: "background-color 0.3s",
             border: "none",
             marginTop: "10px",
@@ -127,8 +129,8 @@ const FormularioAnulacionPedido = () => {
           }}
         >
           Enviar
-        </Button>
-      </Form>
+        </button>
+      </form>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import "./FormularioAnulacionPedido.css";
-import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
 const Contactanos = () => {
@@ -31,7 +30,7 @@ const Contactanos = () => {
           siguiente formulario. Los campos con (*) son obligatorios.
         </p>
       </div>
-      <Form className="form-container">
+      <form className="form-container">
         <div className="name-row">
           <Form.Group controlId="formNombre">
             <Form.Label className="label-style">Nombre</Form.Label>
@@ -180,7 +179,7 @@ const Contactanos = () => {
         >
           Enviar
         </Button>
-      </Form>
+      </form>
     </>
   );
 };

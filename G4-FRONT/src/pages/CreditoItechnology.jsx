@@ -1,4 +1,3 @@
-import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import imgPagoFacil from "../assets/imgFormasDePago/imgPagoFacil.jpg";
 import "./ComprasOnline.css";
@@ -16,26 +15,26 @@ const CreditoItechnology = () => {
           horarios de atención
           <Link to="/sucursales"> aquí.</Link>
         </p>
-        <Accordion>
-          <Accordion.Item eventKey="0" flush>
-            <Accordion.Header>
+        <div className="accordion">
+          <div className="accordion-item" eventKey="0" flush>
+            <div className="accordion-header">
               ¿PUEDO COMPRAR ONLINE CON CRÉDITO CETROGAR?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Crédito Itechnology está disponible únicamente en nuestras
               sucursales. No podrás comprar online con esta modalidad de pago.
               Te esperamos en la sucursal Itechnology más cercana para
               asesorarte sobre las alternativas disponibles para acceder a tu
               crédito. Consultá las direcciones y horarios de atención{" "}
               <Link to="/sucursales">aquí:</Link>
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="1">
+            <div className="accordion-header">
               ¿CÓMO Y DONDE PODÉS ABONAR LAS CUOTAS DE TU CRÉDITO ITECHNOLOGY?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               <b> 1) SUCURSALES ITECHNOLOGY:</b> todas nuestras sucursales se
               encuentran abiertas para el cobro de cuotas de Crédito
               Itechnology. <em>IMPORTANTE:</em>
@@ -66,14 +65,14 @@ const CreditoItechnology = () => {
               disponibles para abonar.
               <br /> <b>5) PAGO MIS CUENTAS:</b> Podés abonar desde{" "}
               <Link to="/https://pagomiscuentas.com/">aqui.</Link>
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>
+          <div className="accordion-item">
+            <div className="accordion-header">
               INFORMACIÓN IMPORTANTE PARA EL PAGO DE CUOTAS - COVID-19
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               En cumplimiento con la disposición del Banco Central “A” 6958,
               todas nuestras{" "}
               <b>
@@ -88,27 +87,27 @@ const CreditoItechnology = () => {
               tendrán a disposición una fila de atención prioritaria. La
               operación se realiza respetando los protocolos de higiene y
               prevención para la salud de todos, colaboradores y clientes.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="3">
+            <div className="accordion-header">
               ¿CUÁLES SON LOS REQUISITOS PARA SACAR UN CRÉDITO?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Para acceder a tu Crédito Itechnology solo necesitás presentar tu
               <b>DNI,</b> un <b>Recibo de sueldo/Jubilación</b> y una{" "}
               <b>Boleta de servicio.</b>
               Acercate a nuestras sucursales, nuestros colaboradores podrán
               brindarte asesoramiento.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="4">
+            <div className="accordion-header">
               ¿DÓNDE PUEDO CONSULTAR MI RESUMEN DE CRÉDITO ITECHNOLOGY?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Ahora podés consultar tu resumen de cuenta de Crédito Itechnology
               <b>desde nuestra web,</b> ingresando a Mi Cuenta &gt; Crédito
               Itechnology, o hace clic en el siguiente enlace.
@@ -125,14 +124,14 @@ const CreditoItechnology = () => {
               <br />
               <br /> Mirá cómo ingresar a tu cuenta y consultar tus resúmenes
               aquí.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="5">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="5">
+            <div className="accordion-header">
               NECESITO CONTACTARME CON EL SECTOR DE COBRANZAS ITECHNOLOGY
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Para envío de comprobantes de pago de cuotas, comunicarse con el{" "}
               <Link to="/centro-de-ayuda/contactanos">siguiente enlace.</Link>{" "}
               Si tenés alguna duda o inconveniente con tu resumen de Crédito
@@ -140,9 +139,9 @@ const CreditoItechnology = () => {
               a través del siguiente{" "}
               <Link to="/centro-de-ayuda/contactanos">formulario</Link> y un
               asesor te responderá a la brevedad: Consulta Crédito Itechnology.
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+            </div>
+          </div>
+        </div>
         <Link to="/centro-de-ayuda">
           <div className="volver-container">
             <button className="volver-button">Volver</button>

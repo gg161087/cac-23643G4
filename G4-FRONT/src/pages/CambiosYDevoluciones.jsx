@@ -1,4 +1,3 @@
-import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import "./ComprasOnline.css";
 
@@ -15,13 +14,13 @@ const CambiosYDevoluciones = () => {
           varían según donde hayas realizado la compra. Revisá la información de
           plazos y procedimientos a continuación.
         </p>
-        <Accordion>
-          <Accordion.Item eventKey="0" flush>
-            <Accordion.Header>
+        <div className="accordion">
+          <div className="accordion-item" eventKey="0" flush>
+            <div className="accordion-header">
               ¿CUÁLES SON LOS PLAZOS Y CONDICIONES DE CAMBIO Y DEVOLUCIÓN PARA
               UNA COMPRA ONLINE?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Si no estás conforme con tu producto, podrás solicitar el cambio o
               devolución dentro de los diez (10) días corridos contados a partir
               de la fecha en la que lo recibiste/retiraste. Para iniciar el
@@ -39,15 +38,15 @@ const CambiosYDevoluciones = () => {
               técnico oficial de la marca. Algunos productos no admiten cambios
               una vez abiertos. Consultá las Excepciones para Cambios y
               Devoluciones.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="1">
+            <div className="accordion-header">
               ¿CUÁLES SON LOS PLAZOS Y CONDICIONES DE CAMBIO Y DEVOLUCIÓN PARA
               UNA COMPRA REALIZADA EN SUCURSAL?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Si compraste tu producto en alguna de nuestras sucursales, podrás
               solicitar el cambio o devolución de tu producto dentro de las 72
               horas corridas desde que retiraste tu compra. Acercate a tu
@@ -64,14 +63,14 @@ const CambiosYDevoluciones = () => {
               técnico oficial de la marca. Algunos productos no admiten cambios
               una vez abiertos. Consultá las Excepciones para Cambios y
               Devoluciones.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="2">
+            <div className="accordion-header">
               EXCEPCIONES PARA CAMBIOS Y DEVOLUCIONES
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Los productos instalables como aires acondicionados, calefones,
               termotanques, anafes, cocinas, hornos, campanas, lavarropas,
               lavasecarropas, lavavajillas, heladeras, freezers, cavas y
@@ -84,24 +83,24 @@ const CambiosYDevoluciones = () => {
               para este tipo de productos. En el caso de impresoras, sólo se
               admitirá la devolución con el envoltorio de los cartuchos o
               tonners cerrados y originales.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>DETALLE ESTÉTICO EN PRODUCTOS</Accordion.Header>
-            <Accordion.Body>
+          <div className="accordion-item" eventKey="3">
+            <div className="accordion-header">DETALLE ESTÉTICO EN PRODUCTOS</div>
+            <div className="accordion-body">
               Al momento de la entrega, recordá siempre verificar el buen estado
               del producto antes de firmar el remito. No se realizarán cambios
               por detalle estético cuando el remito haya sido firmado en
               conformidad.
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="4">
+            <div className="accordion-header">
               ¿CÓMO SOLICITAR LA ANULACIÓN DE UNA COMPRA?
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               Para solicitar la anulación de la compra, completá el{" "}
               <Link to="/centro-de-ayuda/contactanos">
                 {" "}
@@ -113,9 +112,9 @@ const CambiosYDevoluciones = () => {
               cuenta de la tarjeta utilizada en la compra. El plazo de
               devolución dependerá de los tiempos de procesamiento de cada
               Tarjeta o Banco emisor.
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+            </div>
+          </div>
+        </div>
         <Link to="/centro-de-ayuda">
           <div className="volver-container">
             <button className="volver-button">Volver</button>

@@ -1,10 +1,9 @@
-import { Container } from "react-bootstrap";
 import Ciberdelitos from "../components/Ciberdelitos.jsx";
 import { Link } from "react-router-dom";
 
 const CiberdelitosPage = () => {
   return (
-    <Container>
+    <div className="container">
       <h1>CIBERDELITOS</h1>
       <Ciberdelitos />
       <Link to="/centro-de-ayuda">
@@ -12,7 +11,7 @@ const CiberdelitosPage = () => {
           <button className="volver-button">Volver</button>
         </div>
       </Link>
-    </Container>
+    </div>
   );
 };
 

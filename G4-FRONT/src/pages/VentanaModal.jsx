@@ -1,23 +1,15 @@
-// ModalComponent.js
-
-import { Modal, Button } from "react-bootstrap";
-
 export const ModalVentana = ({ show, handleClose, message }) => {
-  return (
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>ITECHNOLOGY</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <p>
-          <h1>{message}</h1>
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
-          Cerrar
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  );
+    return (
+        <div className="modal" show={show} onHide={handleClose} tabindex="-1">
+            <div className="modal-header" closeButton>
+                <h5 className="modal-title">ITECHNOLOGY</h5>
+            </div>
+            <div className="modal-body">
+                <p>{message}</p>
+            </div>
+            <div className="modal-footer">
+                <button className="btn btn-primary" onClick={handleClose}>Cerrar</button>
+            </div>
+        </div>
+    );
 };

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Nav, NavDropdown } from "react-bootstrap";
 import { FaPhoneVolume, FaTruckMoving } from "react-icons/fa";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
 import { BiSolidMessage, BiSolidUser } from "react-icons/bi";
 
 import { SearchBar } from "../components/SearchBar";
 import { SearchResultsList } from "../components/SearchResultsList";
+import { NavBarCategories } from './../components/NavBarCategories.jsx';
 
 import { getDinamic } from './../utils/getDinamic.js';
 
@@ -76,27 +76,22 @@ export const Header = ({
                     <Link className="nav1__link text-decoration-none  d-flex align-items-center ms-auto" to="envios-domicilio">
                         <FaTruckMoving className="me-3" />
                         Envíos a domicilio
-                    </Link>                    
+                    </Link>
                 </div>
             </div>
             <div className="container-fluid header__nav2">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-6 col-md-3">
-                            <Nav>
-                                <Link
-                                    className="nav2__logo d-flex align-items-center p-1 text-decoration-none"
-                                    to="/"
-                                >
-                                    <img
-                                        className=" me-3"
-                                        src={logo}
-                                        alt="Logo"
-                                        style={{ width: "80px" }}
-                                    />
-                                    <h1>ITECHNOLOGY</h1>
-                                </Link>
-                            </Nav>
+                            <Link className="nav2__logo d-flex align-items-center p-1 text-decoration-none" to="/">
+                                <img
+                                    className="me-3"
+                                    src={logo}
+                                    alt="Logo"
+                                    style={{ width: "80px" }}
+                                />
+                                <h1>ITECHNOLOGY</h1>
+                            </Link>
                         </div>
                         <div className="col-6 col-md-6">
                             <div className="header__search">
@@ -109,7 +104,7 @@ export const Header = ({
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <Nav className="d-flex flex-nowrap justify-content-end align-items-center gap-3">
+                            <nav className="d-flex flex-nowrap justify-content-end align-items-center gap-3">
                                 <Link
                                     className="miCuenta__link text-decoration-none ms-3 me-3 "
                                     to="miCuenta "
@@ -177,31 +172,16 @@ export const Header = ({
                                         )}
                                     </div>
                                 </div>
-                            </Nav>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
-            <div fluid className="container-fluid header__nav3">
+            <div className="container-fluid header__nav3">
                 <div className="container">
-                    <div className="d-flex justify-content-between align-items-center p-3 ">
-                        <Nav>
-                            <NavDropdown
-                                className="m-0 text-decoration-none"
-                                title="Categorías"
-                            >
-                                {categories.map((category) => (
-                                    <Link key={category.id}
-                                        className="text-decoration-none ms-3 me-3  d-flex fs-4 categoryList"
-                                        to={`products/${category.name}`}
-                                    >
-                                        {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
-                                    </Link>
-                                ))
-                                }
-                            </NavDropdown>
-                        </Nav>
-                        <Nav className="ultima">
+                    <div className="d-flex justify-content-between align-items-center p-3 ">  
+                        <NavBarCategories categories={categories}></NavBarCategories>            
+                        <div className="ultima">
                             <Link
                                 className="nav3__link text-decoration-none ms-3 me-3 "
                                 to="exclusivo-online "
@@ -214,7 +194,7 @@ export const Header = ({
                             >
                                 Ofertas
                             </Link>
-                        </Nav>
+                        </div>
                     </div>
                 </div>
             </div>

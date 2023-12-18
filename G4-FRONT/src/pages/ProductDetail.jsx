@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getDinamic } from "../utils/getDinamic.js";
 import { ProductsGrid } from "../components/ProductsGrid.jsx";
-import { Container, Row, Col } from "react-bootstrap";
 import "./ProductDetail.css";
 
 export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => {
@@ -53,7 +52,7 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
         <>
             <div className="container contenedor">
                 <div className="row">
-                    <Col md={8} className="p-5 d-flex flex-column">
+                    <div className="col p-5 d-flex flex-column">
                         <img
                             src={image}
                             alt={product.model}
@@ -62,7 +61,7 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
                         <section className="d-flex justify-content-evenly mt-2 sectionImgs">
                             {product.product_imgsurls &&
                                 product.product_imgsurls.map((product) => (
-                                    <div key={product.img_url} className="imgs">
+                                    <div key={product.id} className="imgs">
                                         <img
                                             src={product.img_url}
                                             alt={product.model}
@@ -72,14 +71,14 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
                                     </div>
                                 ))}
                         </section>
-                    </Col>
-                    <Col md={4} className="d-flex flex-column info-card justify-content-center">
+                    </div>
+                    <div className="col d-flex flex-column info-card justify-content-center">
                         <span>Nuevo | +100 vendidos</span>
                         {/* Este campo tiene que ser dinamico */}
                         <h1>
                             {product.brand} - {product.model}
                         </h1>
-                        <div className="rating"><span>4.8</span> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(3)</span></div>
+                        <div className="rating"><span>4.8</span> <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-regular fa-star"></i> <span>(3)</span></div>
                         {/* Este campo tiene que ser dinamico */}
                         <p className="price"><span className="price-discount">${product.price}</span> <br /> ${Number.parseFloat(product.price*((100-product.discount)/100)).toFixed(2)} </p>
                         <p className="discount">-{Math.round(product.discount)}% off</p>
@@ -90,7 +89,7 @@ export const ProductDetail = ({allProducts, setAllProducts, countProducts, setCo
                             <button className="btn-dark">Comprar ahora</button>
                             <button className="btn-light" onClick={()=> onAddProduct(product)}>Agregar al carrito</button>
                         </div>
-                    </Col>
+                    </div>
                 </div>
             </div>
             <div className="container">

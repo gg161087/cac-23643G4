@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Tab, Tabs } from "react-bootstrap";
 import { CrudBranchOffices } from './CrudBranchOffices.jsx';
 import { CrudCategories } from './CrudCategories.jsx';
 import { CrudProducts } from './CrudProducts.jsx';
@@ -72,33 +71,41 @@ export const CrudsAdmin = () => {
     }
 
     return (       
-        <Tabs
-            defaultActiveKey="Productos"
-            id="uncontrolled-tab-example"
-            className="mb-3"
-        >
-            <Tab eventKey='Productos' title='Productos'>
-                <h2>Productos</h2>
-                <CrudProducts products={products}></CrudProducts>
-            </Tab>
-            <Tab eventKey='Categorias' title='Categorias'>
-                <CrudCategories categories={categories}></CrudCategories>
-            </Tab>
-            <Tab eventKey='Usuarios' title='Usuarios'>
-                <CrudUsers users={users}></CrudUsers>
-            </Tab>
-            <Tab eventKey='Roles' title='Roles'>
-                <CrudRoles roles={roles}></CrudRoles>
-            </Tab>
-            <Tab eventKey='Suscriptores' title='Suscriptores'>
-                <CrudSubscribers subscribers={subscribers}></CrudSubscribers>
-            </Tab>
-            <Tab eventKey='Provincias' title='Provincias'>
+        <ul className="nav nav-tabs"            
+            id="uncontrolled-tab-example"            
+        >   
+            <li className="nav-item">
+                <div className="nav-link active" eventKey='Productos' title='Productos' >
+                    <h2>Productos</h2>
+                    <CrudProducts products={products}></CrudProducts>
+                </div>
+            </li>
+            <li className="nav-item">
+                <div eventKey='Categorias' title='Categorias'>
+                    <CrudCategories categories={categories}></CrudCategories>
+                </div>
+            </li>
+            <li className="nav-item">
+                <div eventKey='Usuarios' title='Usuarios'>
+                    <CrudUsers users={users}></CrudUsers>
+                </div>
+            </li>
+            <li className="nav-item">
+                <div eventKey='Roles' title='Roles'>
+                    <CrudRoles roles={roles}></CrudRoles>
+                </div>
+            </li>
+            <li className="nav-item">
+                <div eventKey='Suscriptores' title='Suscriptores'>
+                    <CrudSubscribers subscribers={subscribers}></CrudSubscribers>
+                </div>
+            </li>
+            <div eventKey='Provincias' title='Provincias'>
                 <CrudProvinces provinces={provinces}></CrudProvinces>
-            </Tab>
-            <Tab eventKey='Sucursales' title='Sucursales'>
+            </div>
+            <div eventKey='Sucursales' title='Sucursales'>
                 <CrudBranchOffices branchOffices={branchOffices}></CrudBranchOffices>
-            </Tab>
-        </Tabs>
+            </div>
+        </ul>
     )
 }

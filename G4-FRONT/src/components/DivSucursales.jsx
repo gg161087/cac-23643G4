@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { Tab, Tabs } from "react-bootstrap";
-
 import { getDinamic } from '../utils/getDinamic.js';
 
 const DivSucursales = () => {
@@ -31,15 +29,21 @@ const DivSucursales = () => {
     }
 
     return (
-        <div>
-            <Tabs
-                defaultActiveKey="Buenos Aires"
-                id="uncontrolled-tab-example"
-                className="mb-3"
-            >
+        <div className="container mt-4">
+            <ul className="nav nav-tabs" id="myTab" role="tablist">
                 {provinces.map((province) => (
-                    <Tab eventKey={province.name} title={province.name} key={province.id}>
-                        {branchOffices.filter((branch) => branch.province_id === province.id)
+                    <li className="nav-item" key={province.id}>
+                        <a className={`nav-link ${province.id === 1 ? 'active' : ''}`} id={`tab-${province.id}`} data-bs-toggle="tab" href={`#tabContent-${province.id}`} role="tab" aria-controls={`tabContent-${province.id}`} aria-selected={province.id === 1 ? 'true' : 'false'}>
+                            {province.name}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+            <div className="tab-content" id="myTabContent">
+                {provinces.map((province) => (
+                    <div className={`tab-pane fade ${province.id === 1 ? 'show active' : ''}`} id={`tabContent-${province.id}`} role="tabpanel" aria-labelledby={`tab-${province.id}`} key={province.id}>
+                        {branchOffices
+                            .filter((branch) => branch.province_id === province.id)
                             .map((filteredBranch) => (
                                 <div key={filteredBranch.id}>
                                     <p>Departamento: {filteredBranch.departments}</p>
@@ -48,9 +52,9 @@ const DivSucursales = () => {
                                     <br />
                                 </div>
                             ))}
-                    </Tab>
+                    </div>
                 ))}
-            </Tabs>
+            </div>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Accordion, Col, Container, Row } from "react-bootstrap";
 
 import FormularioAnulacionPedido from "./../components/FormularioAnulacionPedido";
 import ContenidoCentroAyuda from "./../components/CentroAyuda";
@@ -36,12 +35,12 @@ const CentroAyuda = () => {
   }, []);
 
   return (
-    <Container>
-      <Row>
-        <Col sm={3}>
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="1">
-              <Accordion.Header
+    <div className="container">
+      <div className="row">
+        <div className="col col-sm-3">
+          <div className="accordion" defaultActiveKey="0">
+            <div className="accordion-item" eventKey="1">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(
                     contenidoArrepentimiento(),
@@ -50,51 +49,51 @@ const CentroAyuda = () => {
                 }
               >
                 Arrepentimiento de Compra
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="2">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="2">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(contenidoCentroAyuda(), "Centro de Ayuda")
                 }
               >
                 Centro de Ayuda
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="3">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="3">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(contenidoCiberdelitos(), "Ciberdelitos")
                 }
               >
                 Ciberdelitos
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="4">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="4">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(contenidoContactanos(), "Contactanos")
                 }
               >
                 Contactanos
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="5">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="5">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(contenidoInstitucional(), "Institucional")
                 }
               >
                 Institucional
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="6">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="6">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(
                     contenidoPoliticaDePrivacidad(),
@@ -103,21 +102,21 @@ const CentroAyuda = () => {
                 }
               >
                 Política de Privacidad
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="7">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="7">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(contenidoSucursales(), "Sucursales")
                 }
               >
                 Sucursales
-              </Accordion.Header>
-            </Accordion.Item>
+              </div>
+            </div>
 
-            <Accordion.Item eventKey="8">
-              <Accordion.Header
+            <div className="accordion-item" eventKey="8">
+              <div className="accordion-header"
                 onClick={() =>
                   handleItemClick(
                     contenidoTerminosYCondiciones(),
@@ -126,19 +125,19 @@ const CentroAyuda = () => {
                 }
               >
                 Términos y Condiciones
-              </Accordion.Header>
-            </Accordion.Item>
-          </Accordion>
-        </Col>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <Col sm={9}>
+        <div className="col col-sm-9">
           <div>
             <h2 className="title-arrepentimiento">{titulo}</h2>
             <p>{contenido}</p>
           </div>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 

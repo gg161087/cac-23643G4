@@ -1,9 +1,8 @@
-import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const EnviosDomicilio = () => {
   return (
-    <Container>
+    <div className="container">
       <h1>ENVIOS A DOMICILIO</h1>
       Realizamos envíos a todo el territorio argentino, excepto la Isla de
       Tierra del Fuego, a través de operadores logísticos. Esta modalidad de
@@ -74,6 +73,6 @@ export const EnviosDomicilio = () => {
       <Link to="/centro-de-ayuda/contactanos">siguiente enlace.</Link> <br />
       <br />
       <Link to="/">VOLVER AL INICIO</Link>
-    </Container>
+    </div>
   );
 };

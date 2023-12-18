@@ -1,13 +1,5 @@
 import { useState } from "react";
 import {
-    Container,
-    Row,
-    Col,
-    Form,
-    FormControl,
-    Button,
-} from "react-bootstrap";
-import {
     AiFillFacebook,
     AiFillTwitterCircle,
     AiFillYoutube,
@@ -20,9 +12,6 @@ import {
 } from "react-icons/ai";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
-//import withReactContent from "sweetalert2-react-content";
-
-//const mySwal = withReactContent(Swal);
 
 import { subscriberSchema } from "./../schemas/subscriberSchema.js";
 import { postSubscriber } from "./../utils/postDinamic.js";
@@ -72,7 +61,7 @@ export const Footer = () => {
         });
 
     return (
-        <footer className="footer mt-4">
+        <footer className="container-fluid footer">
             <div className="container">
                 <div className="row mt-4">
                     <div className="col mt-5">
@@ -142,12 +131,12 @@ export const Footer = () => {
                                     Contratos de Adhesión-Ley N° 24.240 de Defensa del Consumidor
                                 </p>
                                 <p>Información al Usuario Financiero</p>
-                                <Button className=" btn-sm" variant="outline-warning">
+                                <button className="btn btn-outline-warning mb-2">
                                     Solicitud de Baja
-                                </Button>
-                                <Button className=" btn-sm" variant="outline-danger">
+                                </button>
+                                <button className="btn btn-outline-danger mb-2">
                                     Botón de Arrepentimiento
-                                </Button>
+                                </button>
                             </div>
                         </div>
                     </div>

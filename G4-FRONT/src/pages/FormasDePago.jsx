@@ -1,4 +1,3 @@
-import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import imgPagoFacil from "../assets/imgFormasDePago/imgPagoFacil.jpg";
 import imgTarjetas from "../assets/imgFormasDePago/imgTarjetas.jpg";
@@ -12,31 +11,31 @@ const FormasDePago = () => {
     <>
       <div className="accordion-pagos">
         <h1 className="titulo-pagos">Formas de Pago</h1>
-        <Accordion>
-          <Accordion.Item eventKey="0" flush>
-            <Accordion.Header>
+        <div className="accordion">
+          <div className="accordion-item" eventKey="0" flush>
+            <div className="accordion-header">
               TARJETAS DE CRÉDITO - DE TODOS LOS BANCOS{" "}
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               <img src={imgTarjetas} alt="Imágenes de Tarjetas de Crédito" />
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
+          <div className="accordion-item" eventKey="1">
+            <div className="accordion-header">
               TARJETAS DE DÉBITO – DE TODOS LOS BANCOS
-            </Accordion.Header>
-            <Accordion.Body>
+            </div>
+            <div className="accordion-body">
               <img
                 src={imgTarjetasDebito}
                 alt="Imágenes de Tarjetas de Débito"
               />
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>PAGOS EN EFECTIVO</Accordion.Header>
-            <Accordion.Body>
+          <div className="accordion-item" eventKey="2">
+            <div className="accordion-header">PAGOS EN EFECTIVO</div>
+            <div className="accordion-body">
               <img
                 src={imgEfectivo}
                 alt="Imágenes de Formas de Pago en Efectivo"
@@ -54,12 +53,12 @@ const FormasDePago = () => {
               <a href={imgPagoFacil} target="_blank" rel="noopener noreferrer">
                 Instructivo Pago Fácil.
               </a>
-            </Accordion.Body>
-          </Accordion.Item>
+            </div>
+          </div>
 
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>MERCADO PAGO</Accordion.Header>
-            <Accordion.Body>
+          <div className="accordion-item" eventKey="3">
+            <div className="accordion-header">MERCADO PAGO</div>
+            <div className="accordion-body">
               <img src={imgMercadoPago} alt="Imágen del logo de Mercado Pago" />
               <br />
               Podés abonar tus compras utilizando alguna de las alternativas de
@@ -69,9 +68,9 @@ const FormasDePago = () => {
               <Link to="https://www.mercadopago.com.ar/ayuda/medios-de-pago-y-promociones_264">
                 sitio web.
               </Link>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+            </div>
+          </div>
+        </div>
         <Link to="/centro-de-ayuda">
           <div className="volver-container">
             <button className="volver-button">Volver</button>
