@@ -80,7 +80,7 @@ export const Footer = () => {
                     </div>
                     <div className="col">
                         <div className="row">
-                            <label for="emailSubscriber" className="form-label">Email address</label>
+                            <label htmlFor="emailSubscriber" className="form-label">Email address</label>
                         </div>
                         <div className="row">
                             <form

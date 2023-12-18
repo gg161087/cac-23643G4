@@ -1,10 +1,10 @@
-.container__nav1 {
+.header__nav1 {
   background-color: #202020;
 }
-.container__nav2 {
+.header__nav2 {
   background-color: #132043;
 }
-.container__nav3 {
+.header__nav3 {
   background-color: rgb(233, 233, 233);
   color: #202020;
 }
@@ -166,15 +166,20 @@ a.dropdown-toggle:link {
 .hidden-cart {
 	display: none;
 }
+.input-wrapper input{
+	margin-left: .5rem;
+}
 
 @media (max-width: 870px) {
   .header {
     display: none;
     background-color: red;
   }
-
-  .container__nav1 {
-    background-color: green;
-    display: none;
-  }
+  .header__nav1 {
+	  background-color: green;
+	  display: none;
+	}
+	.header__nav2 h1{
+		display: none;
+	}
 }
