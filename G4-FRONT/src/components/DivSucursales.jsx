@@ -10,8 +10,7 @@ const DivSucursales = () => {
         setProvinces(response);
     };
     const getBranchOffices = async () => {
-        const response = await getDinamic('branch_offices');
-        console.log(response);
+        const response = await getDinamic('branch_offices');        
         setBranchOffices(response);
     };
 
@@ -39,7 +38,7 @@ const DivSucursales = () => {
                     </li>
                 ))}
             </ul>
-            <div className="tab-content" id="myTabContent">
+            <div className="tab-content mt-4" id="myTabContent">
                 {provinces.map((province) => (
                     <div className={`tab-pane fade ${province.id === 1 ? 'show active' : ''}`} id={`tabContent-${province.id}`} role="tabpanel" aria-labelledby={`tab-${province.id}`} key={province.id}>
                         {branchOffices

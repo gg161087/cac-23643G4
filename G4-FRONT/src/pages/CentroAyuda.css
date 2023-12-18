@@ -1,3 +1,12 @@
-/* .title-arrepentimiento {
-  color: #0505d9;
-} */
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.content-area {
+  display: none;
+  padding-left: 15px;
+}
+
+.content-area.active {
+  display: block;
+}
