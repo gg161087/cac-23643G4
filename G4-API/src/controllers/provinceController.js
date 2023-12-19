@@ -59,7 +59,7 @@ export const deleteProvinceById = async (req, res) => {
     const { id } = req.params;
     try {
         const province = await provinceModel.findByPk(id);
-        if (province) {
+        if (!province) {
             res.status(404).json({ message: 'Not found.' });
         } else {
             const result = await province.destroy();

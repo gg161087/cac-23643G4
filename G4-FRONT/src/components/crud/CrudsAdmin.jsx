@@ -160,25 +160,25 @@ export const CrudsAdmin = () => {
 
             <div className="tab-content" id="myTabCrudContent">
                 <div className="tab-pane fade show active" id="tabProductsContent" role="tabpanel" aria-labelledby="tabProducos">
-                    <TableWithPagination data={products}/>
+                    <TableWithPagination data={products} path='products'/>
                 </div>
                 <div className="tab-pane fade" id="tabCategoriesContent" role="tabpanel" aria-labelledby="tabCategories">
-                    <TableWithPagination data={categories}/>
+                    <TableWithPagination data={categories} path='categories'/>
                 </div>
                 <div className="tab-pane fade" id="tabBranchOfficesContent" role="tabpanel" aria-labelledby="tabBranchOffices">
-                    <TableWithPagination data={branchOffices}/>
+                    <TableWithPagination data={branchOffices} path='branch_offices'/>
                 </div>
                 <div className="tab-pane fade" id="tabProvincesContent" role="tabpanel" aria-labelledby="tabProvinces">
-                    <TableWithPagination data={provinces}/>
+                    <TableWithPagination data={provinces} path='provinces'/>
                 </div>
                 <div className="tab-pane fade" id="tabSubscribersContent" role="tabpanel" aria-labelledby="tabSubscribers">
-                    <TableWithPagination data={subscribers}/>
+                    <TableWithPagination data={subscribers} path='subscribers'/>
                 </div>
                 <div className="tab-pane fade" id="tabUsersContent" role="tabpanel" aria-labelledby="tabUsers">
-                    <TableWithPagination data={users}/>
+                    <TableWithPagination data={users} path='users'/>
                 </div>
                 <div className="tab-pane fade" id="tabRolesContent" role="tabpanel" aria-labelledby="tabRoles">
-                    <TableWithPagination data={roles}/>
+                    <TableWithPagination data={roles} path='roles'/>
                 </div>                
             </div>
         </div>

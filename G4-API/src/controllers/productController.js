@@ -110,7 +110,7 @@ export const deleteProductById = async (req, res) => {
     try {
         const product = await productModel.findByPk(id);
 
-        if (product) {
+        if (!product) {
             res.status(404).json({ message: 'Not found.' });
         } else {
             await product.destroy();

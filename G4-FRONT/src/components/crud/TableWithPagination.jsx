@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { faPencil, faTrash, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import { Icon } from './../Icon.jsx';
+import { deleteDinamic } from './../../utils/deleteDinamic.js';
 
-export const TableWithPagination = ({ data }) => {
+export const TableWithPagination = ({ data, path }) => {
 
     if (!data || !Array.isArray(data) || data.length === 0) {
         return (
@@ -37,6 +39,7 @@ export const TableWithPagination = ({ data }) => {
                         {columns.map((column, index) => (
                             <th key={index}>{column.toUpperCase()}</th>
                         ))}
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +48,14 @@ export const TableWithPagination = ({ data }) => {
                             {Object.keys(item).map((key, index) => (
                                 <td key={index}>{item[key]}</td>
                             ))}
+                            <td>
+                                <Link to={`/edit/${path}/${item.id}`} className='btn btn-success btn-lg m-2'>
+                                    <Icon css='icon' icon={faPencil} />
+                                </Link>
+                                <button onClick={() => deleteDinamic(path, item.id)} className='btn btn-danger btn-lg'>
+                                    <Icon css='icon' icon={faTrash} />
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -57,7 +68,7 @@ export const TableWithPagination = ({ data }) => {
                             className="page-link"
                             onClick={() => paginate(currentPage - 1)}
                         >
-                            <Icon css='icon' icon={faChevronLeft}/>                            
+                            <Icon css='icon' icon={faChevronLeft} />
                         </button>
                     </li>
 
@@ -80,7 +91,7 @@ export const TableWithPagination = ({ data }) => {
                             className="page-link"
                             onClick={() => paginate(currentPage + 1)}
                         >
-                            <Icon css='icon' icon={faChevronRight}/>  
+                            <Icon css='icon' icon={faChevronRight} />
                         </button>
                     </li>
                 </ul>
