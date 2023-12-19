@@ -3,7 +3,9 @@
   color: #fff;
   background-color: #132043;
 }
-
+.redes{
+  text-align: end;
+}
 .row1 {
   height: 70px;
 }
@@ -36,4 +38,14 @@
   #footer__contendor{
     display: none;
   }
+  #emailSubscriber{
+    width: 25rem;
+  }
+  .subscribe{
+    display: flex;
+    justify-content: center;    
+  }
+  .redes{
+    text-align: center;
+  }  
 }

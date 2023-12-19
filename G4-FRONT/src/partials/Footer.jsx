@@ -96,7 +96,7 @@ export const Footer = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="col text-end mt-5">
+                    <div className="col mt-5 redes">
                         <AiFillFacebook className="link__footer fs-2 me-2 pe" />
                         <AiFillInstagram className="link__footer fs-2 me-2" />
                         <AiFillTwitterCircle className="link__footer fs-2 me-2" />
