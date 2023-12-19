@@ -10,6 +10,7 @@ import { CrudUsers } from './CrudUsers.jsx';
 import { getDinamic } from './../../utils/getDinamic.js';
 
 export const CrudsAdmin = () => {
+    
     const [products, setProducts] = useState([]);
     const [branchOffices, setBranchOffices] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -70,42 +71,69 @@ export const CrudsAdmin = () => {
         )
     }
 
-    return (       
-        <ul className="nav nav-tabs"            
-            id="uncontrolled-tab-example"            
-        >   
-            <li className="nav-item">
-                <div className="nav-link active" eventKey='Productos' title='Productos' >
-                    <h2>Productos</h2>
-                    <CrudProducts products={products}></CrudProducts>
-                </div>
-            </li>
-            <li className="nav-item">
-                <div eventKey='Categorias' title='Categorias'>
-                    <CrudCategories categories={categories}></CrudCategories>
-                </div>
-            </li>
-            <li className="nav-item">
-                <div eventKey='Usuarios' title='Usuarios'>
-                    <CrudUsers users={users}></CrudUsers>
-                </div>
-            </li>
-            <li className="nav-item">
-                <div eventKey='Roles' title='Roles'>
-                    <CrudRoles roles={roles}></CrudRoles>
-                </div>
-            </li>
-            <li className="nav-item">
-                <div eventKey='Suscriptores' title='Suscriptores'>
-                    <CrudSubscribers subscribers={subscribers}></CrudSubscribers>
-                </div>
-            </li>
-            <div eventKey='Provincias' title='Provincias'>
-                <CrudProvinces provinces={provinces}></CrudProvinces>
-            </div>
-            <div eventKey='Sucursales' title='Sucursales'>
-                <CrudBranchOffices branchOffices={branchOffices}></CrudBranchOffices>
-            </div>
-        </ul>
+    return (      
+        <div className="container mt-4">
+      <ul className="nav nav-tabs" id="myTabCrud" role="tablist">
+        <li className="nav-item" role="presentation">
+          <a className="nav-link active" id="tabProducts" data-bs-toggle="tab" href="#tabProductsContent" role="tab" aria-controls="tabProductsContent" aria-selected="true">
+            Productos
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabCategories" data-bs-toggle="tab" href="#tabCategoriesContent" role="tab" aria-controls="tabCategoriesContent" aria-selected="false">
+            Categorías
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabBranchOffices" data-bs-toggle="tab" href="#tabBranchOfficesContent" role="tab" aria-controls="tabBranchOfficesContent" aria-selected="false">
+            Sucursales
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabProvinces" data-bs-toggle="tab" href="#tabProvincesContent" role="tab" aria-controls="tabProvincesContent" aria-selected="false">
+            Provincias
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabSubscribers" data-bs-toggle="tab" href="#tabSubscribersContent" role="tab" aria-controls="tabSubscribersContent" aria-selected="false">
+            Suscriptores
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabUsers" data-bs-toggle="tab" href="#tabUsersContent" role="tab" aria-controls="tabUsersContent" aria-selected="false">
+            Usuarios
+          </a>
+        </li>
+        <li className="nav-item" role="presentation">
+          <a className="nav-link" id="tabRoles" data-bs-toggle="tab" href="#tabRolesContent" role="tab" aria-controls="tabRolesContent" aria-selected="false">
+            Roles
+          </a>
+        </li>        
+      </ul>
+
+      <div className="tab-content" id="myTabCrudContent">
+        <div className="tab-pane fade show active" id="tabProductsContent" role="tabpanel" aria-labelledby="tabProducos">
+          <CrudProducts products={products} />
+        </div>
+        <div className="tab-pane fade" id="tabCategoriesContent" role="tabpanel" aria-labelledby="tabCategories">
+          <CrudCategories categories={categories}/>
+        </div>
+        <div className="tab-pane fade" id="tabBranchOfficesContent" role="tabpanel" aria-labelledby="tabBranchOffices">
+          <CrudBranchOffices branchOffices={branchOffices}/>
+        </div> 
+        <div className="tab-pane fade" id="tabProvincesContent" role="tabpanel" aria-labelledby="tabProvinces">
+          <CrudProvinces provinces={provinces}/>
+        </div> 
+        <div className="tab-pane fade" id="tabSubscribersContent" role="tabpanel" aria-labelledby="tabSubscribers">
+          <CrudSubscribers subscribers={subscribers}/>
+        </div> 
+        <div className="tab-pane fade" id="tabUsersContent" role="tabpanel" aria-labelledby="tabUsers">
+          <CrudUsers users={users}/>
+        </div> 
+        <div className="tab-pane fade" id="tabRolesContent" role="tabpanel" aria-labelledby="tabRoles">
+          <CrudRoles roles={roles}/>
+        </div>         
+      </div>
+    </div>
     )
 }
