@@ -26,8 +26,7 @@ export const createSubscriber = async (req, res) => {
     if (!email) {
         return res.status(404).json({message: 'Missing fields.'});
     };
-    try {
-        const response = await subscriberModel.create();
+    try {        
         const newSubscriber = await subscriberModel.create({email});
         res.status(201).json(newSubscriber);
     } catch (error) {

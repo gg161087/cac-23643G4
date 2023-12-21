@@ -179,7 +179,8 @@ a.dropdown-toggle:link {
 	  background-color: green;
 	  display: none;
 	}
-	.header__nav2 h1{
-		display: none;
+	.header__nav2{
+		display: flex!important;
+		flex-direction: column;
 	}
 }

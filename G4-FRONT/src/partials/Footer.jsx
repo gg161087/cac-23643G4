@@ -32,16 +32,13 @@ export const Footer = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 postSubscriber(email).then((result) => {
-                    if (result) {
-                        Swal.fire(
-                            "Subscripto!",
-                            "Te subscribiste correctamente.",
-                            "success"
-                        );
-                    } else {
-                        Swal.fire("Error!", "corrego electronico ya registrado", "error");
-                    }
+                    result && Swal.fire(
+                        "Subscripto!",
+                        "Te subscribiste correctamente.",
+                        "success"
+                    )                                 
                 });
+                Swal.fire("Error!", "correo electronico ya registrado", "error");
             }
         });
     };

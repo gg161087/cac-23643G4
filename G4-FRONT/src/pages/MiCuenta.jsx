@@ -20,6 +20,7 @@ export const MiCuenta = () => {
     const [telephone, setTelephone] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [isAdmin, setIsAdmin] = useState(false)
 
     const localToken = localStorage.getItem('token');
     const localUserId = localStorage.getItem('userId');
@@ -33,7 +34,8 @@ export const MiCuenta = () => {
             setTelephone(response.telephone)
             setEmail(response.email)
             setPassword(response.password)
-        }
+            response.roles.some(role => role.name === 'administrator') && setIsAdmin(!isAdmin)                        
+        }        
     }
 
     const logOut = () => {
@@ -52,16 +54,19 @@ export const MiCuenta = () => {
 
     return (
         <div className="container d-flex justify-content-center flex-column">
-            <div className='justify-content-center d-flex gap-3'>
+            <div className='justify-content-center d-flex gap-3 mt-4'>
                 <h1>MI CUENTA - {user.name}</h1>
-                <button className='btn btn-danger' onClick={() => logOut()}>Log Out</button>
+                
             </div>
-            <div>
+            <div className='justify-content-center d-flex gap-3 mt-4'>
                 <p>{user.name} {user.last_name}</p>                
                 <p>{user.email}</p>                
-            </div>
-            <CrudsAdmin></CrudsAdmin>           
-            <div>
+            </div>                       
+            {isAdmin&& <CrudsAdmin></CrudsAdmin>}
+            <div className='justify-content-center d-flex flex-column align-items-center gap-3 mt-4 mb-4'>
+                <div>
+                    <button className='btn btn-danger btn-lg' onClick={() => logOut()}>Log Out</button> 
+                </div>
                 <Link to="/">VOLVER AL INICIO</Link>
             </div>
         </div>

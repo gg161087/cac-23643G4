@@ -60,42 +60,42 @@ export const TableWithPagination = ({ data, path }) => {
                     ))}
                 </tbody>
             </table>
-
-            <nav>
-                <ul className="pagination">
-                    <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                        <button
-                            className="page-link"
-                            onClick={() => paginate(currentPage - 1)}
-                        >
-                            <Icon css='icon' icon={faChevronLeft} />
-                        </button>
-                    </li>
-
-                    {[...Array(totalPages)].map((_, index) => (
-                        <li
-                            key={index}
-                            className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}
-                        >
+            <div className='container d-flex justify-content-center text-center'>
+                <nav>
+                    <ul className="pagination">
+                        <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
                             <button
                                 className="page-link"
-                                onClick={() => paginate(index + 1)}
+                                onClick={() => paginate(currentPage - 1)}
                             >
-                                {index + 1}
+                                <Icon css='icon' icon={faChevronLeft} />
                             </button>
                         </li>
-                    ))}
 
-                    <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-                        <button
-                            className="page-link"
-                            onClick={() => paginate(currentPage + 1)}
-                        >
-                            <Icon css='icon' icon={faChevronRight} />
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+                        {[...Array(totalPages)].map((_, index) => (
+                            <li
+                                key={index}
+                                className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}
+                            >
+                                <button
+                                    className="page-link"
+                                    onClick={() => paginate(index + 1)}
+                                >
+                                    {index + 1}
+                                </button>
+                            </li>
+                        ))}
+                        <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                            <button
+                                className="page-link"
+                                onClick={() => paginate(currentPage + 1)}
+                            >
+                                <Icon css='icon' icon={faChevronRight} />
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     );
 };

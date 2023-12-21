@@ -157,7 +157,6 @@ export const CrudsAdmin = () => {
                     </a>
                 </li>                
             </ul>
-
             <div className="tab-content" id="myTabCrudContent">
                 <div className="tab-pane fade show active" id="tabProductsContent" role="tabpanel" aria-labelledby="tabProducos">
                     <TableWithPagination data={products} path='products'/>
