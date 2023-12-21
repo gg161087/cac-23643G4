@@ -171,16 +171,21 @@ a.dropdown-toggle:link {
 }
 
 @media (max-width: 870px) {
-  .header {
-    display: none;
-    background-color: red;
-  }
-  .header__nav1 {
-	  background-color: green;
-	  display: none;
+	.header {		
+		background-color: red;
+	}
+  	.header__nav1 {
+		background-color: green;
+		display: none;
 	}
 	.header__nav2{
 		display: flex!important;
 		flex-direction: column;
 	}
+	.nav2__logo h1{
+		display: none;
+	}
+	.miCuenta__link span{
+		display: none;
+	} 
 }

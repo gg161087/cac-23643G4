@@ -82,7 +82,7 @@ export const Header = ({
             <div className="container-fluid header__nav2">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-6 col-md-3">
+                        <div className="col">
                             <Link className="nav2__logo d-flex align-items-center p-1 text-decoration-none" to="/">
                                 <img
                                     className="me-3"
@@ -93,7 +93,7 @@ export const Header = ({
                                 <h1>ITECHNOLOGY</h1>
                             </Link>
                         </div>
-                        <div className="col-6 col-md-6">
+                        <div className="col">
                             <div className="header__search">
                                 <div className="search-bar-container">
                                     <SearchBar setResults={setResults} />
@@ -103,7 +103,7 @@ export const Header = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div className="col">
                             <nav className="d-flex flex-nowrap justify-content-end align-items-center gap-3">
                                 <Link
                                     className="miCuenta__link text-decoration-none ms-3 me-3 "
